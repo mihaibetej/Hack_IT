@@ -21,6 +21,7 @@ class WebViewController: UIViewController {
     
     open var webSiteURL: URL? = nil
     open var youtubeURL: String? = nil
+    open var textHTML: String? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +73,9 @@ class WebViewController: UIViewController {
             </html>
             """
             webView.loadHTMLString(embededHTML, baseURL: nil)
+        } else if var text = textHTML {
+            text = text.replacingOccurrences(of: "\n", with: "<br>")
+            webView.loadHTMLString("<html><body>\(text)</body></html>", baseURL: nil)
         }
     }
     
