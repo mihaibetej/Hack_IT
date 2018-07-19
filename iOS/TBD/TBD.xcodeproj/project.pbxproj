@@ -16,6 +16,9 @@
 		633A311D2100D5B800C6C253 /* MyFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A311C2100D5B800C6C253 /* MyFeedViewController.swift */; };
 		633A311F2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A311E2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift */; };
 		633A31212100DF2800C6C253 /* MyFeedItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A31202100DF2800C6C253 /* MyFeedItemTableViewCell.swift */; };
+		633A31232101109400C6C253 /* VideoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A31222101109400C6C253 /* VideoHelper.swift */; };
+		633A3125210110A800C6C253 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633A3124210110A800C6C253 /* AVFoundation.framework */; };
+		633A3127210110AE00C6C253 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633A3126210110AE00C6C253 /* MobileCoreServices.framework */; };
 		751A59C62100B2ED00E913A8 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C52100B2ED00E913A8 /* Dashboard.storyboard */; };
 		751A59C82100B35900E913A8 /* MySchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C72100B35900E913A8 /* MySchedule.storyboard */; };
 		751A59CA2100B41600E913A8 /* DirectMessages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C92100B41600E913A8 /* DirectMessages.storyboard */; };
@@ -59,6 +62,9 @@
 		633A311C2100D5B800C6C253 /* MyFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedViewController.swift; sourceTree = "<group>"; };
 		633A311E2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		633A31202100DF2800C6C253 /* MyFeedItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedItemTableViewCell.swift; sourceTree = "<group>"; };
+		633A31222101109400C6C253 /* VideoHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoHelper.swift; sourceTree = "<group>"; };
+		633A3124210110A800C6C253 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		633A3126210110AE00C6C253 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		751A59C52100B2ED00E913A8 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		751A59C72100B35900E913A8 /* MySchedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MySchedule.storyboard; sourceTree = "<group>"; };
 		751A59C92100B41600E913A8 /* DirectMessages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DirectMessages.storyboard; sourceTree = "<group>"; };
@@ -97,6 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				633A3127210110AE00C6C253 /* MobileCoreServices.framework in Frameworks */,
+				633A3125210110A800C6C253 /* AVFoundation.framework in Frameworks */,
 				03C67B51A244299B79438955 /* Pods_TBD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +258,7 @@
 			children = (
 				756DD8DA2100EC130037FF3C /* PostContent.storyboard */,
 				756DD8DC2100EC230037FF3C /* PostContentViewController.swift */,
+				633A31222101109400C6C253 /* VideoHelper.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -275,6 +284,8 @@
 		C5DB28BC024D03F6D5E08022 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				633A3126210110AE00C6C253 /* MobileCoreServices.framework */,
+				633A3124210110A800C6C253 /* AVFoundation.framework */,
 				247D4A247F4770FC36831575 /* Pods_TBD.framework */,
 			);
 			name = Frameworks;
@@ -401,6 +412,7 @@
 				633A31212100DF2800C6C253 /* MyFeedItemTableViewCell.swift in Sources */,
 				633A311F2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift in Sources */,
 				756DD8DF2100EE750037FF3C /* FeedItemModel.swift in Sources */,
+				633A31232101109400C6C253 /* VideoHelper.swift in Sources */,
 				756DD8DD2100EC230037FF3C /* PostContentViewController.swift in Sources */,
 				75966F5E21010CCC00779E78 /* MyFeedDetailsViewController.swift in Sources */,
 				633A311D2100D5B800C6C253 /* MyFeedViewController.swift in Sources */,
@@ -552,13 +564,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H4NV4H58UW;
+				DEVELOPMENT_TEAM = 6E245HX4RD;
 				INFOPLIST_FILE = TBD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.shiveringsingletons.TBD;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shiveringsingletons.TBDFlorin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -571,13 +583,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H4NV4H58UW;
+				DEVELOPMENT_TEAM = 6E245HX4RD;
 				INFOPLIST_FILE = TBD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.shiveringsingletons.TBD;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shiveringsingletons.TBDFlorin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

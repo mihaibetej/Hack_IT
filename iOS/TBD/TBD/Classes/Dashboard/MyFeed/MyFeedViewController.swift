@@ -49,9 +49,7 @@ class MyFeedViewController: UITableViewController {
                 preconditionFailure()
             }
             let feedItem = feedItemsDatasource.items[indexPath.row - 1]
-            cell.setupCellWith(name: feedItem.username,
-                               text: feedItem.text,
-                               mediaThumb: #imageLiteral(resourceName: "test"))
+            cell.setupCellWith(feedItem: feedItem)
             cell.index = indexPath.row
             cell.delegate = self
             tableCell = cell

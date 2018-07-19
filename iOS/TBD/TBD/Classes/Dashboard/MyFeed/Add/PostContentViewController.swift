@@ -8,6 +8,14 @@
 
 import UIKit
 
+extension URL {
+    static var documentsDirectoryURL: URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
+}
+
 protocol PostContentViewControllerDelegate: class {
     func didCreatePost(item: FeedItemModel)
 }
@@ -21,6 +29,8 @@ class PostContentViewController: UIViewController {
     @IBOutlet weak var imageViewHeight: NSLayoutConstraint!
     let imageHeight: CGFloat = 200
     
+    var videoName: String?
+    
     weak var delegate: PostContentViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -33,18 +43,11 @@ class PostContentViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        
-//        textArea.becomeFirstResponder()
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.keyboardNotification(notification:)),
                                                name: NSNotification.Name.UIKeyboardWillChangeFrame,
                                                object: nil)
-        
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
-//            self?.imageViewHeight.constant = self?.imageHeight ?? 0
-//            self?.imageView.image = #imageLiteral(resourceName: "test")
-//        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -74,19 +77,18 @@ class PostContentViewController: UIViewController {
         }
     }
     
-    func photoLibrary()
-    {
+    func photoLibrary() {
         
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
             let myPickerController = UIImagePickerController()
             myPickerController.delegate = self
             myPickerController.sourceType = .photoLibrary
+            myPickerController.mediaTypes = ["public.movie", "public.image"]
             present(myPickerController, animated: true, completion: nil)
         }
     }
     
-    func camera()
-    {
+    func camera() {
         if UIImagePickerController.isSourceTypeAvailable(.camera){
             let myPickerController = UIImagePickerController()
             myPickerController.delegate = self
@@ -96,11 +98,19 @@ class PostContentViewController: UIViewController {
         
     }
     
+    func video() {
+        VideoHelper.startMediaBrowser(delegate: self, sourceType: .camera)
+    }
+    
     
     @IBAction func addAttachment(_ sender: Any) {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (alert:UIAlertAction!) -> Void in
+        actionSheet.addAction(UIAlertAction(title: "Record Video", style: .default, handler: { (alert:UIAlertAction!) -> Void in
+            self.video()
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Take photo", style: .default, handler: { (alert:UIAlertAction!) -> Void in
             self.camera()
         }))
         
@@ -125,9 +135,20 @@ class PostContentViewController: UIViewController {
         
         if let delegate = delegate {
             
-            var attachments: [FeedItemModel.Media] = []
+            var attachment: FeedItemModel.MediaType?
             
-            let item = FeedItemModel(username: defaultUsername, text: textArea.text, attachments: attachments)
+            var mediaType: FeedItemModel.MediaType?
+            if let videoName = videoName {
+                mediaType = FeedItemModel.MediaType.video(fileName: videoName, imageData: imageView.image!)
+            } else if let imageData = imageView.image {
+                mediaType = FeedItemModel.MediaType.image(imageData: imageData)
+            }
+            
+            if let mediaType = mediaType {
+                attachment = mediaType
+            }
+            
+            let item = FeedItemModel(username: defaultUsername, text: textArea.text, attachment: attachment)
             
             delegate.didCreatePost(item: item)
         }
@@ -142,10 +163,22 @@ extension PostContentViewController: UIImagePickerControllerDelegate, UINavigati
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        videoName = nil
+        print(info)
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.image = image
             imageViewHeight.constant = imageHeight
-        }else{
+        } else if let videoURL = info[UIImagePickerControllerMediaURL] as? NSURL {
+            imageView.image = VideoHelper.getVideoThumbnail(for: videoURL.path!)
+            imageViewHeight.constant = imageHeight
+            //save the video to the documents folder
+            videoName = videoURL.pathComponents?.last
+            print(videoName!)
+            let documentsDirectoryURL = URL.documentsDirectoryURL
+            let newVideoURL = documentsDirectoryURL.appendingPathComponent(videoName!)
+            print(newVideoURL)
+            try! FileManager.default.moveItem(at: videoURL as URL, to: newVideoURL)
+        } else {
             print("Something went wrong")
         }
         dismiss(animated: true, completion: nil)
