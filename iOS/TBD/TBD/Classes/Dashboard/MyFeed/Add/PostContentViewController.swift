@@ -8,6 +8,14 @@
 
 import UIKit
 
+extension URL {
+    static var documentsDirectoryURL: URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
+}
+
 class PostContentViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
@@ -16,6 +24,8 @@ class PostContentViewController: UIViewController {
     @IBOutlet weak var attachButtonHeight: NSLayoutConstraint!
     @IBOutlet weak var imageViewHeight: NSLayoutConstraint!
     let imageHeight: CGFloat = 200
+    
+    var videoName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,19 +78,18 @@ class PostContentViewController: UIViewController {
         }
     }
     
-    func photoLibrary()
-    {
+    func photoLibrary() {
         
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
             let myPickerController = UIImagePickerController()
             myPickerController.delegate = self
             myPickerController.sourceType = .photoLibrary
+            myPickerController.mediaTypes = ["public.movie", "public.image"]
             present(myPickerController, animated: true, completion: nil)
         }
     }
     
-    func camera()
-    {
+    func camera() {
         if UIImagePickerController.isSourceTypeAvailable(.camera){
             let myPickerController = UIImagePickerController()
             myPickerController.delegate = self
@@ -90,11 +99,19 @@ class PostContentViewController: UIViewController {
         
     }
     
+    func video() {
+        VideoHelper.startMediaBrowser(delegate: self, sourceType: .camera)
+    }
+    
     
     @IBAction func addAttachment(_ sender: Any) {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (alert:UIAlertAction!) -> Void in
+        actionSheet.addAction(UIAlertAction(title: "Record Video", style: .default, handler: { (alert:UIAlertAction!) -> Void in
+            self.video()
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Take photo", style: .default, handler: { (alert:UIAlertAction!) -> Void in
             self.camera()
         }))
         
@@ -121,10 +138,21 @@ extension PostContentViewController: UIImagePickerControllerDelegate, UINavigati
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        videoName = nil
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.image = image
             imageViewHeight.constant = imageHeight
-        }else{
+        } else if let videoURL = info[UIImagePickerControllerMediaURL] as? NSURL {
+            imageView.image = VideoHelper.getVideoThumbnail(for: videoURL.path!)
+            imageViewHeight.constant = imageHeight
+            //save the video to the documents folder
+            videoName = videoURL.pathComponents?.last
+            print(videoName!)
+            let documentsDirectoryURL = URL.documentsDirectoryURL
+            let newVideoURL = documentsDirectoryURL.appendingPathComponent(videoName!)
+            print(newVideoURL)
+            try! FileManager.default.moveItem(at: videoURL as URL, to: newVideoURL)
+        } else {
             print("Something went wrong")
         }
         dismiss(animated: true, completion: nil)
