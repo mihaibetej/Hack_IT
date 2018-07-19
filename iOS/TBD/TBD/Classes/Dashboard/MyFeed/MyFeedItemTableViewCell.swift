@@ -14,7 +14,6 @@ class MyFeedItemTableViewCell: UITableViewCell {
     @IBOutlet weak var textContentLabel: UILabel!
     @IBOutlet weak var mediaThumbImageView: UIImageView!
     @IBOutlet weak var mediaThumbHeight: NSLayoutConstraint!
-    @IBOutlet weak var mediaThumbSpaceToTextContent: NSLayoutConstraint!
     let mediaThumbHeightConstant: CGFloat = 150
     
     weak var delegate: ItemExpandable?
@@ -25,8 +24,6 @@ class MyFeedItemTableViewCell: UITableViewCell {
         if let mediaThumb = mediaThumb {
             mediaThumbImageView.image = mediaThumb
             mediaThumbHeight.constant = mediaThumbHeightConstant
-        } else {
-            mediaThumbSpaceToTextContent.constant = 0
         }
     }
     
