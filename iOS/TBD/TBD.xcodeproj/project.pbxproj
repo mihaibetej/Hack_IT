@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03C67B51A244299B79438955 /* Pods_TBD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247D4A247F4770FC36831575 /* Pods_TBD.framework */; };
 		27992C132100841300F05763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27992C122100841300F05763 /* AppDelegate.swift */; };
 		27992C182100841300F05763 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27992C162100841300F05763 /* Main.storyboard */; };
 		27992C1A2100841500F05763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27992C192100841500F05763 /* Assets.xcassets */; };
@@ -16,9 +17,27 @@
 		751A59CA2100B41600E913A8 /* DirectMessages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C92100B41600E913A8 /* DirectMessages.storyboard */; };
 		751A59CC2100B43000E913A8 /* Information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59CB2100B43000E913A8 /* Information.storyboard */; };
 		751A59CE2100B44800E913A8 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59CD2100B44800E913A8 /* Settings.storyboard */; };
+		751A59E32100B8FE00E913A8 /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59D22100B8FA00E913A8 /* ProximaNova-Semibold.otf */; };
+		751A59E42100B8FE00E913A8 /* ProximaNova-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59D32100B8FB00E913A8 /* ProximaNova-RegularItalic.otf */; };
+		751A59E52100B8FE00E913A8 /* ProximaNova-Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59D42100B8FB00E913A8 /* ProximaNova-Extrabold.otf */; };
+		751A59E62100B8FE00E913A8 /* ProximaNovaCond-LightIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59D52100B8FB00E913A8 /* ProximaNovaCond-LightIt.otf */; };
+		751A59E72100B8FE00E913A8 /* ProximaNova-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59D62100B8FC00E913A8 /* ProximaNova-Black.otf */; };
+		751A59E82100B8FE00E913A8 /* ProximaNovaCond-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59D72100B8FC00E913A8 /* ProximaNovaCond-Regular.otf */; };
+		751A59E92100B8FE00E913A8 /* ProximaNova-RegItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59D82100B8FC00E913A8 /* ProximaNova-RegItalic.otf */; };
+		751A59EA2100B8FE00E913A8 /* ProximaNovaCond-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59D92100B8FC00E913A8 /* ProximaNovaCond-Semibold.otf */; };
+		751A59EB2100B8FE00E913A8 /* ProximaNovaCond-SemiboldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59DA2100B8FC00E913A8 /* ProximaNovaCond-SemiboldIt.otf */; };
+		751A59EC2100B8FE00E913A8 /* ProximaNovaCond-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59DB2100B8FC00E913A8 /* ProximaNovaCond-Light.otf */; };
+		751A59ED2100B8FE00E913A8 /* ProximaNova-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59DC2100B8FC00E913A8 /* ProximaNova-LightItalic.otf */; };
+		751A59EE2100B8FE00E913A8 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59DD2100B8FD00E913A8 /* ProximaNova-Bold.otf */; };
+		751A59EF2100B8FE00E913A8 /* ProximaNova-BoldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59DE2100B8FD00E913A8 /* ProximaNova-BoldIt.otf */; };
+		751A59F02100B8FE00E913A8 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59DF2100B8FD00E913A8 /* ProximaNova-Light.otf */; };
+		751A59F12100B8FE00E913A8 /* ProximaNovaCond-RegularIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59E02100B8FD00E913A8 /* ProximaNovaCond-RegularIt.otf */; };
+		751A59F22100B8FE00E913A8 /* ProximaNova-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59E12100B8FD00E913A8 /* ProximaNova-SemiboldItalic.otf */; };
+		751A59F32100B8FE00E913A8 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59E22100B8FD00E913A8 /* ProximaNova-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		247D4A247F4770FC36831575 /* Pods_TBD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TBD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27992C0F2100841300F05763 /* TBD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27992C122100841300F05763 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27992C172100841300F05763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,6 +49,25 @@
 		751A59C92100B41600E913A8 /* DirectMessages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DirectMessages.storyboard; sourceTree = "<group>"; };
 		751A59CB2100B43000E913A8 /* Information.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Information.storyboard; sourceTree = "<group>"; };
 		751A59CD2100B44800E913A8 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		751A59D22100B8FA00E913A8 /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Semibold.otf"; path = "../../../../../UX/font/Proxima Nova/ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
+		751A59D32100B8FB00E913A8 /* ProximaNova-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-RegularItalic.otf"; path = "../../../../../UX/font/Proxima Nova/ProximaNova-RegularItalic.otf"; sourceTree = "<group>"; };
+		751A59D42100B8FB00E913A8 /* ProximaNova-Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Extrabold.otf"; path = "../../../../../UX/font/Proxima Nova/ProximaNova-Extrabold.otf"; sourceTree = "<group>"; };
+		751A59D52100B8FB00E913A8 /* ProximaNovaCond-LightIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNovaCond-LightIt.otf"; path = "../../../../../UX/font/Proxima Nova/ProximaNovaCond-LightIt.otf"; sourceTree = "<group>"; };
+		751A59D62100B8FC00E913A8 /* ProximaNova-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Black.otf"; path = "../../../../../UX/font/Proxima Nova/ProximaNova-Black.otf"; sourceTree = "<group>"; };
+		751A59D72100B8FC00E913A8 /* ProximaNovaCond-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNovaCond-Regular.otf"; path = "../../../../../UX/font/Proxima Nova/ProximaNovaCond-Regular.otf"; sourceTree = "<group>"; };
+		751A59D82100B8FC00E913A8 /* ProximaNova-RegItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-RegItalic.otf"; path = "../../../../../UX/font/Proxima Nova/ProximaNova-RegItalic.otf"; sourceTree = "<group>"; };
+		751A59D92100B8FC00E913A8 /* ProximaNovaCond-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNovaCond-Semibold.otf"; path = "../../../../../UX/font/Proxima Nova/ProximaNovaCond-Semibold.otf"; sourceTree = "<group>"; };
+		751A59DA2100B8FC00E913A8 /* ProximaNovaCond-SemiboldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNovaCond-SemiboldIt.otf"; path = "../../../../../UX/font/Proxima Nova/ProximaNovaCond-SemiboldIt.otf"; sourceTree = "<group>"; };
+		751A59DB2100B8FC00E913A8 /* ProximaNovaCond-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNovaCond-Light.otf"; path = "../../../../../UX/font/Proxima Nova/ProximaNovaCond-Light.otf"; sourceTree = "<group>"; };
+		751A59DC2100B8FC00E913A8 /* ProximaNova-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-LightItalic.otf"; path = "../../../../../UX/font/Proxima Nova/ProximaNova-LightItalic.otf"; sourceTree = "<group>"; };
+		751A59DD2100B8FD00E913A8 /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Bold.otf"; path = "../../../../../UX/font/Proxima Nova/ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		751A59DE2100B8FD00E913A8 /* ProximaNova-BoldIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-BoldIt.otf"; path = "../../../../../UX/font/Proxima Nova/ProximaNova-BoldIt.otf"; sourceTree = "<group>"; };
+		751A59DF2100B8FD00E913A8 /* ProximaNova-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Light.otf"; path = "../../../../../UX/font/Proxima Nova/ProximaNova-Light.otf"; sourceTree = "<group>"; };
+		751A59E02100B8FD00E913A8 /* ProximaNovaCond-RegularIt.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNovaCond-RegularIt.otf"; path = "../../../../../UX/font/Proxima Nova/ProximaNovaCond-RegularIt.otf"; sourceTree = "<group>"; };
+		751A59E12100B8FD00E913A8 /* ProximaNova-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-SemiboldItalic.otf"; path = "../../../../../UX/font/Proxima Nova/ProximaNova-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		751A59E22100B8FD00E913A8 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Regular.otf"; path = "../../../../../UX/font/Proxima Nova/ProximaNova-Regular.otf"; sourceTree = "<group>"; };
+		87F9D5360280F4D279EB21D9 /* Pods-TBD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBD.release.xcconfig"; path = "Pods/Target Support Files/Pods-TBD/Pods-TBD.release.xcconfig"; sourceTree = "<group>"; };
+		E425451493A9A4022C6B075F /* Pods-TBD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TBD/Pods-TBD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C67B51A244299B79438955 /* Pods_TBD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +87,8 @@
 			children = (
 				27992C112100841300F05763 /* TBD */,
 				27992C102100841300F05763 /* Products */,
+				A74AAB9FB532D4EB87DE11D5 /* Pods */,
+				C5DB28BC024D03F6D5E08022 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,15 +103,8 @@
 		27992C112100841300F05763 /* TBD */ = {
 			isa = PBXGroup;
 			children = (
-				751A59C02100B1B000E913A8 /* Dashboard */,
-				751A59C12100B1B700E913A8 /* My Schedule */,
-				751A59C22100B1CE00E913A8 /* Direct Messages */,
-				751A59C42100B1E400E913A8 /* Information */,
-				751A59C32100B1DC00E913A8 /* Settings */,
-				27992C122100841300F05763 /* AppDelegate.swift */,
-				27992C162100841300F05763 /* Main.storyboard */,
-				27992C192100841500F05763 /* Assets.xcassets */,
-				27992C1B2100841500F05763 /* LaunchScreen.storyboard */,
+				751A59CF2100B89F00E913A8 /* Resources */,
+				751A59D12100B8D900E913A8 /* Classes */,
 				27992C1E2100841500F05763 /* Info.plist */,
 			);
 			path = TBD;
@@ -116,6 +150,71 @@
 			path = Information;
 			sourceTree = "<group>";
 		};
+		751A59CF2100B89F00E913A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				27992C192100841500F05763 /* Assets.xcassets */,
+				27992C1B2100841500F05763 /* LaunchScreen.storyboard */,
+				751A59D02100B8B000E913A8 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		751A59D02100B8B000E913A8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				751A59D62100B8FC00E913A8 /* ProximaNova-Black.otf */,
+				751A59DD2100B8FD00E913A8 /* ProximaNova-Bold.otf */,
+				751A59DE2100B8FD00E913A8 /* ProximaNova-BoldIt.otf */,
+				751A59D42100B8FB00E913A8 /* ProximaNova-Extrabold.otf */,
+				751A59DF2100B8FD00E913A8 /* ProximaNova-Light.otf */,
+				751A59DC2100B8FC00E913A8 /* ProximaNova-LightItalic.otf */,
+				751A59D82100B8FC00E913A8 /* ProximaNova-RegItalic.otf */,
+				751A59E22100B8FD00E913A8 /* ProximaNova-Regular.otf */,
+				751A59D32100B8FB00E913A8 /* ProximaNova-RegularItalic.otf */,
+				751A59D22100B8FA00E913A8 /* ProximaNova-Semibold.otf */,
+				751A59E12100B8FD00E913A8 /* ProximaNova-SemiboldItalic.otf */,
+				751A59DB2100B8FC00E913A8 /* ProximaNovaCond-Light.otf */,
+				751A59D52100B8FB00E913A8 /* ProximaNovaCond-LightIt.otf */,
+				751A59D72100B8FC00E913A8 /* ProximaNovaCond-Regular.otf */,
+				751A59E02100B8FD00E913A8 /* ProximaNovaCond-RegularIt.otf */,
+				751A59D92100B8FC00E913A8 /* ProximaNovaCond-Semibold.otf */,
+				751A59DA2100B8FC00E913A8 /* ProximaNovaCond-SemiboldIt.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		751A59D12100B8D900E913A8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				751A59C02100B1B000E913A8 /* Dashboard */,
+				751A59C12100B1B700E913A8 /* My Schedule */,
+				751A59C22100B1CE00E913A8 /* Direct Messages */,
+				751A59C42100B1E400E913A8 /* Information */,
+				751A59C32100B1DC00E913A8 /* Settings */,
+				27992C122100841300F05763 /* AppDelegate.swift */,
+				27992C162100841300F05763 /* Main.storyboard */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A74AAB9FB532D4EB87DE11D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E425451493A9A4022C6B075F /* Pods-TBD.debug.xcconfig */,
+				87F9D5360280F4D279EB21D9 /* Pods-TBD.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C5DB28BC024D03F6D5E08022 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				247D4A247F4770FC36831575 /* Pods_TBD.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,6 +222,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27992C212100841500F05763 /* Build configuration list for PBXNativeTarget "TBD" */;
 			buildPhases = (
+				A8F6F307D16C66CC123270C9 /* [CP] Check Pods Manifest.lock */,
 				27992C0B2100841300F05763 /* Sources */,
 				27992C0C2100841300F05763 /* Frameworks */,
 				27992C0D2100841300F05763 /* Resources */,
@@ -175,17 +275,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				27992C1D2100841500F05763 /* LaunchScreen.storyboard in Resources */,
+				751A59E32100B8FE00E913A8 /* ProximaNova-Semibold.otf in Resources */,
 				27992C1A2100841500F05763 /* Assets.xcassets in Resources */,
+				751A59E52100B8FE00E913A8 /* ProximaNova-Extrabold.otf in Resources */,
+				751A59E62100B8FE00E913A8 /* ProximaNovaCond-LightIt.otf in Resources */,
+				751A59EC2100B8FE00E913A8 /* ProximaNovaCond-Light.otf in Resources */,
 				27992C182100841300F05763 /* Main.storyboard in Resources */,
 				751A59CE2100B44800E913A8 /* Settings.storyboard in Resources */,
+				751A59EA2100B8FE00E913A8 /* ProximaNovaCond-Semibold.otf in Resources */,
+				751A59EE2100B8FE00E913A8 /* ProximaNova-Bold.otf in Resources */,
+				751A59E42100B8FE00E913A8 /* ProximaNova-RegularItalic.otf in Resources */,
+				751A59F22100B8FE00E913A8 /* ProximaNova-SemiboldItalic.otf in Resources */,
+				751A59EF2100B8FE00E913A8 /* ProximaNova-BoldIt.otf in Resources */,
 				751A59CC2100B43000E913A8 /* Information.storyboard in Resources */,
+				751A59EB2100B8FE00E913A8 /* ProximaNovaCond-SemiboldIt.otf in Resources */,
 				751A59C62100B2ED00E913A8 /* Dashboard.storyboard in Resources */,
+				751A59F32100B8FE00E913A8 /* ProximaNova-Regular.otf in Resources */,
 				751A59C82100B35900E913A8 /* MySchedule.storyboard in Resources */,
+				751A59E82100B8FE00E913A8 /* ProximaNovaCond-Regular.otf in Resources */,
+				751A59F12100B8FE00E913A8 /* ProximaNovaCond-RegularIt.otf in Resources */,
+				751A59F02100B8FE00E913A8 /* ProximaNova-Light.otf in Resources */,
+				751A59E92100B8FE00E913A8 /* ProximaNova-RegItalic.otf in Resources */,
+				751A59ED2100B8FE00E913A8 /* ProximaNova-LightItalic.otf in Resources */,
 				751A59CA2100B41600E913A8 /* DirectMessages.storyboard in Resources */,
+				751A59E72100B8FE00E913A8 /* ProximaNova-Black.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A8F6F307D16C66CC123270C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TBD-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27992C0B2100841300F05763 /* Sources */ = {
@@ -334,6 +472,7 @@
 		};
 		27992C222100841500F05763 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E425451493A9A4022C6B075F /* Pods-TBD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -352,6 +491,7 @@
 		};
 		27992C232100841500F05763 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87F9D5360280F4D279EB21D9 /* Pods-TBD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
