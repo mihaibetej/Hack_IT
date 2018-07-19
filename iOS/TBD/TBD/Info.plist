@@ -61,5 +61,7 @@
 		<string>ProximaNova-BoldIt.otf</string>
 		<string>ProximaNova-Black.otf</string>
 	</array>
+	<key>NSCalendarsUsageDescription</key>
+	<string>The app needs to add events in your calendar</string>
 </dict>
 </plist>

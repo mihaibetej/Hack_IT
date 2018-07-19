@@ -48,6 +48,10 @@
 		BE70ADC12100EEBE00585157 /* MyScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC02100EEBE00585157 /* MyScheduleViewController.swift */; };
 		BE70ADC32101087600585157 /* RoutinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC22101087600585157 /* RoutinesViewController.swift */; };
 		BE70ADC521010E8F00585157 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC421010E8F00585157 /* CalendarViewController.swift */; };
+		BE70ADC12100EEBE00585157 /* MyScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC02100EEBE00585157 /* MyScheduleViewController.swift */; };
+		BE70ADC32101087600585157 /* RoutinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC22101087600585157 /* RoutinesViewController.swift */; };
+		BE70ADC521010E8F00585157 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC421010E8F00585157 /* CalendarViewController.swift */; };
+		BE70ADC82101247C00585157 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC72101247C00585157 /* RoundedShadowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +99,7 @@
 		BE70ADC02100EEBE00585157 /* MyScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScheduleViewController.swift; sourceTree = "<group>"; };
 		BE70ADC22101087600585157 /* RoutinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutinesViewController.swift; sourceTree = "<group>"; };
 		BE70ADC421010E8F00585157 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		BE70ADC72101247C00585157 /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
 		E425451493A9A4022C6B075F /* Pods-TBD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TBD/Pods-TBD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -237,6 +242,7 @@
 		751A59D12100B8D900E913A8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BE70ADC62101245900585157 /* Helpers */,
 				751A59C02100B1B000E913A8 /* Dashboard */,
 				751A59C12100B1B700E913A8 /* My Schedule */,
 				751A59C22100B1CE00E913A8 /* Messages */,
@@ -279,6 +285,14 @@
 				87F9D5360280F4D279EB21D9 /* Pods-TBD.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BE70ADC62101245900585157 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BE70ADC72101247C00585157 /* RoundedShadowView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		C5DB28BC024D03F6D5E08022 /* Frameworks */ = {
@@ -438,6 +452,7 @@
 				27F1C6152100DDE90083B6A7 /* PrivateMessageCell.swift in Sources */,
 				BE70ADC32101087600585157 /* RoutinesViewController.swift in Sources */,
 				BE70ADC12100EEBE00585157 /* MyScheduleViewController.swift in Sources */,
+				BE70ADC82101247C00585157 /* RoundedShadowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

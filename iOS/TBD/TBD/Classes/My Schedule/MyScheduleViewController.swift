@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import EventKitUI
 
-class MyScheduleViewController: UIViewController {
-    
+class MyScheduleViewController: UIViewController, EKEventEditViewDelegate {
+
     var tabBar: UITabBarController!
     var calendarViewController: CalendarViewController!
     var routinesViewController: RoutinesViewController!
@@ -28,5 +29,36 @@ class MyScheduleViewController: UIViewController {
         default:
             break
         }
+    }
+    
+    @IBAction func DidTapAddButton(_ sender: UIBarButtonItem) {
+        
+        let eventViewController: EKEventEditViewController = EKEventEditViewController()
+        eventViewController.editViewDelegate = self
+        
+        let store = EKEventStore()
+        eventViewController.eventStore = store
+        
+        let status = EKEventStore.authorizationStatus(for: .event)
+        switch status {
+        case .authorized:
+            DispatchQueue.main.async {
+                self.present(eventViewController, animated: true)
+            }
+            
+        case .notDetermined:
+            store.requestAccess(to: .event) { granted , _ in
+                if granted == true {
+                   self.present(eventViewController, animated: true)
+                }
+            }
+        case .denied, .restricted:
+            break
+        }
+        
+    }
+    
+    func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
+        self.dismiss(animated: true)
     }
 }
