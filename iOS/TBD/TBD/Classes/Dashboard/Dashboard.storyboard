@@ -319,6 +319,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="170"/>
                                                         <connections>
                                                             <action selector="didTapOnFeed:" destination="hIv-7w-Vtx" eventType="touchUpInside" id="tkt-Qm-w1C"/>
+                                                            <segue destination="Ufw-az-0Hn" kind="show" id="sDv-VE-D1z"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
