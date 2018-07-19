@@ -14,6 +14,11 @@
 		27992C1D2100841500F05763 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27992C1B2100841500F05763 /* LaunchScreen.storyboard */; };
 		27F1C6102100D4F00083B6A7 /* MessagesOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F1C60F2100D4F00083B6A7 /* MessagesOverviewViewController.swift */; };
 		27F1C6122100D8CC0083B6A7 /* AddContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F1C6112100D8CC0083B6A7 /* AddContactsViewController.swift */; };
+		27F1C6152100DDE90083B6A7 /* PrivateMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F1C6142100DDE90083B6A7 /* PrivateMessageCell.swift */; };
+		27F1C6172100DE040083B6A7 /* GroupMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F1C6162100DE040083B6A7 /* GroupMessageCell.swift */; };
+		27F1C61A2100DE9D0083B6A7 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F1C6192100DE9D0083B6A7 /* Contact.swift */; };
+		27F1C61C2100DEAC0083B6A7 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F1C61B2100DEAC0083B6A7 /* Group.swift */; };
+		27F1C61E2100DEB60083B6A7 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F1C61D2100DEB60083B6A7 /* Message.swift */; };
 		751A59C62100B2ED00E913A8 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C52100B2ED00E913A8 /* Dashboard.storyboard */; };
 		751A59C82100B35900E913A8 /* MySchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C72100B35900E913A8 /* MySchedule.storyboard */; };
 		751A59CA2100B41600E913A8 /* DirectMessages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C92100B41600E913A8 /* DirectMessages.storyboard */; };
@@ -48,6 +53,11 @@
 		27992C1E2100841500F05763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27F1C60F2100D4F00083B6A7 /* MessagesOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesOverviewViewController.swift; sourceTree = "<group>"; };
 		27F1C6112100D8CC0083B6A7 /* AddContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactsViewController.swift; sourceTree = "<group>"; };
+		27F1C6142100DDE90083B6A7 /* PrivateMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateMessageCell.swift; sourceTree = "<group>"; };
+		27F1C6162100DE040083B6A7 /* GroupMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMessageCell.swift; sourceTree = "<group>"; };
+		27F1C6192100DE9D0083B6A7 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		27F1C61B2100DEAC0083B6A7 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		27F1C61D2100DEB60083B6A7 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		751A59C52100B2ED00E913A8 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		751A59C72100B35900E913A8 /* MySchedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MySchedule.storyboard; sourceTree = "<group>"; };
 		751A59C92100B41600E913A8 /* DirectMessages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DirectMessages.storyboard; sourceTree = "<group>"; };
@@ -114,6 +124,25 @@
 			path = TBD;
 			sourceTree = "<group>";
 		};
+		27F1C6132100DDAD0083B6A7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				27F1C6142100DDE90083B6A7 /* PrivateMessageCell.swift */,
+				27F1C6162100DE040083B6A7 /* GroupMessageCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		27F1C6182100DE840083B6A7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27F1C6192100DE9D0083B6A7 /* Contact.swift */,
+				27F1C61B2100DEAC0083B6A7 /* Group.swift */,
+				27F1C61D2100DEB60083B6A7 /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		751A59C02100B1B000E913A8 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +165,8 @@
 				751A59C92100B41600E913A8 /* DirectMessages.storyboard */,
 				27F1C60F2100D4F00083B6A7 /* MessagesOverviewViewController.swift */,
 				27F1C6112100D8CC0083B6A7 /* AddContactsViewController.swift */,
+				27F1C6182100DE840083B6A7 /* Models */,
+				27F1C6132100DDAD0083B6A7 /* Views */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -344,9 +375,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F1C61C2100DEAC0083B6A7 /* Group.swift in Sources */,
+				27F1C61A2100DE9D0083B6A7 /* Contact.swift in Sources */,
 				27F1C6122100D8CC0083B6A7 /* AddContactsViewController.swift in Sources */,
 				27F1C6102100D4F00083B6A7 /* MessagesOverviewViewController.swift in Sources */,
+				27F1C6172100DE040083B6A7 /* GroupMessageCell.swift in Sources */,
+				27F1C61E2100DEB60083B6A7 /* Message.swift in Sources */,
 				27992C132100841300F05763 /* AppDelegate.swift in Sources */,
+				27F1C6152100DDE90083B6A7 /* PrivateMessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
