@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LwY-2x-7fx">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -13,18 +13,89 @@
         <!--Direct Messages-->
         <scene sceneID="LKn-WE-e6m">
             <objects>
-                <viewController title="Direct Messages" id="Bv6-9e-4tg" sceneMemberID="viewController">
+                <viewController title="Direct Messages" id="Bv6-9e-4tg" customClass="MessagesOverviewViewController" customModule="TBD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E8L-aZ-lQ0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nbX-GA-mfn">
+                                <rect key="frame" x="20" y="84" width="374" height="29"/>
+                                <segments>
+                                    <segment title="Private"/>
+                                    <segment title="Groups"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="snE-Hs-Jdb">
+                                <rect key="frame" x="0.0" y="120" width="414" height="616"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Bv6-9e-4tg" id="7es-RZ-uwW"/>
+                                    <outlet property="delegate" destination="Bv6-9e-4tg" id="gNC-KG-tHa"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="snE-Hs-Jdb" firstAttribute="leading" secondItem="uGh-xZ-bW3" secondAttribute="leading" id="5mt-ge-q44"/>
+                            <constraint firstItem="nbX-GA-mfn" firstAttribute="top" secondItem="uGh-xZ-bW3" secondAttribute="top" constant="20" id="Euf-b1-002"/>
+                            <constraint firstItem="snE-Hs-Jdb" firstAttribute="bottom" secondItem="uGh-xZ-bW3" secondAttribute="bottom" id="GgM-6Q-PsU"/>
+                            <constraint firstItem="snE-Hs-Jdb" firstAttribute="top" secondItem="nbX-GA-mfn" secondAttribute="bottom" constant="8" id="h1f-tW-3ro"/>
+                            <constraint firstItem="snE-Hs-Jdb" firstAttribute="trailing" secondItem="uGh-xZ-bW3" secondAttribute="trailing" id="ibN-fR-lqz"/>
+                            <constraint firstItem="uGh-xZ-bW3" firstAttribute="trailing" secondItem="nbX-GA-mfn" secondAttribute="trailing" constant="20" id="pKU-p3-teD"/>
+                            <constraint firstItem="nbX-GA-mfn" firstAttribute="centerX" secondItem="E8L-aZ-lQ0" secondAttribute="centerX" id="r6M-u6-gbD"/>
+                            <constraint firstItem="nbX-GA-mfn" firstAttribute="leading" secondItem="uGh-xZ-bW3" secondAttribute="leading" constant="20" id="sI2-dz-fGT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uGh-xZ-bW3"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Direct Messages" id="5h7-sQ-9JW"/>
+                    <navigationItem key="navigationItem" title="Direct Messages" id="5h7-sQ-9JW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="YFG-N8-55r">
+                            <connections>
+                                <segue destination="ZXX-l8-oi0" kind="presentation" id="6qN-Kk-SQL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segmentedControl" destination="nbX-GA-mfn" id="gIk-x5-hDX"/>
+                        <outlet property="tableView" destination="snE-Hs-Jdb" id="S2h-xx-fVT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tib-eq-BYp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2456.8000000000002" y="824.43778110944538"/>
+            <point key="canvasLocation" x="2456.521739130435" y="824.18478260869574"/>
+        </scene>
+        <!--New chat-->
+        <scene sceneID="IhG-S0-4hf">
+            <objects>
+                <viewController id="HzJ-T9-acr" customClass="AddContactsViewController" customModule="TBD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mqu-0U-HAa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UcX-KS-UNu">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UcX-KS-UNu" firstAttribute="leading" secondItem="HCW-Ck-9AI" secondAttribute="leading" id="QJw-2v-UOr"/>
+                            <constraint firstItem="UcX-KS-UNu" firstAttribute="bottom" secondItem="HCW-Ck-9AI" secondAttribute="bottom" id="XYB-vp-PDm"/>
+                            <constraint firstItem="UcX-KS-UNu" firstAttribute="top" secondItem="HCW-Ck-9AI" secondAttribute="top" id="bd7-xT-rOc"/>
+                            <constraint firstItem="UcX-KS-UNu" firstAttribute="trailing" secondItem="HCW-Ck-9AI" secondAttribute="trailing" id="iNR-rx-8ed"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HCW-Ck-9AI"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New chat" id="FwP-qC-c2T">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="3su-JE-m2n">
+                            <connections>
+                                <action selector="cancelAction:" destination="HzJ-T9-acr" id="02I-6e-EDB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l0W-RY-zLN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3197.5999999999999" y="1557.5712143928038"/>
         </scene>
         <!--Direct Messages-->
         <scene sceneID="KGu-fa-S3k">
@@ -33,7 +104,7 @@
                     <tabBarItem key="tabBarItem" title="Direct Messages" id="Q0Y-mg-rnv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="10k-hu-e6M">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -44,6 +115,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwe-RW-OEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1517.5999999999999" y="824.43778110944538"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DjW-LH-lCt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZXX-l8-oi0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5QB-Nd-z0a">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HzJ-T9-acr" kind="relationship" relationship="rootViewController" id="WP9-OO-3My"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gri-Rf-Tfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2456.8000000000002" y="1557.5712143928038"/>
         </scene>
     </scenes>
 </document>
