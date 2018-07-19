@@ -48,6 +48,10 @@
 		75966F5B210107F600779E78 /* FeedDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75966F5A210107F600779E78 /* FeedDatasource.swift */; };
 		75966F5E21010CCC00779E78 /* MyFeedDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75966F5D21010CCC00779E78 /* MyFeedDetailsViewController.swift */; };
 		75966F6021010D1000779E78 /* MyFeedDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75966F5F21010D1000779E78 /* MyFeedDetails.storyboard */; };
+		BE70ADC12100EEBE00585157 /* MyScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC02100EEBE00585157 /* MyScheduleViewController.swift */; };
+		BE70ADC32101087600585157 /* RoutinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC22101087600585157 /* RoutinesViewController.swift */; };
+		BE70ADC521010E8F00585157 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC421010E8F00585157 /* CalendarViewController.swift */; };
+		BE70ADC82101247C00585157 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC72101247C00585157 /* RoundedShadowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +99,10 @@
 		75966F5D21010CCC00779E78 /* MyFeedDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedDetailsViewController.swift; sourceTree = "<group>"; };
 		75966F5F21010D1000779E78 /* MyFeedDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyFeedDetails.storyboard; sourceTree = "<group>"; };
 		87F9D5360280F4D279EB21D9 /* Pods-TBD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBD.release.xcconfig"; path = "Pods/Target Support Files/Pods-TBD/Pods-TBD.release.xcconfig"; sourceTree = "<group>"; };
+		BE70ADC02100EEBE00585157 /* MyScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScheduleViewController.swift; sourceTree = "<group>"; };
+		BE70ADC22101087600585157 /* RoutinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutinesViewController.swift; sourceTree = "<group>"; };
+		BE70ADC421010E8F00585157 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		BE70ADC72101247C00585157 /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
 		E425451493A9A4022C6B075F /* Pods-TBD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TBD/Pods-TBD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +177,9 @@
 			isa = PBXGroup;
 			children = (
 				751A59C72100B35900E913A8 /* MySchedule.storyboard */,
+				BE70ADC02100EEBE00585157 /* MyScheduleViewController.swift */,
+				BE70ADC22101087600585157 /* RoutinesViewController.swift */,
+				BE70ADC421010E8F00585157 /* CalendarViewController.swift */,
 			);
 			path = "My Schedule";
 			sourceTree = "<group>";
@@ -218,6 +229,7 @@
 		751A59D12100B8D900E913A8 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BE70ADC62101245900585157 /* Helpers */,
 				751A59C02100B1B000E913A8 /* Dashboard */,
 				751A59C12100B1B700E913A8 /* My Schedule */,
 				751A59C22100B1CE00E913A8 /* Direct Messages */,
@@ -279,6 +291,14 @@
 				87F9D5360280F4D279EB21D9 /* Pods-TBD.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BE70ADC62101245900585157 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BE70ADC72101247C00585157 /* RoundedShadowView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		C5DB28BC024D03F6D5E08022 /* Frameworks */ = {
@@ -416,9 +436,13 @@
 				756DD8DD2100EC230037FF3C /* PostContentViewController.swift in Sources */,
 				75966F5E21010CCC00779E78 /* MyFeedDetailsViewController.swift in Sources */,
 				633A311D2100D5B800C6C253 /* MyFeedViewController.swift in Sources */,
+				BE70ADC521010E8F00585157 /* CalendarViewController.swift in Sources */,
 				27992C132100841300F05763 /* AppDelegate.swift in Sources */,
 				75966F5B210107F600779E78 /* FeedDatasource.swift in Sources */,
 				756065142100DA4300C9B421 /* DashboardViewController.swift in Sources */,
+				BE70ADC32101087600585157 /* RoutinesViewController.swift in Sources */,
+				BE70ADC12100EEBE00585157 /* MyScheduleViewController.swift in Sources */,
+				BE70ADC82101247C00585157 /* RoundedShadowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
