@@ -53,7 +53,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QeC-X4-Fwg">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="670"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="678"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="niw-B6-QrZ" userLabel="HowAreYou">
                                                 <rect key="frame" x="16" y="16" width="343" height="80"/>
@@ -287,7 +287,7 @@
                                                 <viewLayoutGuide key="safeArea" id="Bif-Tz-gSk"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mth-bo-zmF" userLabel="Feed">
-                                                <rect key="frame" x="16" y="484" width="343" height="170"/>
+                                                <rect key="frame" x="16" y="484" width="343" height="178"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="News Feed" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHd-8w-68i">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="14"/>
@@ -296,10 +296,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npE-nU-xj0">
-                                                        <rect key="frame" x="0.0" y="26" width="343" height="144"/>
+                                                        <rect key="frame" x="0.0" y="26" width="343" height="152"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stire_1" translatesAutoresizingMaskIntoConstraints="NO" id="iXG-M6-W7d">
-                                                                <rect key="frame" x="0.0" y="0.0" width="343" height="144"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="343" height="152"/>
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -316,7 +316,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ss-SD-3UG">
-                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="170"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="178"/>
                                                         <connections>
                                                             <action selector="didTapOnFeed:" destination="hIv-7w-Vtx" eventType="touchUpInside" id="tkt-Qm-w1C"/>
                                                             <segue destination="Ufw-az-0Hn" kind="show" id="sDv-VE-D1z"/>
@@ -332,7 +332,7 @@
                                                     <constraint firstItem="Mat-Yi-uM9" firstAttribute="trailing" secondItem="npE-nU-xj0" secondAttribute="trailing" id="Dbm-hs-czY"/>
                                                     <constraint firstItem="IHd-8w-68i" firstAttribute="leading" secondItem="Mth-bo-zmF" secondAttribute="leading" id="Mae-rl-1zk"/>
                                                     <constraint firstItem="4ss-SD-3UG" firstAttribute="leading" secondItem="Mth-bo-zmF" secondAttribute="leading" id="MbL-bl-yPY"/>
-                                                    <constraint firstAttribute="height" constant="170" id="P4r-iv-lDN"/>
+                                                    <constraint firstAttribute="height" constant="178" id="P4r-iv-lDN"/>
                                                     <constraint firstItem="Mat-Yi-uM9" firstAttribute="bottom" secondItem="npE-nU-xj0" secondAttribute="bottom" id="PW7-7o-vvn"/>
                                                     <constraint firstItem="npE-nU-xj0" firstAttribute="leading" secondItem="Mat-Yi-uM9" secondAttribute="leading" id="dFl-8H-fc5"/>
                                                     <constraint firstItem="IHd-8w-68i" firstAttribute="top" secondItem="Mth-bo-zmF" secondAttribute="top" id="fM9-2Z-lYx"/>
@@ -413,6 +413,6 @@
         <image name="how_are_you_feeling" width="1149" height="249"/>
         <image name="poza_1" width="1141" height="296"/>
         <image name="schedule" width="551" height="383"/>
-        <image name="stire_1" width="1149" height="519"/>
+        <image name="stire_1" width="383" height="173"/>
     </resources>
 </document>
