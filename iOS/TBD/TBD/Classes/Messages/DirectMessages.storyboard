@@ -14,6 +14,9 @@
         <array key="ProximaNova-Light.otf">
             <string>ProximaNova-Light</string>
         </array>
+        <array key="ProximaNova-Regular.otf">
+            <string>ProximaNova-Regular</string>
+        </array>
         <array key="ProximaNova-Semibold.otf">
             <string>ProximaNova-Semibold</string>
         </array>
@@ -33,6 +36,7 @@
                                     <segment title="Private"/>
                                     <segment title="Groups"/>
                                 </segments>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="selectionUpdate:" destination="Bv6-9e-4tg" eventType="valueChanged" id="pGz-L8-MZr"/>
                                 </connections>
@@ -110,7 +114,7 @@
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Garry Kasparov:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1BA-oC-kfg">
                                                     <rect key="frame" x="76" y="25.666666666666671" width="292" height="14"/>
-                                                    <fontDescription key="fontDescription" name="ProximaNova-Light" family="Proxima Nova" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey, have you finally solved the train mistery?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kj-af-ZyV">
@@ -152,7 +156,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.5490196078431373" green="0.5490196078431373" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="snE-Hs-Jdb" firstAttribute="leading" secondItem="uGh-xZ-bW3" secondAttribute="leading" id="5mt-ge-q44"/>
                             <constraint firstItem="nbX-GA-mfn" firstAttribute="top" secondItem="uGh-xZ-bW3" secondAttribute="top" constant="8" id="Euf-b1-002"/>
@@ -205,16 +209,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UcX-KS-UNu">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="UcX-KS-UNu">
+                                <rect key="frame" x="0.0" y="108" width="414" height="628"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactCell" rowHeight="52" id="SCo-Gh-lUt" customClass="ContactCell" customModule="TBD" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="52"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SCo-Gh-lUt" id="NfE-c0-TLQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_male" translatesAutoresizingMaskIntoConstraints="NO" id="gKm-xo-mMt">
+                                                    <rect key="frame" x="16" y="7" width="36" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="36" id="at7-7p-S1D"/>
+                                                        <constraint firstAttribute="width" constant="36" id="p0r-I8-x98"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hercule Poirot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s33-zc-sKP">
+                                                    <rect key="frame" x="60" y="17.666666666666668" width="334" height="15.000000000000004"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="gKm-xo-mMt" secondAttribute="bottom" constant="8.6699999999999999" id="Cff-uO-yWF"/>
+                                                <constraint firstItem="s33-zc-sKP" firstAttribute="leading" secondItem="gKm-xo-mMt" secondAttribute="trailing" constant="8" id="Hhm-uf-f93"/>
+                                                <constraint firstItem="s33-zc-sKP" firstAttribute="trailing" secondItem="NfE-c0-TLQ" secondAttribute="trailingMargin" id="Tcl-oH-XSo"/>
+                                                <constraint firstItem="gKm-xo-mMt" firstAttribute="leading" secondItem="NfE-c0-TLQ" secondAttribute="leading" constant="16" id="U9z-Ju-4Oq"/>
+                                                <constraint firstItem="gKm-xo-mMt" firstAttribute="top" secondItem="NfE-c0-TLQ" secondAttribute="top" constant="7" id="Ykl-iw-NlF"/>
+                                                <constraint firstItem="s33-zc-sKP" firstAttribute="centerY" secondItem="gKm-xo-mMt" secondAttribute="centerY" id="rkm-Ox-IaE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contactImageView" destination="gKm-xo-mMt" id="zs2-Pk-tZb"/>
+                                            <outlet property="contactNameLabel" destination="s33-zc-sKP" id="veH-vF-fa2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="HzJ-T9-acr" id="Npg-Xf-r1Y"/>
+                                    <outlet property="delegate" destination="HzJ-T9-acr" id="JPL-aO-Gk6"/>
+                                </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hu3-09-03M">
+                                <rect key="frame" x="16" y="72" width="382" height="29"/>
+                                <segments>
+                                    <segment title="Nearby"/>
+                                    <segment title="All"/>
+                                </segments>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="segmentChange:" destination="HzJ-T9-acr" eventType="valueChanged" id="g9r-vX-qJx"/>
+                                    <action selector="selectionUpdate:" destination="Bv6-9e-4tg" eventType="valueChanged" id="Zdr-g2-Xad"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.5490196078431373" green="0.5490196078431373" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="hu3-09-03M" firstAttribute="leading" secondItem="HCW-Ck-9AI" secondAttribute="leading" constant="16" id="Gtk-zf-0ve"/>
+                            <constraint firstItem="HCW-Ck-9AI" firstAttribute="trailing" secondItem="hu3-09-03M" secondAttribute="trailing" constant="16" id="H1P-uG-qjm"/>
+                            <constraint firstItem="UcX-KS-UNu" firstAttribute="top" secondItem="hu3-09-03M" secondAttribute="bottom" constant="8" id="PE0-BS-4lm"/>
                             <constraint firstItem="UcX-KS-UNu" firstAttribute="leading" secondItem="HCW-Ck-9AI" secondAttribute="leading" id="QJw-2v-UOr"/>
                             <constraint firstItem="UcX-KS-UNu" firstAttribute="bottom" secondItem="HCW-Ck-9AI" secondAttribute="bottom" id="XYB-vp-PDm"/>
-                            <constraint firstItem="UcX-KS-UNu" firstAttribute="top" secondItem="HCW-Ck-9AI" secondAttribute="top" id="bd7-xT-rOc"/>
+                            <constraint firstItem="hu3-09-03M" firstAttribute="top" secondItem="HCW-Ck-9AI" secondAttribute="top" constant="8" id="Yx8-mi-JWz"/>
                             <constraint firstItem="UcX-KS-UNu" firstAttribute="trailing" secondItem="HCW-Ck-9AI" secondAttribute="trailing" id="iNR-rx-8ed"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HCW-Ck-9AI"/>
@@ -226,10 +286,14 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="segmentedControl" destination="hu3-09-03M" id="oVn-kE-ukc"/>
+                        <outlet property="tableView" destination="UcX-KS-UNu" id="dIe-SI-E27"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0W-RY-zLN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3197.5999999999999" y="1557.5712143928038"/>
+            <point key="canvasLocation" x="3197.1014492753625" y="1557.0652173913045"/>
         </scene>
         <!--Direct Messages-->
         <scene sceneID="KGu-fa-S3k">
