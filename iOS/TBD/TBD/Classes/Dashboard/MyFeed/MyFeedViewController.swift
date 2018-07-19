@@ -17,6 +17,8 @@ protocol ItemExpandable: class {
 }
 
 class MyFeedViewController: UITableViewController {
+    
+    var feedItems = ["dsghf"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +41,7 @@ class MyFeedViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return feedItems.count + 1
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -56,7 +58,7 @@ class MyFeedViewController: UITableViewController {
             }
             cell.setupCellWith(name: "What's my name",
                                text: "jfbfajg sfn fn jb agjbjb bkg fsj gbj n nakjg s gb akjfkjnfakj ngkfgj gk ak anfgkjan kn kjnk k ak kj nakj k skj akj kkj k ngj njr nkjrntkjnkj njnjn kjnbkjn kjn j j kj nk kjkjbkj b kjb b kjbkj b kjb kjb kb kjb kb kjb kjbk jbk jb kj kjb kjb kj jb kjb kj bkj kj nk jnk jn kjb j kb kj bkj bkj b kb kjb kjb kj bkj bkj  jb kb kjb kj bk bkj b kbb k b kb kjb kjb b k ",
-                               mediaThumb: nil)
+                               mediaThumb: #imageLiteral(resourceName: "test"))
             tableCell = cell
         }
         

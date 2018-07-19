@@ -232,6 +232,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="335" height="200"/>
                                                         <connections>
                                                             <action selector="didTapOnFeed:" destination="hIv-7w-Vtx" eventType="touchUpInside" id="aCB-QN-cbg"/>
+                                                            <segue destination="Ufw-az-0Hn" kind="show" id="dSc-f3-EZ8"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -299,6 +300,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xQK-yy-Rce" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2493.5999999999999" y="-273.01349325337333"/>
+        </scene>
+        <!--MyFeedViewController-->
+        <scene sceneID="T7k-vg-2ZE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyFeedViewController" id="Ufw-az-0Hn" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LlA-mt-wwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3124" y="-88"/>
         </scene>
     </scenes>
 </document>
