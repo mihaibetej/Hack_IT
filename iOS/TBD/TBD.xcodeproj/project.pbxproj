@@ -12,6 +12,8 @@
 		27992C182100841300F05763 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27992C162100841300F05763 /* Main.storyboard */; };
 		27992C1A2100841500F05763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27992C192100841500F05763 /* Assets.xcassets */; };
 		27992C1D2100841500F05763 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27992C1B2100841500F05763 /* LaunchScreen.storyboard */; };
+		633A311B2100D56800C6C253 /* MyFeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633A311A2100D56800C6C253 /* MyFeedViewController.storyboard */; };
+		633A311D2100D5B800C6C253 /* MyFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A311C2100D5B800C6C253 /* MyFeedViewController.swift */; };
 		751A59C62100B2ED00E913A8 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C52100B2ED00E913A8 /* Dashboard.storyboard */; };
 		751A59C82100B35900E913A8 /* MySchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C72100B35900E913A8 /* MySchedule.storyboard */; };
 		751A59CA2100B41600E913A8 /* DirectMessages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C92100B41600E913A8 /* DirectMessages.storyboard */; };
@@ -45,6 +47,8 @@
 		27992C192100841500F05763 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27992C1C2100841500F05763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27992C1E2100841500F05763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		633A311A2100D56800C6C253 /* MyFeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyFeedViewController.storyboard; sourceTree = "<group>"; };
+		633A311C2100D5B800C6C253 /* MyFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedViewController.swift; sourceTree = "<group>"; };
 		751A59C52100B2ED00E913A8 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		751A59C72100B35900E913A8 /* MySchedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MySchedule.storyboard; sourceTree = "<group>"; };
 		751A59C92100B41600E913A8 /* DirectMessages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DirectMessages.storyboard; sourceTree = "<group>"; };
@@ -112,9 +116,19 @@
 			path = TBD;
 			sourceTree = "<group>";
 		};
+		633A310F2100D09A00C6C253 /* MyFeed */ = {
+			isa = PBXGroup;
+			children = (
+				633A311C2100D5B800C6C253 /* MyFeedViewController.swift */,
+				633A311A2100D56800C6C253 /* MyFeedViewController.storyboard */,
+			);
+			path = MyFeed;
+			sourceTree = "<group>";
+		};
 		751A59C02100B1B000E913A8 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				633A310F2100D09A00C6C253 /* MyFeed */,
 				756065132100DA4300C9B421 /* DashboardViewController.swift */,
 				751A59C52100B2ED00E913A8 /* Dashboard.storyboard */,
 			);
@@ -294,6 +308,7 @@
 				751A5A0D2100D8BD00E913A8 /* ProximaNova-BoldIt.otf in Resources */,
 				751A5A0C2100D8BD00E913A8 /* ProximaNova-Extrabold.otf in Resources */,
 				751A5A132100D8BD00E913A8 /* ProximaNova-Black.otf in Resources */,
+				633A311B2100D56800C6C253 /* MyFeedViewController.storyboard in Resources */,
 				751A59CE2100B44800E913A8 /* Settings.storyboard in Resources */,
 				751A5A142100D8BD00E913A8 /* ProximaNova-Regular.otf in Resources */,
 				751A5A0E2100D8BD00E913A8 /* ProximaNovaCond-LightIt.otf in Resources */,
@@ -341,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				633A311D2100D5B800C6C253 /* MyFeedViewController.swift in Sources */,
 				27992C132100841300F05763 /* AppDelegate.swift in Sources */,
 				756065142100DA4300C9B421 /* DashboardViewController.swift in Sources */,
 			);
