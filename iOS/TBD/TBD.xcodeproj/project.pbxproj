@@ -130,14 +130,14 @@
 			path = "My Schedule";
 			sourceTree = "<group>";
 		};
-		751A59C22100B1CE00E913A8 /* Direct Messages */ = {
+		751A59C22100B1CE00E913A8 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
 				751A59C92100B41600E913A8 /* DirectMessages.storyboard */,
 				27F1C60F2100D4F00083B6A7 /* MessagesOverviewViewController.swift */,
 				27F1C6112100D8CC0083B6A7 /* AddContactsViewController.swift */,
 			);
-			path = "Direct Messages";
+			path = Messages;
 			sourceTree = "<group>";
 		};
 		751A59C32100B1DC00E913A8 /* Settings */ = {
@@ -179,7 +179,7 @@
 			children = (
 				751A59C02100B1B000E913A8 /* Dashboard */,
 				751A59C12100B1B700E913A8 /* My Schedule */,
-				751A59C22100B1CE00E913A8 /* Direct Messages */,
+				751A59C22100B1CE00E913A8 /* Messages */,
 				751A59C42100B1E400E913A8 /* Information */,
 				751A59C32100B1DC00E913A8 /* Settings */,
 				27992C122100841300F05763 /* AppDelegate.swift */,
