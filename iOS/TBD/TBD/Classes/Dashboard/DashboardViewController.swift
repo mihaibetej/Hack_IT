@@ -10,8 +10,24 @@ import UIKit
 
 class DashboardViewController: UIViewController {
 
+    @IBOutlet weak var howAreYouView: UIView!
+    @IBOutlet weak var schedulesView: UIView!
+    @IBOutlet weak var routinesView: UIView!
+    @IBOutlet weak var theyveWonView: UIView!
+    @IBOutlet weak var feedView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let shadowViews: [UIView] = [howAreYouView, schedulesView, routinesView, theyveWonView, feedView]
+        
+        for view in shadowViews {
+            view.layer.masksToBounds = false
+            view.layer.shadowOpacity = 0.1
+            view.layer.shadowColor = UIColor.black.cgColor
+            view.layer.shadowOffset = CGSize(width: 0, height: 5)
+            view.layer.shadowRadius = 10
+        }
 
         // Do any additional setup after loading the view.
     }
