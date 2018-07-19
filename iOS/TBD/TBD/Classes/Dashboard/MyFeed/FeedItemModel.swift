@@ -10,8 +10,11 @@ import UIKit
 
 struct FeedItemModel {
     let username: String
+    let avatarImage: UIImage
     let text: String
     let attachment: MediaType?
+    let reactions: Int
+    let hoursAgo: Int
     
     enum MediaType {
         case image(imageData: UIImage)

@@ -55,6 +55,12 @@ class MyFeedViewController: UITableViewController {
             tableCell = cell
         }
         
+        tableCell.contentView.layer.masksToBounds = false
+        tableCell.contentView.layer.shadowOpacity = 0.1
+        tableCell.contentView.layer.shadowColor = UIColor.black.cgColor
+        tableCell.contentView.layer.shadowOffset = CGSize(width: 0, height: 5)
+        tableCell.contentView.layer.shadowRadius = 10
+        
         return tableCell
     }
     
