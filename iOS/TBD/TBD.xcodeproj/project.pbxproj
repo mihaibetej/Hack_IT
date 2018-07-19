@@ -12,6 +12,7 @@
 		27992C182100841300F05763 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27992C162100841300F05763 /* Main.storyboard */; };
 		27992C1A2100841500F05763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27992C192100841500F05763 /* Assets.xcassets */; };
 		27992C1D2100841500F05763 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27992C1B2100841500F05763 /* LaunchScreen.storyboard */; };
+		27DB63A82100F782009AECA4 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DB63A72100F782009AECA4 /* MessagesViewController.swift */; };
 		27F1C6102100D4F00083B6A7 /* MessagesOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F1C60F2100D4F00083B6A7 /* MessagesOverviewViewController.swift */; };
 		27F1C6122100D8CC0083B6A7 /* AddContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F1C6112100D8CC0083B6A7 /* AddContactsViewController.swift */; };
 		27F1C6152100DDE90083B6A7 /* PrivateMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F1C6142100DDE90083B6A7 /* PrivateMessageCell.swift */; };
@@ -51,6 +52,7 @@
 		27992C192100841500F05763 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27992C1C2100841500F05763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27992C1E2100841500F05763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27DB63A72100F782009AECA4 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		27F1C60F2100D4F00083B6A7 /* MessagesOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesOverviewViewController.swift; sourceTree = "<group>"; };
 		27F1C6112100D8CC0083B6A7 /* AddContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactsViewController.swift; sourceTree = "<group>"; };
 		27F1C6142100DDE90083B6A7 /* PrivateMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateMessageCell.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			children = (
 				751A59C92100B41600E913A8 /* DirectMessages.storyboard */,
 				27F1C60F2100D4F00083B6A7 /* MessagesOverviewViewController.swift */,
+				27DB63A72100F782009AECA4 /* MessagesViewController.swift */,
 				27F1C6112100D8CC0083B6A7 /* AddContactsViewController.swift */,
 				27F1C6182100DE840083B6A7 /* Models */,
 				27F1C6132100DDAD0083B6A7 /* Views */,
@@ -378,6 +381,7 @@
 				27F1C61C2100DEAC0083B6A7 /* Group.swift in Sources */,
 				27F1C61A2100DE9D0083B6A7 /* Contact.swift in Sources */,
 				27F1C6122100D8CC0083B6A7 /* AddContactsViewController.swift in Sources */,
+				27DB63A82100F782009AECA4 /* MessagesViewController.swift in Sources */,
 				27F1C6102100D4F00083B6A7 /* MessagesOverviewViewController.swift in Sources */,
 				27F1C6172100DE040083B6A7 /* GroupMessageCell.swift in Sources */,
 				27F1C61E2100DEB60083B6A7 /* Message.swift in Sources */,

@@ -10,20 +10,24 @@ import UIKit
 
 class GroupMessageCell: UITableViewCell {
 
+    @IBOutlet weak var groupImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var lastContactLabel: UILabel!
+    @IBOutlet weak var lastMessageLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        groupImageView.layer.masksToBounds = true
+        groupImageView.layer.cornerRadius = groupImageView.frame.height / 2
     }
 
     func configure(_ group: Group) {
+        groupImageView.image = UIImage(named: "group")
         nameLabel.text = group.name
+        if let fullname = group.contacts.first?.fullname {
+            lastContactLabel.text = "\(fullname):"
+        }
+        lastMessageLabel.text = group.contacts.first?.messages?.first?.content
     }
 }

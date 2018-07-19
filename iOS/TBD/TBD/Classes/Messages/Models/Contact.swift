@@ -9,5 +9,6 @@
 import Foundation
 
 struct Contact {
-    let fullname: String    
+    let fullname: String
+    var messages: [Message]?
 }

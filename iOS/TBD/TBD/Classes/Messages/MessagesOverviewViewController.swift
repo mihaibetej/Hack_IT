@@ -27,8 +27,20 @@ class MessagesOverviewViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        contacts = [Contact(fullname: "Kthulu"), Contact(fullname: "John Doe"), Contact(fullname: "Mr. Smith"), Contact(fullname: "Hercule Poirot")]
-        groups = [Group(name: "Cooking"), Group(name: "Chess club")]
+        // Prepopulate some private messages
+        let poirot = Contact(fullname: "Hercule Poirot", messages: [Message(content: "Hey, have you finally solved that train mistery that was bugging you so much?")])
+        let lovelace = Contact(fullname: "Ada Lovelace", messages: [Message(content: "Working on this computer is soooo exciting! It's surely going to lead to a revolution in our lives!")])
+        let bond = Contact(fullname: "James Bond", messages: [Message(content: "I've been expecting you, Mr. Bond")])
+        contacts = [poirot, lovelace, bond]
+        
+        // Prepopulate some groups:
+        let kasparov = Contact(fullname: "Garry Kasparov", messages: [Message(content: "Deep Blue is ruining the game for everybody :(")])
+        let chessClub = Group(name: "Chess Club", contacts: [kasparov])
+        let sherlock = Contact(fullname: "Sherlock Holmes", messages: [Message(content: "Hey, have you finally solved that train mistery that was bugging you so much?")])
+        let detectiveClub = Group(name: "Detective Club", contacts: [sherlock, poirot])
+        groups = [chessClub, detectiveClub]
+        
+        // Refresh
         tableView.reloadData()
     }
     
@@ -36,6 +48,24 @@ class MessagesOverviewViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let senderCell = sender as? UITableViewCell, let index = tableView.indexPath(for: senderCell)?.row else {
+            return
+        }
+        
+        let messagesController = segue.destination as! MessagesViewController
+        
+        if chatMode == .private {
+            messagesController.contact = contacts[index]
+        } else {
+            messagesController.group = groups[index]
+        }
+    }
+    
+    // MARK: Actions
     
     @IBAction func selectionUpdate(_ sender: Any) {
         chatMode = ChatMode(rawValue: segmentedControl.selectedSegmentIndex) ?? .private
@@ -70,5 +100,9 @@ extension MessagesOverviewViewController: UITableViewDataSource, UITableViewDele
     }
     
     // MARK: Delegate
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 0.5
+    }
     
 }
