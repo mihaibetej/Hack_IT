@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		27992C132100841300F05763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27992C122100841300F05763 /* AppDelegate.swift */; };
-		27992C152100841300F05763 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27992C142100841300F05763 /* ViewController.swift */; };
 		27992C182100841300F05763 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27992C162100841300F05763 /* Main.storyboard */; };
 		27992C1A2100841500F05763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27992C192100841500F05763 /* Assets.xcassets */; };
 		27992C1D2100841500F05763 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27992C1B2100841500F05763 /* LaunchScreen.storyboard */; };
+		751A59C62100B2ED00E913A8 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C52100B2ED00E913A8 /* Dashboard.storyboard */; };
+		751A59C82100B35900E913A8 /* MySchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C72100B35900E913A8 /* MySchedule.storyboard */; };
+		751A59CA2100B41600E913A8 /* DirectMessages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C92100B41600E913A8 /* DirectMessages.storyboard */; };
+		751A59CC2100B43000E913A8 /* Information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59CB2100B43000E913A8 /* Information.storyboard */; };
+		751A59CE2100B44800E913A8 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59CD2100B44800E913A8 /* Settings.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		27992C0F2100841300F05763 /* TBD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27992C122100841300F05763 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		27992C142100841300F05763 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27992C172100841300F05763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27992C192100841500F05763 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27992C1C2100841500F05763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27992C1E2100841500F05763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		751A59C52100B2ED00E913A8 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
+		751A59C72100B35900E913A8 /* MySchedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MySchedule.storyboard; sourceTree = "<group>"; };
+		751A59C92100B41600E913A8 /* DirectMessages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DirectMessages.storyboard; sourceTree = "<group>"; };
+		751A59CB2100B43000E913A8 /* Information.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Information.storyboard; sourceTree = "<group>"; };
+		751A59CD2100B44800E913A8 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,58 @@
 		27992C112100841300F05763 /* TBD */ = {
 			isa = PBXGroup;
 			children = (
+				751A59C02100B1B000E913A8 /* Dashboard */,
+				751A59C12100B1B700E913A8 /* My Schedule */,
+				751A59C22100B1CE00E913A8 /* Direct Messages */,
+				751A59C42100B1E400E913A8 /* Information */,
+				751A59C32100B1DC00E913A8 /* Settings */,
 				27992C122100841300F05763 /* AppDelegate.swift */,
-				27992C142100841300F05763 /* ViewController.swift */,
 				27992C162100841300F05763 /* Main.storyboard */,
 				27992C192100841500F05763 /* Assets.xcassets */,
 				27992C1B2100841500F05763 /* LaunchScreen.storyboard */,
 				27992C1E2100841500F05763 /* Info.plist */,
 			);
 			path = TBD;
+			sourceTree = "<group>";
+		};
+		751A59C02100B1B000E913A8 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				751A59C52100B2ED00E913A8 /* Dashboard.storyboard */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		751A59C12100B1B700E913A8 /* My Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				751A59C72100B35900E913A8 /* MySchedule.storyboard */,
+			);
+			path = "My Schedule";
+			sourceTree = "<group>";
+		};
+		751A59C22100B1CE00E913A8 /* Direct Messages */ = {
+			isa = PBXGroup;
+			children = (
+				751A59C92100B41600E913A8 /* DirectMessages.storyboard */,
+			);
+			path = "Direct Messages";
+			sourceTree = "<group>";
+		};
+		751A59C32100B1DC00E913A8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				751A59CD2100B44800E913A8 /* Settings.storyboard */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		751A59C42100B1E400E913A8 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				751A59CB2100B43000E913A8 /* Information.storyboard */,
+			);
+			path = Information;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +177,11 @@
 				27992C1D2100841500F05763 /* LaunchScreen.storyboard in Resources */,
 				27992C1A2100841500F05763 /* Assets.xcassets in Resources */,
 				27992C182100841300F05763 /* Main.storyboard in Resources */,
+				751A59CE2100B44800E913A8 /* Settings.storyboard in Resources */,
+				751A59CC2100B43000E913A8 /* Information.storyboard in Resources */,
+				751A59C62100B2ED00E913A8 /* Dashboard.storyboard in Resources */,
+				751A59C82100B35900E913A8 /* MySchedule.storyboard in Resources */,
+				751A59CA2100B41600E913A8 /* DirectMessages.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +192,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27992C152100841300F05763 /* ViewController.swift in Sources */,
 				27992C132100841300F05763 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
