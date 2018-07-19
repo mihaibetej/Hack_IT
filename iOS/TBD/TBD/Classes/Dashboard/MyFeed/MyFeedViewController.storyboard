@@ -44,6 +44,7 @@
                                                     <state key="normal" title="+"/>
                                                     <connections>
                                                         <action selector="addNewFeedItem:" destination="5P8-7H-4a7" eventType="touchUpInside" id="fkY-cd-hw8"/>
+                                                        <segue destination="Gcg-5z-lbI" kind="presentation" id="Mnf-Y8-6gA"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL0-Wx-5iR">
@@ -173,6 +174,14 @@
                 <exit id="5P8-7H-4a7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="920.28985507246387" y="118.20652173913044"/>
+        </scene>
+        <!--PostContent-->
+        <scene sceneID="Rgc-Lu-LPd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PostContent" id="Gcg-5z-lbI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gin-Iq-nOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1688" y="81"/>
         </scene>
     </scenes>
 </document>

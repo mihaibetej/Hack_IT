@@ -13,12 +13,16 @@ class PostContentViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textArea: UITextView!
     @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var attachButtonHeight: NSLayoutConstraint!
+    @IBOutlet weak var imageViewHeight: NSLayoutConstraint!
+    let imageHeight: CGFloat = 200
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         textArea.text = nil
-//        imageView.image = nil
+        imageView.image = nil
+        imageViewHeight.constant = attachButtonHeight.constant
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -30,6 +34,11 @@ class PostContentViewController: UIViewController {
                                                selector: #selector(self.keyboardNotification(notification:)),
                                                name: NSNotification.Name.UIKeyboardWillChangeFrame,
                                                object: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
+            self?.imageViewHeight.constant = self?.imageHeight ?? 0
+            self?.imageView.image = #imageLiteral(resourceName: "test")
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -61,5 +70,8 @@ class PostContentViewController: UIViewController {
     
     @IBAction func didTapOutsideKeyboard(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
+    }
+    @IBAction func dismissScreen(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 }
