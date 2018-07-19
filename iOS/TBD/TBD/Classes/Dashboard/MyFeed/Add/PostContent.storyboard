@@ -86,7 +86,11 @@
                                 <action selector="dismissScreen:" destination="ubG-ha-kye" id="saN-aN-thI"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Post" style="done" id="1if-9Q-Smh"/>
+                        <barButtonItem key="rightBarButtonItem" title="Post" style="done" id="1if-9Q-Smh">
+                            <connections>
+                                <action selector="didTapPostButton:" destination="ubG-ha-kye" id="3fY-XX-VgG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="attachButtonHeight" destination="p3d-FV-meU" id="CQW-fP-z71"/>

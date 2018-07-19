@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ItemExpandable: class {
+    func expandItem(at index: Int)
+}
+
 class MyFeedItemTableViewCell: UITableViewCell {
     @IBOutlet weak var cellBackgroundView: UIView!
     @IBOutlet weak var posterName: UILabel!
@@ -17,6 +21,7 @@ class MyFeedItemTableViewCell: UITableViewCell {
     let mediaThumbHeightConstant: CGFloat = 150
     
     weak var delegate: ItemExpandable?
+    var index: Int?
     
     func setupCellWith(name: String, text: String, mediaThumb: UIImage? = nil) {
         posterName.text = name
@@ -28,6 +33,6 @@ class MyFeedItemTableViewCell: UITableViewCell {
     }
     
     @IBAction func expandItem(_ sender: Any) {
-        delegate?.expandItem()
+        delegate?.expandItem(at: index!)
     }
 }

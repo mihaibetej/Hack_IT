@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol PostContentViewControllerDelegate: class {
+    func didCreatePost(item: FeedItemModel)
+}
+
 class PostContentViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
@@ -16,6 +20,8 @@ class PostContentViewController: UIViewController {
     @IBOutlet weak var attachButtonHeight: NSLayoutConstraint!
     @IBOutlet weak var imageViewHeight: NSLayoutConstraint!
     let imageHeight: CGFloat = 200
+    
+    weak var delegate: PostContentViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,7 +116,22 @@ class PostContentViewController: UIViewController {
     @IBAction func didTapOutsideKeyboard(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
+    
     @IBAction func dismissScreen(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func didTapPostButton(_ sender: UIBarButtonItem) {
+        
+        if let delegate = delegate {
+            
+            var attachments: [FeedItemModel.Media] = []
+            
+            let item = FeedItemModel(username: defaultUsername, text: textArea.text, attachments: attachments)
+            
+            delegate.didCreatePost(item: item)
+        }
+        
         dismiss(animated: true, completion: nil)
     }
 }
