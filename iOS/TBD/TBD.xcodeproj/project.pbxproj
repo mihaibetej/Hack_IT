@@ -38,6 +38,7 @@
 		751A5A162100D8BD00E913A8 /* ProximaNova-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A5A052100D8BD00E913A8 /* ProximaNova-SemiboldItalic.otf */; };
 		751A5A172100D8BD00E913A8 /* ProximaNovaCond-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A5A062100D8BD00E913A8 /* ProximaNovaCond-Regular.otf */; };
 		751A5A182100D8BD00E913A8 /* ProximaNova-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A5A072100D8BD00E913A8 /* ProximaNova-LightItalic.otf */; };
+		756065142100DA4300C9B421 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756065132100DA4300C9B421 /* DashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		751A5A052100D8BD00E913A8 /* ProximaNova-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		751A5A062100D8BD00E913A8 /* ProximaNovaCond-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaCond-Regular.otf"; sourceTree = "<group>"; };
 		751A5A072100D8BD00E913A8 /* ProximaNova-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-LightItalic.otf"; sourceTree = "<group>"; };
+		756065132100DA4300C9B421 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		87F9D5360280F4D279EB21D9 /* Pods-TBD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBD.release.xcconfig"; path = "Pods/Target Support Files/Pods-TBD/Pods-TBD.release.xcconfig"; sourceTree = "<group>"; };
 		E425451493A9A4022C6B075F /* Pods-TBD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TBD/Pods-TBD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				633A310F2100D09A00C6C253 /* MyFeed */,
+				756065132100DA4300C9B421 /* DashboardViewController.swift */,
 				751A59C52100B2ED00E913A8 /* Dashboard.storyboard */,
 			);
 			path = Dashboard;
@@ -363,6 +366,7 @@
 				633A311F2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift in Sources */,
 				633A311D2100D5B800C6C253 /* MyFeedViewController.swift in Sources */,
 				27992C132100841300F05763 /* AppDelegate.swift in Sources */,
+				756065142100DA4300C9B421 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
