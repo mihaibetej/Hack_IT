@@ -13,7 +13,9 @@ let defaultUsername = "Simona Halep"
 class FeedDatasource {
     private(set) var items: [FeedItemModel] = []
     
-    init() {
+    static let instance = FeedDatasource()
+    
+    private init() {
         let i1 = FeedItemModel(username: defaultUsername, text: "Some text 1", attachments: [
             ])
         
