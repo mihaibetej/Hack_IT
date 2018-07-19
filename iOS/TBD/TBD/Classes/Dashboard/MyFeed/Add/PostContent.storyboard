@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -33,51 +34,62 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="SYf-df-h3n">
-                                <rect key="frame" x="20" y="124" width="335" height="387"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="c5h-Cu-ubF">
+                                <rect key="frame" x="20" y="551" width="96" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="c5h-Cu-ubF" secondAttribute="height" id="0eW-1l-o8j"/>
+                                    <constraint firstAttribute="height" constant="96" id="Sfw-Ad-wjr"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="SYf-df-h3n">
+                                <rect key="frame" x="20" y="124" width="335" height="419"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7d-OR-dHK">
-                                <rect key="frame" x="168" y="568" width="187" height="30"/>
+                                <rect key="frame" x="264" y="626.5" width="91" height="30"/>
                                 <state key="normal" title="Attach Image"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c5h-Cu-ubF">
-                                <rect key="frame" x="20" y="519" width="128" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="c5h-Cu-ubF" secondAttribute="height" id="0eW-1l-o8j"/>
-                                    <constraint firstAttribute="height" constant="128" id="Sfw-Ad-wjr"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="SYf-df-h3n" firstAttribute="top" secondItem="6ct-D6-sYM" secondAttribute="bottom" constant="20" id="043-kM-cB5"/>
                             <constraint firstItem="SYf-df-h3n" firstAttribute="leading" secondItem="XcV-2f-X3B" secondAttribute="leading" constant="20" id="8eJ-p7-2W9"/>
-                            <constraint firstItem="y7d-OR-dHK" firstAttribute="leading" secondItem="c5h-Cu-ubF" secondAttribute="trailing" constant="20" id="OFA-Tl-dnb"/>
+                            <constraint firstItem="y7d-OR-dHK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="c5h-Cu-ubF" secondAttribute="trailing" constant="20" id="OFA-Tl-dnb"/>
                             <constraint firstItem="c5h-Cu-ubF" firstAttribute="leading" secondItem="XcV-2f-X3B" secondAttribute="leading" constant="20" id="SoJ-k1-1dy"/>
                             <constraint firstItem="XcV-2f-X3B" firstAttribute="trailing" secondItem="SYf-df-h3n" secondAttribute="trailing" constant="20" id="X1V-uX-ENG"/>
                             <constraint firstItem="6ct-D6-sYM" firstAttribute="leading" secondItem="XcV-2f-X3B" secondAttribute="leading" constant="20" id="bUW-5e-zVb"/>
                             <constraint firstItem="XcV-2f-X3B" firstAttribute="trailing" secondItem="6ct-D6-sYM" secondAttribute="trailing" constant="20" id="kC4-6a-jpl"/>
                             <constraint firstItem="c5h-Cu-ubF" firstAttribute="top" secondItem="SYf-df-h3n" secondAttribute="bottom" constant="8" id="oRd-06-Ygc"/>
-                            <constraint firstItem="y7d-OR-dHK" firstAttribute="centerY" secondItem="c5h-Cu-ubF" secondAttribute="centerY" id="pSM-57-kUK"/>
+                            <constraint firstItem="y7d-OR-dHK" firstAttribute="firstBaseline" secondItem="c5h-Cu-ubF" secondAttribute="baseline" id="pSM-57-kUK"/>
                             <constraint firstAttribute="trailing" secondItem="y7d-OR-dHK" secondAttribute="trailing" constant="20" id="pYW-j0-vf6"/>
                             <constraint firstItem="6ct-D6-sYM" firstAttribute="top" secondItem="XcV-2f-X3B" secondAttribute="top" constant="20" id="roB-MX-hoQ"/>
                             <constraint firstItem="XcV-2f-X3B" firstAttribute="bottom" secondItem="c5h-Cu-ubF" secondAttribute="bottom" constant="20" id="zgo-kG-bnf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XcV-2f-X3B"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Cry-fK-v6V" appends="YES" id="WzY-4J-Oxd"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="New Post" id="XpH-zY-laA">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="YP1-jl-No3"/>
                         <barButtonItem key="rightBarButtonItem" title="Post" style="done" id="1if-9Q-Smh"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="imageView" destination="c5h-Cu-ubF" id="fQt-dQ-f5n"/>
+                        <outlet property="imageViewBottomConstraint" destination="zgo-kG-bnf" id="6pp-Su-2Be"/>
                         <outlet property="textArea" destination="SYf-df-h3n" id="beG-b6-koE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzz-7t-auU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Cry-fK-v6V">
+                    <connections>
+                        <action selector="didTapOutsideKeyboard:" destination="ubG-ha-kye" id="cNN-Sj-Plx"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1124" y="160.56971514242881"/>
         </scene>
@@ -100,4 +112,7 @@
             <point key="canvasLocation" x="184.80000000000001" y="160.56971514242881"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="test" width="1296" height="864"/>
+    </resources>
 </document>
