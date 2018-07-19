@@ -8,6 +8,14 @@
 
 import UIKit
 
+protocol FeedItemAddable: class {
+    func addNewFeedItem()
+}
+
+protocol ItemExpandable: class {
+    func expandItem()
+}
+
 class MyFeedViewController: UITableViewController {
 
     override func viewDidLoad() {
@@ -18,6 +26,9 @@ class MyFeedViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 44
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,60 +38,30 @@ class MyFeedViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 3
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        var tableCell: UITableViewCell
+        if indexPath.row == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeedHeaderCell", for: indexPath) as? MyFeedHeaderTableViewCell else {
+                preconditionFailure()
+            }
+            cell.delegate = self
+            tableCell = cell
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeedItemCell", for: indexPath) as? MyFeedItemTableViewCell else {
+                preconditionFailure()
+            }
+            cell.setupCellWith(name: "What's my name",
+                               text: "jfbfajg sfn fn jb agjbjb bkg fsj gbj n nakjg s gb akjfkjnfakj ngkfgj gk ak anfgkjan kn kjnk k ak kj nakj k skj akj kkj k ngj njr nkjrntkjnkj njnjn kjnbkjn kjn j j kj nk kjkjbkj b kjb b kjbkj b kjb kjb kb kjb kb kjb kjbk jbk jb kj kjb kjb kj jb kjb kj bkj kj nk jnk jn kjb j kb kj bkj bkj b kb kjb kjb kj bkj bkj  jb kb kjb kj bk bkj b kbb k b kb kjb kjb b k ",
+                               mediaThumb: nil)
+            tableCell = cell
+        }
+        
+        return tableCell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     /*
     // MARK: - Navigation
@@ -92,4 +73,14 @@ class MyFeedViewController: UITableViewController {
     }
     */
 
+}
+
+extension MyFeedViewController: ItemExpandable, FeedItemAddable {
+    func expandItem() {
+        
+    }
+    
+    func addNewFeedItem() {
+        
+    }
 }

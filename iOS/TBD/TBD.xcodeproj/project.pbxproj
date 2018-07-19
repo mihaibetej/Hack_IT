@@ -14,6 +14,8 @@
 		27992C1D2100841500F05763 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27992C1B2100841500F05763 /* LaunchScreen.storyboard */; };
 		633A311B2100D56800C6C253 /* MyFeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633A311A2100D56800C6C253 /* MyFeedViewController.storyboard */; };
 		633A311D2100D5B800C6C253 /* MyFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A311C2100D5B800C6C253 /* MyFeedViewController.swift */; };
+		633A311F2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A311E2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift */; };
+		633A31212100DF2800C6C253 /* MyFeedItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A31202100DF2800C6C253 /* MyFeedItemTableViewCell.swift */; };
 		751A59C62100B2ED00E913A8 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C52100B2ED00E913A8 /* Dashboard.storyboard */; };
 		751A59C82100B35900E913A8 /* MySchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C72100B35900E913A8 /* MySchedule.storyboard */; };
 		751A59CA2100B41600E913A8 /* DirectMessages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C92100B41600E913A8 /* DirectMessages.storyboard */; };
@@ -48,6 +50,8 @@
 		27992C1E2100841500F05763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		633A311A2100D56800C6C253 /* MyFeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyFeedViewController.storyboard; sourceTree = "<group>"; };
 		633A311C2100D5B800C6C253 /* MyFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedViewController.swift; sourceTree = "<group>"; };
+		633A311E2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		633A31202100DF2800C6C253 /* MyFeedItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedItemTableViewCell.swift; sourceTree = "<group>"; };
 		751A59C52100B2ED00E913A8 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		751A59C72100B35900E913A8 /* MySchedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MySchedule.storyboard; sourceTree = "<group>"; };
 		751A59C92100B41600E913A8 /* DirectMessages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DirectMessages.storyboard; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 			children = (
 				633A311C2100D5B800C6C253 /* MyFeedViewController.swift */,
 				633A311A2100D56800C6C253 /* MyFeedViewController.storyboard */,
+				633A311E2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift */,
+				633A31202100DF2800C6C253 /* MyFeedItemTableViewCell.swift */,
 			);
 			path = MyFeed;
 			sourceTree = "<group>";
@@ -353,6 +359,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				633A31212100DF2800C6C253 /* MyFeedItemTableViewCell.swift in Sources */,
+				633A311F2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift in Sources */,
 				633A311D2100D5B800C6C253 /* MyFeedViewController.swift in Sources */,
 				27992C132100841300F05763 /* AppDelegate.swift in Sources */,
 			);
