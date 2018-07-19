@@ -35,10 +35,10 @@ class PostContentViewController: UIViewController {
                                                name: NSNotification.Name.UIKeyboardWillChangeFrame,
                                                object: nil)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
-            self?.imageViewHeight.constant = self?.imageHeight ?? 0
-            self?.imageView.image = #imageLiteral(resourceName: "test")
-        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
+//            self?.imageViewHeight.constant = self?.imageHeight ?? 0
+//            self?.imageView.image = #imageLiteral(resourceName: "test")
+//        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -68,10 +68,65 @@ class PostContentViewController: UIViewController {
         }
     }
     
+    func photoLibrary()
+    {
+        
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            let myPickerController = UIImagePickerController()
+            myPickerController.delegate = self
+            myPickerController.sourceType = .photoLibrary
+            present(myPickerController, animated: true, completion: nil)
+        }
+    }
+    
+    func camera()
+    {
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            let myPickerController = UIImagePickerController()
+            myPickerController.delegate = self
+            myPickerController.sourceType = .camera
+            present(myPickerController, animated: true, completion: nil)
+        }
+        
+    }
+    
+    
+    @IBAction func addAttachment(_ sender: Any) {
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (alert:UIAlertAction!) -> Void in
+            self.camera()
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { (alert:UIAlertAction!) -> Void in
+            self.photoLibrary()
+        }))
+        
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(actionSheet, animated: true, completion: nil)
+    }
+    
     @IBAction func didTapOutsideKeyboard(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
     @IBAction func dismissScreen(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+}
+
+extension PostContentViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageView.image = image
+            imageViewHeight.constant = imageHeight
+        }else{
+            print("Something went wrong")
+        }
         dismiss(animated: true, completion: nil)
     }
 }

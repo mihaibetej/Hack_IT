@@ -53,6 +53,9 @@
                                     <constraint firstAttribute="width" constant="91" id="vbx-K9-eD8"/>
                                 </constraints>
                                 <state key="normal" title="Attach Image"/>
+                                <connections>
+                                    <action selector="addAttachment:" destination="ubG-ha-kye" eventType="touchUpInside" id="3fx-6E-swM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
