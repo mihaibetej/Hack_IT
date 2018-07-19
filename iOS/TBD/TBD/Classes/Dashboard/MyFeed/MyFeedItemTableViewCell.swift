@@ -23,9 +23,19 @@ class MyFeedItemTableViewCell: UITableViewCell {
     weak var delegate: ItemExpandable?
     var index: Int?
     
-    func setupCellWith(name: String, text: String, mediaThumb: UIImage? = nil) {
-        posterName.text = name
-        textContentLabel.text = text
+    func setupCellWith(feedItem: FeedItemModel) {
+        posterName.text = feedItem.username
+        textContentLabel.text = feedItem.text
+        guard let attachment = feedItem.attachment else {
+            return
+        }
+        var mediaThumb: UIImage?
+        switch attachment {
+        case FeedItemModel.MediaType.image(let imageData):
+            mediaThumb = imageData
+        case FeedItemModel.MediaType.video( _, let imageData):
+            mediaThumb = imageData
+        }
         if let mediaThumb = mediaThumb {
             mediaThumbImageView.image = mediaThumb
             mediaThumbHeight.constant = mediaThumbHeightConstant

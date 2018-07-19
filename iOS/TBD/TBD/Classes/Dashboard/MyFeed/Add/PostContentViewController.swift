@@ -43,18 +43,11 @@ class PostContentViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        
-//        textArea.becomeFirstResponder()
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.keyboardNotification(notification:)),
                                                name: NSNotification.Name.UIKeyboardWillChangeFrame,
                                                object: nil)
-        
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
-//            self?.imageViewHeight.constant = self?.imageHeight ?? 0
-//            self?.imageView.image = #imageLiteral(resourceName: "test")
-//        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -142,9 +135,20 @@ class PostContentViewController: UIViewController {
         
         if let delegate = delegate {
             
-            var attachments: [FeedItemModel.Media] = []
+            var attachment: FeedItemModel.MediaType?
             
-            let item = FeedItemModel(username: defaultUsername, text: textArea.text, attachments: attachments)
+            var mediaType: FeedItemModel.MediaType?
+            if let videoName = videoName {
+                mediaType = FeedItemModel.MediaType.video(fileName: videoName, imageData: imageView.image!)
+            } else if let imageData = imageView.image {
+                mediaType = FeedItemModel.MediaType.image(imageData: imageData)
+            }
+            
+            if let mediaType = mediaType {
+                attachment = mediaType
+            }
+            
+            let item = FeedItemModel(username: defaultUsername, text: textArea.text, attachment: attachment)
             
             delegate.didCreatePost(item: item)
         }
@@ -160,6 +164,7 @@ extension PostContentViewController: UIImagePickerControllerDelegate, UINavigati
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         videoName = nil
+        print(info)
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageView.image = image
             imageViewHeight.constant = imageHeight

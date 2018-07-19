@@ -6,22 +6,15 @@
 //  Copyright © 2018 Shivering Singletons. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct FeedItemModel {
     let username: String
     let text: String
-    let attachments: [Media]
+    let attachment: MediaType?
     
-    struct Media {
-        
-        enum MType {
-            case image
-            case video
-            case url
-        }
-        
-        let name: String
-        let type: MType
+    enum MediaType {
+        case image(imageData: UIImage)
+        case video(fileName: String, imageData: UIImage)
     }
 }
