@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNovaCond-Semibold.otf">
+            <string>ProximaNovaCond-Semibold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Dashboard-->
         <scene sceneID="Ru9-Pa-rWU">
@@ -36,7 +41,19 @@
                     <view key="view" contentMode="scaleToFill" id="2Bk-I6-nSq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Font test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7g-sz-b36">
+                                <rect key="frame" x="158.5" y="357" width="57.5" height="17"/>
+                                <fontDescription key="fontDescription" name="ProximaNovaCond-Semibold" family="Proxima Nova Condensed" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="v7g-sz-b36" firstAttribute="centerY" secondItem="9IX-rD-ndy" secondAttribute="centerY" id="NV5-0b-nIl"/>
+                            <constraint firstItem="v7g-sz-b36" firstAttribute="centerX" secondItem="9IX-rD-ndy" secondAttribute="centerX" id="cHP-VQ-eLX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9IX-rD-ndy"/>
                     </view>
                     <navigationItem key="navigationItem" title="Dashboard" id="fkH-le-5mr"/>
