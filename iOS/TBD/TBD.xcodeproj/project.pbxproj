@@ -34,6 +34,9 @@
 		751A59F12100B8FE00E913A8 /* ProximaNovaCond-RegularIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59E02100B8FD00E913A8 /* ProximaNovaCond-RegularIt.otf */; };
 		751A59F22100B8FE00E913A8 /* ProximaNova-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59E12100B8FD00E913A8 /* ProximaNova-SemiboldItalic.otf */; };
 		751A59F32100B8FE00E913A8 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59E22100B8FD00E913A8 /* ProximaNova-Regular.otf */; };
+		BE70ADC12100EEBE00585157 /* MyScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC02100EEBE00585157 /* MyScheduleViewController.swift */; };
+		BE70ADC32101087600585157 /* RoutinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC22101087600585157 /* RoutinesViewController.swift */; };
+		BE70ADC521010E8F00585157 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC421010E8F00585157 /* CalendarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +70,9 @@
 		751A59E12100B8FD00E913A8 /* ProximaNova-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-SemiboldItalic.otf"; path = "../../../../../UX/font/Proxima Nova/ProximaNova-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		751A59E22100B8FD00E913A8 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Regular.otf"; path = "../../../../../UX/font/Proxima Nova/ProximaNova-Regular.otf"; sourceTree = "<group>"; };
 		87F9D5360280F4D279EB21D9 /* Pods-TBD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBD.release.xcconfig"; path = "Pods/Target Support Files/Pods-TBD/Pods-TBD.release.xcconfig"; sourceTree = "<group>"; };
+		BE70ADC02100EEBE00585157 /* MyScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScheduleViewController.swift; sourceTree = "<group>"; };
+		BE70ADC22101087600585157 /* RoutinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutinesViewController.swift; sourceTree = "<group>"; };
+		BE70ADC421010E8F00585157 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		E425451493A9A4022C6B075F /* Pods-TBD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TBD/Pods-TBD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				751A59C72100B35900E913A8 /* MySchedule.storyboard */,
+				BE70ADC02100EEBE00585157 /* MyScheduleViewController.swift */,
+				BE70ADC22101087600585157 /* RoutinesViewController.swift */,
+				BE70ADC421010E8F00585157 /* CalendarViewController.swift */,
 			);
 			path = "My Schedule";
 			sourceTree = "<group>";
@@ -330,7 +339,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE70ADC521010E8F00585157 /* CalendarViewController.swift in Sources */,
 				27992C132100841300F05763 /* AppDelegate.swift in Sources */,
+				BE70ADC32101087600585157 /* RoutinesViewController.swift in Sources */,
+				BE70ADC12100EEBE00585157 /* MyScheduleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
