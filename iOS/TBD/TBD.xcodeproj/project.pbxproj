@@ -45,6 +45,9 @@
 		756DD8DB2100EC130037FF3C /* PostContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756DD8DA2100EC130037FF3C /* PostContent.storyboard */; };
 		756DD8DD2100EC230037FF3C /* PostContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756DD8DC2100EC230037FF3C /* PostContentViewController.swift */; };
 		756DD8DF2100EE750037FF3C /* FeedItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756DD8DE2100EE750037FF3C /* FeedItemModel.swift */; };
+		75966F5B210107F600779E78 /* FeedDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75966F5A210107F600779E78 /* FeedDatasource.swift */; };
+		75966F5E21010CCC00779E78 /* MyFeedDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75966F5D21010CCC00779E78 /* MyFeedDetailsViewController.swift */; };
+		75966F6021010D1000779E78 /* MyFeedDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75966F5F21010D1000779E78 /* MyFeedDetails.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +91,9 @@
 		756DD8DA2100EC130037FF3C /* PostContent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostContent.storyboard; sourceTree = "<group>"; };
 		756DD8DC2100EC230037FF3C /* PostContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContentViewController.swift; sourceTree = "<group>"; };
 		756DD8DE2100EE750037FF3C /* FeedItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemModel.swift; sourceTree = "<group>"; };
+		75966F5A210107F600779E78 /* FeedDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDatasource.swift; sourceTree = "<group>"; };
+		75966F5D21010CCC00779E78 /* MyFeedDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedDetailsViewController.swift; sourceTree = "<group>"; };
+		75966F5F21010D1000779E78 /* MyFeedDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyFeedDetails.storyboard; sourceTree = "<group>"; };
 		87F9D5360280F4D279EB21D9 /* Pods-TBD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBD.release.xcconfig"; path = "Pods/Target Support Files/Pods-TBD/Pods-TBD.release.xcconfig"; sourceTree = "<group>"; };
 		E425451493A9A4022C6B075F /* Pods-TBD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TBD/Pods-TBD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,7 +143,9 @@
 		633A310F2100D09A00C6C253 /* MyFeed */ = {
 			isa = PBXGroup;
 			children = (
+				75966F5C21010CB000779E78 /* Details */,
 				756DD8DE2100EE750037FF3C /* FeedItemModel.swift */,
+				75966F5A210107F600779E78 /* FeedDatasource.swift */,
 				756DD8D92100EBF50037FF3C /* Add */,
 				633A311C2100D5B800C6C253 /* MyFeedViewController.swift */,
 				633A311A2100D56800C6C253 /* MyFeedViewController.storyboard */,
@@ -255,6 +263,15 @@
 			path = Add;
 			sourceTree = "<group>";
 		};
+		75966F5C21010CB000779E78 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				75966F5F21010D1000779E78 /* MyFeedDetails.storyboard */,
+				75966F5D21010CCC00779E78 /* MyFeedDetailsViewController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		A74AAB9FB532D4EB87DE11D5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +357,7 @@
 				751A5A162100D8BD00E913A8 /* ProximaNova-SemiboldItalic.otf in Resources */,
 				27992C182100841300F05763 /* Main.storyboard in Resources */,
 				751A5A0D2100D8BD00E913A8 /* ProximaNova-BoldIt.otf in Resources */,
+				75966F6021010D1000779E78 /* MyFeedDetails.storyboard in Resources */,
 				751A5A0C2100D8BD00E913A8 /* ProximaNova-Extrabold.otf in Resources */,
 				751A5A132100D8BD00E913A8 /* ProximaNova-Black.otf in Resources */,
 				633A311B2100D56800C6C253 /* MyFeedViewController.storyboard in Resources */,
@@ -396,8 +414,10 @@
 				756DD8DF2100EE750037FF3C /* FeedItemModel.swift in Sources */,
 				633A31232101109400C6C253 /* VideoHelper.swift in Sources */,
 				756DD8DD2100EC230037FF3C /* PostContentViewController.swift in Sources */,
+				75966F5E21010CCC00779E78 /* MyFeedDetailsViewController.swift in Sources */,
 				633A311D2100D5B800C6C253 /* MyFeedViewController.swift in Sources */,
 				27992C132100841300F05763 /* AppDelegate.swift in Sources */,
+				75966F5B210107F600779E78 /* FeedDatasource.swift in Sources */,
 				756065142100DA4300C9B421 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

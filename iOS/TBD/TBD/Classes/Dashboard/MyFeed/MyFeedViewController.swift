@@ -8,17 +8,10 @@
 
 import UIKit
 
-protocol FeedItemAddable: class {
-    func addNewFeedItem()
-}
-
-protocol ItemExpandable: class {
-    func expandItem()
-}
-
 class MyFeedViewController: UITableViewController {
     
-    var feedItems = ["dsghf"]
+    var feedItemsDatasource = FeedDatasource.instance
+    var selectedCellIndex: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +34,7 @@ class MyFeedViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return feedItems.count + 1
+        return feedItemsDatasource.items.count + 1
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -50,39 +43,48 @@ class MyFeedViewController: UITableViewController {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeedHeaderCell", for: indexPath) as? MyFeedHeaderTableViewCell else {
                 preconditionFailure()
             }
-            cell.delegate = self
             tableCell = cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeedItemCell", for: indexPath) as? MyFeedItemTableViewCell else {
                 preconditionFailure()
             }
-            cell.setupCellWith(name: "What's my name",
-                               text: "jfbfajg sfn fn jb agjbjb bkg fsj gbj n nakjg s gb akjfkjnfakj ngkfgj gk ak anfgkjan kn kjnk k ak kj nakj k skj akj kkj k ngj njr nkjrntkjnkj njnjn kjnbkjn kjn j j kj nk kjkjbkj b kjb b kjbkj b kjb kjb kb kjb kb kjb kjbk jbk jb kj kjb kjb kj jb kjb kj bkj kj nk jnk jn kjb j kb kj bkj bkj b kb kjb kjb kj bkj bkj  jb kb kjb kj bk bkj b kbb k b kb kjb kjb b k ",
+            let feedItem = feedItemsDatasource.items[indexPath.row - 1]
+            cell.setupCellWith(name: feedItem.username,
+                               text: feedItem.text,
                                mediaThumb: #imageLiteral(resourceName: "test"))
+            cell.index = indexPath.row
+            cell.delegate = self
             tableCell = cell
         }
         
         return tableCell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender)
+        
+        if let navController = segue.destination as? UINavigationController {
+            if let postController = navController.topViewController as? PostContentViewController {
+                postController.delegate = self
+            }
+        }
+        else if let detailsViewController = segue.destination as? MyFeedDetailsViewController {
+            detailsViewController.feedItem = feedItemsDatasource.items[selectedCellIndex! - 1]
+            selectedCellIndex = nil
+        }
     }
-    */
-
 }
 
-extension MyFeedViewController: ItemExpandable, FeedItemAddable {
-    func expandItem() {
-        
+extension MyFeedViewController: PostContentViewControllerDelegate {
+    func didCreatePost(item: FeedItemModel) {
+        feedItemsDatasource.addNew(item: item)
+        tableView.reloadData()
     }
-    
-    func addNewFeedItem() {
-        
+}
+
+extension MyFeedViewController: ItemExpandable {
+    func expandItem(at index: Int) {
+        selectedCellIndex = index
+        performSegue(withIdentifier: "showFeedItemDetails", sender: self)
     }
 }

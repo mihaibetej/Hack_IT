@@ -9,6 +9,7 @@
 import Foundation
 
 struct FeedItemModel {
+    let username: String
     let text: String
     let attachments: [Media]
     
