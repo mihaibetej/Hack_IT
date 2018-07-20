@@ -25,6 +25,8 @@ class DashboardViewController: UIViewController {
     
     @IBOutlet weak var accountButton: UIButton!
     
+    let transition = CircularTransition()
+    
     @IBAction func openHowIFeel(_ sender: Any) {
         openButton.isHidden = true
         feelingClosedImageView.isHidden = true
@@ -105,4 +107,32 @@ class DashboardViewController: UIViewController {
         myScheduleViewController.segmentedController.selectedSegmentIndex = tabIndex
         myScheduleViewController.tabBar.selectedIndex = tabIndex
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowUserProfile" {
+            segue.destination.transitioningDelegate = self
+            segue.destination.modalPresentationStyle = .custom
+        }
+    }
 }
+
+// MARK: - UIViewControllerTransitioningDelegate
+extension DashboardViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = accountButton.convert(accountButton.center, to: self.view)
+        transition.circleColor = UIColor.white
+        
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint =  accountButton.convert(accountButton.center, to: self.view)
+        transition.circleColor = UIColor.white
+        
+        return transition
+    }
+}
+
