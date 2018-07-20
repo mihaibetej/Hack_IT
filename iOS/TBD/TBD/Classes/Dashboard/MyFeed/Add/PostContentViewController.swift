@@ -27,18 +27,31 @@ class PostContentViewController: UIViewController {
     @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var attachButtonHeight: NSLayoutConstraint!
     @IBOutlet weak var imageViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var imageContainer: UIView!
     let imageHeight: CGFloat = 200
+    @IBOutlet weak var cameraButton: UIButton!
     
     var videoName: String?
     
     weak var delegate: PostContentViewControllerDelegate?
     
+    func applyShadow(to view: UIView) {
+        view.layer.masksToBounds = false
+        view.layer.shadowOpacity = 0.1
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOffset = CGSize(width: 0, height: 5)
+        view.layer.shadowRadius = 10
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         textArea.text = nil
+        applyShadow(to: textArea)
+        applyShadow(to: imageContainer)
         imageView.image = nil
         imageViewHeight.constant = attachButtonHeight.constant
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -148,7 +161,7 @@ class PostContentViewController: UIViewController {
                 attachment = mediaType
             }
             
-            let item = FeedItemModel(username: defaultUsername, avatarImage: #imageLiteral(resourceName: "av_3"), text: textArea.text, attachment: attachment, reactions: 0, hoursAgo: 0)
+            let item = FeedItemModel(username: defaultUsername, avatarImage: #imageLiteral(resourceName: "av_3"), text: textArea.text, attachment: attachment, reactions: 0, hoursAgo: 0, comments: [])
             
             delegate.didCreatePost(item: item)
         }
