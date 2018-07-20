@@ -9,6 +9,8 @@
 import UIKit
 
 class DashboardViewController: UIViewController {
+    
+    static var shouldLaunchHelp = false
 
     @IBOutlet weak var howAreYouView: UIView!
     @IBOutlet weak var schedulesView: UIView!
@@ -38,6 +40,16 @@ class DashboardViewController: UIViewController {
         accountButton.layer.shadowRadius = 5
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if DashboardViewController.shouldLaunchHelp {
+            DashboardViewController.shouldLaunchHelp = false
+            
+            (tabBarController as? CustomTabBarController)?.didTapOnCenterButton(sender: UIButton())
+        }
     }
 
     @IBAction func didTapOnHowAreYouFeelingButton(_ sender: UIButton) {
