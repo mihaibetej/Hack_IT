@@ -27,6 +27,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         UITabBar.appearance().tintColor = UIColor(rgb: 0xf63c0b)
         UITabBar.appearance().unselectedItemTintColor = UIColor(red: 32.0/255.0, green: 63.0/255.0, blue: 212.0/255.0, alpha: 1)
+        
+        if let lo = launchOptions, let url = lo[UIApplicationLaunchOptionsKey.url] as? URL, url.absoluteString == "leuke://companionWidget" {
+            
+            DashboardViewController.shouldLaunchHelp = true
+        }
+        
+        return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        if url.absoluteString == "leuke://companionWidget" {
+            
+            CustomTabBarController.sharedInstance.didTapOnCenterButton(sender: UIButton())
+        }
         return true
     }
 
