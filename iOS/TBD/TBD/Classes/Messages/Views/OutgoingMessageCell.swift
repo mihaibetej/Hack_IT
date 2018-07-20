@@ -25,6 +25,9 @@ class OutgoingMessageCell: UITableViewCell {
         contentView.backgroundColor = .clear
         outgoingMessageContainer.layer.cornerRadius = 8
         
+        // Message container
+        outgoingMessageContainer.backgroundColor = UIColor(red: 32.0/255.0, green: 63.0/255.0, blue: 212.0/255.0, alpha: 1)
+        
         // Shadow mask
         contentView.layer.masksToBounds = false
         contentView.layer.shadowOpacity = 0.3

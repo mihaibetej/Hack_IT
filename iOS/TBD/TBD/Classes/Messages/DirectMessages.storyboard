@@ -189,7 +189,7 @@
         <!--Messages View Controller-->
         <scene sceneID="OIV-y4-v9j">
             <objects>
-                <viewController id="o1B-I1-sTt" customClass="MessagesViewController" customModule="TBD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="o1B-I1-sTt" customClass="MessagesViewController" customModule="TBD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XkY-N4-k9p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,7 +235,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.64887800179999999" blue="0.66550772199999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="qTW-mV-r1i" firstAttribute="leading" secondItem="HiV-5P-mg6" secondAttribute="leading" id="07g-q1-Cw3"/>
                                     <constraint firstItem="xfi-9y-LBr" firstAttribute="leading" secondItem="Kdy-9g-f4g" secondAttribute="trailing" constant="8" id="7rn-9p-iob"/>
@@ -316,19 +316,19 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mre-P8-vHK">
-                                                    <rect key="frame" x="48" y="0.0" width="356" height="36"/>
+                                                    <rect key="frame" x="48" y="0.0" width="356" height="38"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outgoing message" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srw-hU-sTT">
-                                                            <rect key="frame" x="8" y="6" width="340" height="24"/>
+                                                            <rect key="frame" x="8" y="6" width="340" height="26"/>
                                                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.79377148332299496" green="0.99686247110366821" blue="0.60945547153639801" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.2403544061275211" green="0.28424711782463979" blue="0.99686247110366821" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="srw-hU-sTT" secondAttribute="trailing" constant="8" id="Lgj-HG-MLv"/>
-                                                        <constraint firstAttribute="height" constant="36" id="b1I-lh-0pg"/>
+                                                        <constraint firstAttribute="height" constant="38" id="b1I-lh-0pg"/>
                                                         <constraint firstItem="srw-hU-sTT" firstAttribute="leading" secondItem="mre-P8-vHK" secondAttribute="leading" constant="8" id="hZf-ak-6az"/>
                                                         <constraint firstAttribute="bottom" secondItem="srw-hU-sTT" secondAttribute="bottom" constant="6" id="lPS-1h-QNj"/>
                                                         <constraint firstItem="srw-hU-sTT" firstAttribute="top" secondItem="mre-P8-vHK" secondAttribute="top" constant="6" id="yHo-It-fxh"/>
@@ -339,7 +339,7 @@
                                                 <constraint firstItem="mre-P8-vHK" firstAttribute="leading" secondItem="oiD-R7-kJQ" secondAttribute="leading" constant="48" id="3ut-nH-kP6"/>
                                                 <constraint firstItem="mre-P8-vHK" firstAttribute="top" secondItem="oiD-R7-kJQ" secondAttribute="top" id="5gi-Bo-4Jg"/>
                                                 <constraint firstAttribute="trailing" secondItem="mre-P8-vHK" secondAttribute="trailing" constant="10" id="9KP-SC-4dy"/>
-                                                <constraint firstAttribute="bottom" secondItem="mre-P8-vHK" secondAttribute="bottom" constant="8" id="qD9-Qa-qSE"/>
+                                                <constraint firstAttribute="bottom" secondItem="mre-P8-vHK" secondAttribute="bottom" constant="6" id="qD9-Qa-qSE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

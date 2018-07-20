@@ -34,6 +34,9 @@ class IncomingMessageCell: UITableViewCell {
         contentView.backgroundColor = .clear
         incomingMessageContainer.layer.cornerRadius = 8
         
+        // Message container
+        incomingMessageContainer.backgroundColor = .white
+        
         // Shadow mask
         contentView.layer.masksToBounds = false
         contentView.layer.shadowOpacity = 0.3
