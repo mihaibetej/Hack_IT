@@ -15,6 +15,8 @@
 		51E33FE72101300000C7CB27 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FE12100E3ED00C7CB27 /* InformationViewController.swift */; };
 		51E33FE82101300900C7CB27 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FE52100F1BD00C7CB27 /* CircularTransition.swift */; };
 		51E33FE92101301500C7CB27 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FE32100F0D400C7CB27 /* WebViewController.swift */; };
+		51E33FEB21014A6F00C7CB27 /* Glossary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51E33FEA21014A6F00C7CB27 /* Glossary.plist */; };
+		51E33FEE2101527300C7CB27 /* GlossaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FED2101527300C7CB27 /* GlossaryViewController.swift */; };
 		751A59C62100B2ED00E913A8 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C52100B2ED00E913A8 /* Dashboard.storyboard */; };
 		751A59C82100B35900E913A8 /* MySchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C72100B35900E913A8 /* MySchedule.storyboard */; };
 		751A59CA2100B41600E913A8 /* DirectMessages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C92100B41600E913A8 /* DirectMessages.storyboard */; };
@@ -53,6 +55,8 @@
 		51E33FE12100E3ED00C7CB27 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		51E33FE32100F0D400C7CB27 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		51E33FE52100F1BD00C7CB27 /* CircularTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
+		51E33FEA21014A6F00C7CB27 /* Glossary.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Glossary.plist; sourceTree = "<group>"; };
+		51E33FED2101527300C7CB27 /* GlossaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryViewController.swift; sourceTree = "<group>"; };
 		751A59C52100B2ED00E913A8 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		751A59C72100B35900E913A8 /* MySchedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MySchedule.storyboard; sourceTree = "<group>"; };
 		751A59C92100B41600E913A8 /* DirectMessages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DirectMessages.storyboard; sourceTree = "<group>"; };
@@ -122,6 +126,15 @@
 			path = TBD;
 			sourceTree = "<group>";
 		};
+		51E33FEC21014EF600C7CB27 /* Glossary */ = {
+			isa = PBXGroup;
+			children = (
+				51E33FEA21014A6F00C7CB27 /* Glossary.plist */,
+				51E33FED2101527300C7CB27 /* GlossaryViewController.swift */,
+			);
+			path = Glossary;
+			sourceTree = "<group>";
+		};
 		751A59C02100B1B000E913A8 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +173,7 @@
 		751A59C42100B1E400E913A8 /* Information */ = {
 			isa = PBXGroup;
 			children = (
+				51E33FEC21014EF600C7CB27 /* Glossary */,
 				751A59CB2100B43000E913A8 /* Information.storyboard */,
 				51E33FE52100F1BD00C7CB27 /* CircularTransition.swift */,
 				51E33FE12100E3ED00C7CB27 /* InformationViewController.swift */,
@@ -316,6 +330,7 @@
 				751A5A112100D8BD00E913A8 /* ProximaNova-RegItalic.otf in Resources */,
 				751A5A092100D8BD00E913A8 /* ProximaNova-Light.otf in Resources */,
 				751A5A102100D8BD00E913A8 /* ProximaNovaCond-SemiboldIt.otf in Resources */,
+				51E33FEB21014A6F00C7CB27 /* Glossary.plist in Resources */,
 				751A59CC2100B43000E913A8 /* Information.storyboard in Resources */,
 				751A59C62100B2ED00E913A8 /* Dashboard.storyboard in Resources */,
 				751A5A0B2100D8BD00E913A8 /* ProximaNova-Bold.otf in Resources */,
@@ -358,6 +373,7 @@
 			files = (
 				BE70ADC521010E8F00585157 /* CalendarViewController.swift in Sources */,
 				51E33FE82101300900C7CB27 /* CircularTransition.swift in Sources */,
+				51E33FEE2101527300C7CB27 /* GlossaryViewController.swift in Sources */,
 				27992C132100841300F05763 /* AppDelegate.swift in Sources */,
 				BE70ADC32101087600585157 /* RoutinesViewController.swift in Sources */,
 				51E33FE92101301500C7CB27 /* WebViewController.swift in Sources */,

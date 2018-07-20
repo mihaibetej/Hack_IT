@@ -71,7 +71,7 @@ class InformationViewController: UIViewController {
         modalVC.transitioningDelegate = self
         modalVC.modalPresentationStyle = .custom
         //modalVC.youtubeURL = "XGcX5wopq3M"
-        modalVC.webSiteURL = URL.init(string: "https://www.youtube.com/user/CureLeukaemia1")
+        modalVC.webSiteURL = URL.init(string: "https://www.instagram.com/cureleukaemia/")
         
         self.present(modalVC, animated: true, completion: nil)
     }
@@ -85,7 +85,7 @@ extension InformationViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .present
         transition.startingPoint = CGPoint.init(x: 0, y: self.view.frame.height)
-        transition.circleColor = UIColor.black
+        transition.circleColor = UIColor.white
         
         return transition
     }
@@ -93,7 +93,7 @@ extension InformationViewController: UIViewControllerTransitioningDelegate {
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .dismiss
         transition.startingPoint =  CGPoint.init(x: 0, y: self.view.frame.height)
-        transition.circleColor = UIColor.black
+        transition.circleColor = UIColor.white
         
         return transition
     }

@@ -75,7 +75,15 @@ class WebViewController: UIViewController {
             webView.loadHTMLString(embededHTML, baseURL: nil)
         } else if var text = textHTML {
             text = text.replacingOccurrences(of: "\n", with: "<br>")
-            webView.loadHTMLString("<html><body>\(text)</body></html>", baseURL: nil)
+            webView.loadHTMLString("""
+                <html>
+                <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+                </head>
+                <body>\(text)
+                </body>
+                </html>
+                """, baseURL: nil)
         }
     }
     
