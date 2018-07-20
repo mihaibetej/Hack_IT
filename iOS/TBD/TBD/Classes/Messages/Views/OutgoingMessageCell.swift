@@ -15,7 +15,7 @@ class OutgoingMessageCell: UITableViewCell {
     @IBOutlet weak var outgoingMessageContainerHeightConstant: NSLayoutConstraint!
     @IBOutlet weak var outgoingMessageContainerLeadingConstraint: NSLayoutConstraint!
     
-    let defaultContainerHeight: CGFloat = 36
+    let defaultContainerHeight: CGFloat = 38
     let defaultContainerLeading: CGFloat = 48
     
     override func awakeFromNib() {
