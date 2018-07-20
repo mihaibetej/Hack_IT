@@ -87,7 +87,7 @@ class IncomingMessageCell: UITableViewCell {
             articleButtonBottomConstraint.constant = 0
         }
         incomingMessageContainerHeightConstraint.constant = ceil(requiredMessageLabelSize.height) + extraHeight
-        incomingMessageContainerTrailingConstraint.constant = bounds.width - ceil(requiredMessageLabelSize.width) - 16 - 10
+        incomingMessageContainerTrailingConstraint.constant = bounds.width - ceil(requiredMessageLabelSize.width + 2) - 16 - 10
         layoutIfNeeded()
         
         messageLabel.text = message.content
