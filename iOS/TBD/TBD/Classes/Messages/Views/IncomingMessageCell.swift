@@ -20,8 +20,14 @@ class IncomingMessageCell: UITableViewCell {
     @IBOutlet weak var incomingContactImageViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var incomingContactImageViewHeightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var readArticlesButton: UIButton!
+    @IBOutlet weak var readGlossaryEntryButton: UIButton!
+    @IBOutlet weak var articleButonHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var articleButtonBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var glossaryButtonHeightConstraint: NSLayoutConstraint!
     
     let defaultContainerHeight: CGFloat = 38
+    let defaultContainerHeightWithButtons: CGFloat = 64
     let defaultContainerTrailing: CGFloat = 48
     let defaultImageLeadingConstant: CGFloat = 10
     let defaultImageWidthConstant: CGFloat = 28
@@ -44,9 +50,17 @@ class IncomingMessageCell: UITableViewCell {
         contentView.layer.shadowOffset = CGSize(width: 0, height: 1)
         contentView.layer.shadowRadius = 1
 
+        // Actions
+        readArticlesButton.backgroundColor = UIColor(rgb: 0xF03C26)
+        readArticlesButton.layer.masksToBounds = true
+        readArticlesButton.layer.cornerRadius = 2
+        readGlossaryEntryButton.backgroundColor = UIColor(rgb: 0xF03C26)
+        readGlossaryEntryButton.layer.masksToBounds = true
+        readGlossaryEntryButton.layer.cornerRadius = 2
+
     }
     
-    func configure(_ message: Message, previousMessage: Message? = nil, isGroupMessage: Bool = false) {
+    func configure(_ message: Message, previousMessage: Message? = nil, isGroupMessage: Bool = false, showActions: Bool = false) {
         var maxW = bounds.width - defaultContainerTrailing - 10
         // Adjust for avatar
         if message.type == .incoming && isGroupMessage {
@@ -61,7 +75,18 @@ class IncomingMessageCell: UITableViewCell {
         let maxH = CGFloat.greatestFiniteMagnitude
         let requiredMessageLabelSize = (message.content as NSString).boundingRect(with: CGSize(width: maxW - 16, height: maxH), options: [.usesFontLeading, .usesLineFragmentOrigin], attributes: [NSAttributedStringKey.font : messageLabel.font], context: nil)
         
-        incomingMessageContainerHeightConstraint.constant = ceil(requiredMessageLabelSize.height) + 12
+        var extraHeight: CGFloat = 12
+        if showActions {
+            articleButonHeightConstraint.constant = 20
+            glossaryButtonHeightConstraint.constant = 20
+            articleButtonBottomConstraint.constant = 6
+            extraHeight += readArticlesButton.bounds.height + 6
+        } else {
+            articleButonHeightConstraint.constant = 0
+            glossaryButtonHeightConstraint.constant = 0
+            articleButtonBottomConstraint.constant = 0
+        }
+        incomingMessageContainerHeightConstraint.constant = ceil(requiredMessageLabelSize.height) + extraHeight
         incomingMessageContainerTrailingConstraint.constant = bounds.width - ceil(requiredMessageLabelSize.width) - 16 - 10
         layoutIfNeeded()
         
@@ -75,4 +100,14 @@ class IncomingMessageCell: UITableViewCell {
 
     }
 
+    // MARK: Actions
+    
+    @IBAction func readArticlesAction(_ sender: Any) {
+        
+    }
+    
+    @IBAction func readGlossaryEntryActions(_ sender: Any) {
+        
+    }
+    
 }
