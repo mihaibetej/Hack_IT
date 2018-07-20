@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Name</key>
+		<string>magnetic resonance imaging (MRI)</string>
+		<key>Value</key>
+		<string>a safe and painless test that uses a magnetic field and radio waves to produce detailed pictures of the body&apos;s organs and structures.</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>metastasis</string>
+		<key>Value</key>
+		<string>the spread of disease (in this case, cancer) from the original site to other parts of the body.
+</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>neutropenia</string>
+		<key>Value</key>
+		<string>when the body has very low levels of certain white blood cells called neutrophils.
+</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>oncogenes</string>
+		<key>Value</key>
+		<string>genes that cause cells to grow and duplicate. Under certain circumstances, oncogenes can mutate and cause cells to grow abnormally, leading to cancer.
+</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>staging</string>
+		<key>Value</key>
+		<string>a way to categorize or classify patients according to how extensive the disease is at the time of diagnosis.</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>hemoglobin</string>
+		<key>Value</key>
+		<string>a substance in red blood cells that carries oxygen through the blood to different parts of the body.
+</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>immunosuppression</string>
+		<key>Value</key>
+		<string>a condition that causes the body&apos;s immune system to decrease in effectiveness. Immunosuppression can be caused by disease or certain drugs (like chemotherapy).
+</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>lymphocyte</string>
+		<key>Value</key>
+		<string>a type of white blood cell found in lymph nodes. Lymphocytes make antibodies, special proteins that fight off germs and stop infections from spreading by trapping disease-causing germs and destroying them.</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>gallium scan</string>
+		<key>Value</key>
+		<string>a diagnostic test that involves injecting a chemical called gallium to detect tumors and inflammation.</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>granulocyte</string>
+		<key>Value</key>
+		<string>a type of white blood cell that contains grain-like particles full of enzymes that allow it to fight bacteria and infections. Types of granulocytes are basophils, eosinophils, and neutrophils.
+</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>complete blood count [CBC]</string>
+		<key>Value</key>
+		<string>initial blood test in diagnosing leukemia; a common blood test that evaluates the three major types of cells in the blood: red blood cells, white blood cells, and platelets.
+
+cytogenetics analysis (cyto=cell) - further analysis in diagnosing leukemia performed after the CBC test if necessary; it consists of removing a sample of bone marrow tissue (biopsy) from a pelvic bone and test it for cancer cells, examined also for chromosomal abnormalities
+</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>biologic response modifiers</string>
+		<key>Value</key>
+		<string>substances that help the immune system fight cancer, lessen side effects from cancer treatments, and fight infections and other diseases.
+</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>dysplasia</string>
+		<key>Value</key>
+		<string>abnormal changes in the structure or organization of a group of cells.</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>external radiation</string>
+		<key>Value</key>
+		<string>radiation therapy that usually involves visiting the hospital or treatment center as outpatients 4-5 days a week for several weeks, coming in just for the treatment and going home right after.</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>leukemia</string>
+		<key>Value</key>
+		<string>from the Greek words &quot;white&quot; (leukos) and &quot;blood&quot; (haima); means the overproduction of abnormal white blood cells; cancer of the white blood cells, which are also referred to as leukocytes or WBCs.</string>
+	</dict>
+</array>
+</plist>
