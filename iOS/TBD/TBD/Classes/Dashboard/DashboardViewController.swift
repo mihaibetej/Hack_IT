@@ -65,6 +65,11 @@ class DashboardViewController: UIViewController {
         accountButton.layer.shadowRadius = 5
 
         // Do any additional setup after loading the view.
+        
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "titlu"))
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 5
+        navigationItem.titleView = imageView
     }
     
     override func viewDidAppear(_ animated: Bool) {
