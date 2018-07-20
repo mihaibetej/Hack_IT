@@ -52,7 +52,7 @@ extension CustomTabBarController: UIViewControllerTransitioningDelegate {
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .present
-        transition.startingPoint = CGPoint.init(x: 0, y: self.view.frame.height)
+        transition.startingPoint = CGPoint.init(x: tabBar.center.x, y: self.view.frame.height - tabBar.bounds.height / 2)
         transition.circleColor = UIColor.white
         
         return transition
@@ -60,7 +60,7 @@ extension CustomTabBarController: UIViewControllerTransitioningDelegate {
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .dismiss
-        transition.startingPoint =  CGPoint.init(x: 0, y: self.view.frame.height)
+        transition.startingPoint =  CGPoint.init(x: tabBar.center.x, y: self.view.frame.height - tabBar.bounds.height / 2)
         transition.circleColor = UIColor.white
         
         return transition
