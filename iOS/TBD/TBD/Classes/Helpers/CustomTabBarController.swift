@@ -9,7 +9,7 @@
 import UIKit
 
 class CustomTabBarController: UITabBarController {
-    
+    let transition = CircularTransition()
     let centerButton = UIButton(type: .custom)
 
     override func viewDidLoad() {
@@ -33,6 +33,28 @@ class CustomTabBarController: UITabBarController {
     @objc func didTapOnCenterButton(sender: UIButton) {
         let storyboard = UIStoryboard(name: "Alfie", bundle: nil)
         let controller = storyboard.instantiateInitialViewController()
+        controller!.transitioningDelegate = self
+        controller!.modalPresentationStyle = .custom
         present(controller!, animated: true, completion: nil)
+    }
+}
+
+// MARK: - UIViewControllerTransitioningDelegate
+extension CustomTabBarController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = CGPoint.init(x: 0, y: self.view.frame.height)
+        transition.circleColor = UIColor.white
+        
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint =  CGPoint.init(x: 0, y: self.view.frame.height)
+        transition.circleColor = UIColor.white
+        
+        return transition
     }
 }

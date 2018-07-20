@@ -51,7 +51,7 @@ class MessagesViewController: UIViewController {
             group = Group(name: "Alfy", contacts: [Contact(fullname: "Alfy", messages: [alfieMessages.first!])])
             alfyMessageIndex += 1
 
-            let button = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissController))
+            let button = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissController))
             navigationItem.rightBarButtonItem = button
         }
         title = contact?.fullname ?? group!.name
@@ -172,6 +172,27 @@ class MessagesViewController: UIViewController {
     
 }
 
+// MARK: - Cell actions delegate
+
+extension MessagesViewController: CellActionsDelegate {
+    
+    func navigateToArticles() {
+        
+    }
+    
+    func navigateToGlossary() {
+        let storyboard = UIStoryboard(name: "Information", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: String.init(describing: WebViewController.self)) as! WebViewController
+        // Hack to load the view
+        print(controller.view.frame)
+        // Then carry on ... my wayward child...
+        controller.dismissButton.isHidden = true
+        controller.textHTML = "Cytarabine is used to treat different forms of leukemia, including acute and chronic myelogenous leukemia (AML and CML), acute lymphocytic leukemia (ALL), and acute promyelocytic leukemia (APL). It is also used to treat Hodgkin's lymphoma, as well as meningeal leukemia and other types of lymphoma (cancers found in the lining of the brain and spinal cord)."
+        controller.title = "Cytarabine"
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+}
 
 // MARK: - Table view
 
@@ -190,9 +211,9 @@ extension MessagesViewController: UITableViewDataSource, UITableViewDelegate {
             cell = tableView.dequeueReusableCell(withIdentifier: "IncomingMessageCell", for: indexPath) as! IncomingMessageCell
             if group != nil {
                 let previousMessage: Message? = indexPath.row == 0 ? nil : messages[indexPath.row - 1]
-                (cell as! IncomingMessageCell).configure(message, previousMessage: previousMessage, isGroupMessage: true, showActions: indexPath.row == 6)
+                (cell as! IncomingMessageCell).configure(message, previousMessage: previousMessage, isGroupMessage: true, showActions: indexPath.row == 6, delegate: self)
             } else {
-                (cell as! IncomingMessageCell).configure(message)
+                (cell as! IncomingMessageCell).configure(message, delegate: self)
             }
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: "OutgoingMessageCell", for: indexPath) as! OutgoingMessageCell

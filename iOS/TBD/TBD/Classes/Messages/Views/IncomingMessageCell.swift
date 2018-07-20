@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol CellActionsDelegate {
+    func navigateToArticles()
+    func navigateToGlossary()
+}
+
 class IncomingMessageCell: UITableViewCell {
     
     @IBOutlet weak var messageLabel: UILabel!
@@ -32,6 +37,7 @@ class IncomingMessageCell: UITableViewCell {
     let defaultImageLeadingConstant: CGFloat = 10
     let defaultImageWidthConstant: CGFloat = 28
 
+    var delegate: CellActionsDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -60,7 +66,8 @@ class IncomingMessageCell: UITableViewCell {
 
     }
     
-    func configure(_ message: Message, previousMessage: Message? = nil, isGroupMessage: Bool = false, showActions: Bool = false) {
+    func configure(_ message: Message, previousMessage: Message? = nil, isGroupMessage: Bool = false, showActions: Bool = false, delegate: CellActionsDelegate) {
+        self.delegate = delegate
         var maxW = bounds.width - defaultContainerTrailing - 10
         // Adjust for avatar
         if message.type == .incoming && isGroupMessage {
@@ -103,11 +110,11 @@ class IncomingMessageCell: UITableViewCell {
     // MARK: Actions
     
     @IBAction func readArticlesAction(_ sender: Any) {
-        
+        delegate?.navigateToArticles()
     }
     
     @IBAction func readGlossaryEntryActions(_ sender: Any) {
-        
+        delegate?.navigateToGlossary()
     }
     
 }
