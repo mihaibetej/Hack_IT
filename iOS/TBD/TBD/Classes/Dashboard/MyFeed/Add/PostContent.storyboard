@@ -128,7 +128,7 @@
                         <outlet property="cameraButton" destination="y7d-OR-dHK" id="XAa-c3-hgf"/>
                         <outlet property="imageContainer" destination="9cP-RG-PAV" id="6Yn-FX-7jE"/>
                         <outlet property="imageView" destination="c5h-Cu-ubF" id="fQt-dQ-f5n"/>
-                        <outlet property="imageViewBottomConstraint" destination="wFl-Is-73G" id="jfs-aj-FoM"/>
+                        <outlet property="imageViewBottomConstraint" destination="aId-Sk-zKJ" id="DHP-kl-d0g"/>
                         <outlet property="imageViewHeight" destination="zFl-CE-4C2" id="GtO-um-Ogp"/>
                         <outlet property="textArea" destination="SYf-df-h3n" id="beG-b6-koE"/>
                     </connections>
