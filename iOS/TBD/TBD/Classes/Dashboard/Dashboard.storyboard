@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tk6-gc-HAx">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -11,9 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="ProximaNova-Bold.otf">
-            <string>ProximaNova-Bold</string>
-        </array>
         <array key="ProximaNova-Regular.otf">
             <string>ProximaNova-Regular</string>
         </array>
@@ -29,7 +26,7 @@
                     <tabBarItem key="tabBarItem" title="Dashboard" id="Z6S-Le-Fyr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CPP-BS-H70">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -55,51 +52,71 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QeC-X4-Fwg">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="678"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="niw-B6-QrZ" userLabel="HowAreYou">
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="niw-B6-QrZ" userLabel="HowAreYou">
                                                 <rect key="frame" x="16" y="16" width="343" height="80"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="how_are_you_feeling" translatesAutoresizingMaskIntoConstraints="NO" id="iEV-Np-2gU">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feeling_today" translatesAutoresizingMaskIntoConstraints="NO" id="iEV-Np-2gU">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="Bud-Ii-cCx"/>
+                                                        </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                 <integer key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How are you feeling today?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcC-66-qeZ">
-                                                        <rect key="frame" x="16" y="42" width="311" height="20"/>
-                                                        <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="20"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xv-fF-5xO">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="lAi-n3-hWx"/>
+                                                        </constraints>
                                                         <connections>
                                                             <action selector="didTapOnHowAreYouFeelingButton:" destination="hIv-7w-Vtx" eventType="touchUpInside" id="WHh-GQ-mbc"/>
+                                                            <action selector="openHowIFeel:" destination="hIv-7w-Vtx" eventType="touchUpInside" id="WHb-vb-s1M"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="feeling_today_expanded" translatesAutoresizingMaskIntoConstraints="NO" id="Z5w-NL-WSB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="125"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="125" id="2tc-bn-lWf"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4gD-tQ-0ey">
+                                                        <rect key="frame" x="30" y="42" width="282" height="38"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="38" id="UwU-MC-Bpd"/>
+                                                        </constraints>
+                                                        <state key="normal">
+                                                            <attributedString key="attributedTitle"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="closeHowIFeel:" destination="hIv-7w-Vtx" eventType="touchUpInside" id="zJe-Ql-M3E"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="iEV-Np-2gU" firstAttribute="leading" secondItem="niw-B6-QrZ" secondAttribute="leading" id="7e6-8T-qyV"/>
-                                                    <constraint firstItem="OcC-66-qeZ" firstAttribute="centerY" secondItem="niw-B6-QrZ" secondAttribute="centerY" multiplier="1.3" id="7i0-g0-mzq"/>
-                                                    <constraint firstAttribute="bottom" secondItem="6Xv-fF-5xO" secondAttribute="bottom" id="910-3c-5PF"/>
+                                                    <constraint firstAttribute="bottom" secondItem="4gD-tQ-0ey" secondAttribute="bottom" id="7gr-HD-ynC"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4gD-tQ-0ey" secondAttribute="trailing" constant="31" id="88n-8i-3Xt"/>
                                                     <constraint firstItem="6Xv-fF-5xO" firstAttribute="top" secondItem="niw-B6-QrZ" secondAttribute="top" id="EQq-bA-mcb"/>
                                                     <constraint firstItem="iEV-Np-2gU" firstAttribute="top" secondItem="niw-B6-QrZ" secondAttribute="top" id="HMl-u7-24i"/>
-                                                    <constraint firstItem="OcC-66-qeZ" firstAttribute="leading" secondItem="niw-B6-QrZ" secondAttribute="leading" constant="16" id="Hae-nn-Rfw"/>
+                                                    <constraint firstItem="4gD-tQ-0ey" firstAttribute="leading" secondItem="niw-B6-QrZ" secondAttribute="leading" constant="30" id="Kwc-sL-Yyw"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Z5w-NL-WSB" secondAttribute="trailing" id="Nke-4g-4x1"/>
                                                     <constraint firstAttribute="trailing" secondItem="6Xv-fF-5xO" secondAttribute="trailing" id="RAs-sj-SVM"/>
-                                                    <constraint firstAttribute="bottom" secondItem="iEV-Np-2gU" secondAttribute="bottom" id="SYj-57-xgq"/>
+                                                    <constraint firstItem="Z5w-NL-WSB" firstAttribute="top" secondItem="niw-B6-QrZ" secondAttribute="top" id="biz-nQ-hkv"/>
+                                                    <constraint firstItem="Z5w-NL-WSB" firstAttribute="leading" secondItem="niw-B6-QrZ" secondAttribute="leading" id="eqV-5I-DpL"/>
                                                     <constraint firstAttribute="trailing" secondItem="iEV-Np-2gU" secondAttribute="trailing" id="k3P-sM-PfG"/>
                                                     <constraint firstItem="6Xv-fF-5xO" firstAttribute="leading" secondItem="niw-B6-QrZ" secondAttribute="leading" id="ovT-WW-BSm"/>
                                                     <constraint firstAttribute="height" constant="80" id="wVZ-GP-2kk"/>
-                                                    <constraint firstAttribute="trailing" secondItem="OcC-66-qeZ" secondAttribute="trailing" constant="16" id="wbg-NN-Ms7"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1E-8U-bfV" userLabel="Schedule">
-                                                <rect key="frame" x="16" y="112" width="165.5" height="150"/>
+                                                <rect key="frame" x="16" y="112" width="165.66666666666666" height="150"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Upcoming Event" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXd-Mc-XhX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="14"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="165.66666666666666" height="14"/>
                                                         <color key="tintColor" red="0.12549019607843137" green="0.24705882352941178" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="14" id="bXT-Nn-oeY"/>
@@ -109,10 +126,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDU-ae-KXt">
-                                                        <rect key="frame" x="0.0" y="18" width="165.5" height="132"/>
+                                                        <rect key="frame" x="0.0" y="18" width="165.33333333333334" height="132"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="schedule" translatesAutoresizingMaskIntoConstraints="NO" id="lnV-wm-5Nf">
-                                                                <rect key="frame" x="0.0" y="0.0" width="165.5" height="132"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="165.33333333333334" height="132"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                         <integer key="value" value="5"/>
@@ -129,7 +146,7 @@
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqi-qh-xBy">
-                                                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="150"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="165.66666666666666" height="150"/>
                                                         <connections>
                                                             <action selector="didTapOnSchedules:" destination="hIv-7w-Vtx" eventType="touchUpInside" id="cvH-8F-rr5"/>
                                                         </connections>
@@ -153,10 +170,10 @@
                                                 <viewLayoutGuide key="safeArea" id="kYo-vs-pbv"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHJ-ea-aGp" userLabel="Routines">
-                                                <rect key="frame" x="193.5" y="112" width="165.5" height="150"/>
+                                                <rect key="frame" x="193.66666666666663" y="112" width="165.33333333333337" height="150"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Active Routines" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bA8-V3-LHS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="14"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="165.33333333333334" height="14"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="14" id="aGG-4p-64s"/>
                                                         </constraints>
@@ -165,10 +182,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T0U-44-FdJ">
-                                                        <rect key="frame" x="0.0" y="18" width="165.5" height="132"/>
+                                                        <rect key="frame" x="0.0" y="18" width="165.33333333333334" height="132"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="active_routine" translatesAutoresizingMaskIntoConstraints="NO" id="RgU-Ft-zUN">
-                                                                <rect key="frame" x="0.0" y="0.0" width="165.5" height="132"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="165.33333333333334" height="132"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                         <integer key="value" value="5"/>
@@ -185,7 +202,7 @@
                                                         </constraints>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehN-Pt-G9S">
-                                                        <rect key="frame" x="0.0" y="0.0" width="165.5" height="150"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="165.33333333333334" height="150"/>
                                                         <connections>
                                                             <action selector="didTapOnRoutines:" destination="hIv-7w-Vtx" eventType="touchUpInside" id="dWb-2p-gpX"/>
                                                         </connections>
@@ -403,8 +420,13 @@
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
                         <outlet property="accountButton" destination="Pp5-SB-qxL" id="VCQ-hf-YsC"/>
+                        <outlet property="closeButton" destination="4gD-tQ-0ey" id="XOF-Y6-UA8"/>
                         <outlet property="feedView" destination="Mth-bo-zmF" id="nt2-3x-vKF"/>
+                        <outlet property="feelingClosedImageView" destination="iEV-Np-2gU" id="oMG-pE-EBQ"/>
+                        <outlet property="feelingOpenedImageView" destination="Z5w-NL-WSB" id="Y83-DR-GtF"/>
                         <outlet property="howAreYouView" destination="niw-B6-QrZ" id="ile-CI-QoM"/>
+                        <outlet property="howAreYouViewHeight" destination="wVZ-GP-2kk" id="xFr-6Q-0a1"/>
+                        <outlet property="openButton" destination="6Xv-fF-5xO" id="tql-Sk-sQS"/>
                         <outlet property="routinesView" destination="CHJ-ea-aGp" id="0zs-CT-rdv"/>
                         <outlet property="schedulesView" destination="K1E-8U-bfV" id="qd9-af-fnX"/>
                         <outlet property="theyveWonView" destination="5VO-Am-Uuq" id="oKw-mI-5Wl"/>
@@ -412,7 +434,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xQK-yy-Rce" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2493.5999999999999" y="-273.01349325337333"/>
+            <point key="canvasLocation" x="2493.5999999999999" y="-273.4632683658171"/>
         </scene>
         <!--MyFeedViewController-->
         <scene sceneID="T7k-vg-2ZE">
@@ -426,7 +448,8 @@
     <resources>
         <image name="active_routine" width="183" height="127"/>
         <image name="av_3" width="48" height="48"/>
-        <image name="how_are_you_feeling" width="383" height="83"/>
+        <image name="feeling_today" width="380" height="76"/>
+        <image name="feeling_today_expanded" width="383" height="126"/>
         <image name="poza_1" width="380" height="98"/>
         <image name="schedule" width="183" height="127"/>
         <image name="stire_1" width="383" height="173"/>
