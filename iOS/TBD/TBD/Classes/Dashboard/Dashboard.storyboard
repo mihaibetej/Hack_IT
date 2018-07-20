@@ -388,10 +388,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9IX-rD-ndy"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Dashboard" id="fkH-le-5mr"/>
+                    <navigationItem key="navigationItem" title="Dashboard" id="fkH-le-5mr">
+                        <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="68S-6g-szT">
+                            <button key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Pp5-SB-qxL">
+                                <rect key="frame" x="16" y="0.0" width="48" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="-11" minY="0.0" maxX="11" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="12" minY="2" maxX="0.0" maxY="6"/>
+                                <state key="normal" image="av_3"/>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="fiJ-jC-BnD"/>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
+                        <outlet property="accountButton" destination="Pp5-SB-qxL" id="VCQ-hf-YsC"/>
                         <outlet property="feedView" destination="Mth-bo-zmF" id="nt2-3x-vKF"/>
                         <outlet property="howAreYouView" destination="niw-B6-QrZ" id="ile-CI-QoM"/>
                         <outlet property="routinesView" destination="CHJ-ea-aGp" id="0zs-CT-rdv"/>
@@ -414,6 +426,7 @@
     </scenes>
     <resources>
         <image name="active_routine" width="183" height="127"/>
+        <image name="av_3" width="48" height="48"/>
         <image name="how_are_you_feeling" width="383" height="83"/>
         <image name="poza_1" width="380" height="98"/>
         <image name="schedule" width="183" height="127"/>
