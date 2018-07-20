@@ -14,7 +14,7 @@ class MessagesViewController: UIViewController {
     var contact: Contact?
     var me: Contact = Contact(fullname: "Me", messages: nil)
     var group: Group?
-    var myMessages = [Message]()
+    var messages = [Message]()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var inputSeparatorView: UIView!
@@ -56,6 +56,17 @@ class MessagesViewController: UIViewController {
         // Kb notifications
         NotificationCenter.default.addObserver(self, selector: #selector(MessagesViewController.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(MessagesViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        // Incoming messages
+        if let contact = contact, let contactMessages = contact.messages {
+            messages.append(contentsOf: contactMessages)
+        } else if let group = group {
+            for contact in group.contacts {
+                if let contactMessages = contact.messages {
+                    messages.append(contentsOf: contactMessages)
+                }
+            }
+        }
     }
     
     @IBAction func addMediaAction(_ sender: Any) {
@@ -78,11 +89,11 @@ class MessagesViewController: UIViewController {
     
     @IBAction func sendAction(_ sender: Any) {
         let myMessageContent = growingTextView.textView.text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        myMessages.append(Message(content: myMessageContent))
+        messages.append(Message(content: myMessageContent, type: .outgoing))
         if me.messages == nil {
-            me.messages = [myMessages.last!]
+            me.messages = [messages.last!]
         } else {
-            me.messages!.append(myMessages.last!)
+            me.messages!.append(messages.last!)
         }
         growingTextView.textView.text = ""
         tableView.reloadData()
@@ -98,12 +109,19 @@ extension MessagesViewController: UITableViewDataSource, UITableViewDelegate {
     // MARK: Data source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myMessages.count
+        return messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OutgoingMessageCell", for: indexPath) as! OutgoingMessageCell
-        cell.configure(me.messages![indexPath.row])
+        var cell: UITableViewCell
+        let message = messages[indexPath.row]
+        if message.type == .incoming {
+            cell = tableView.dequeueReusableCell(withIdentifier: "IncomingMessageCell", for: indexPath) as! IncomingMessageCell
+            (cell as! IncomingMessageCell).configure(message)
+        } else {
+            cell = tableView.dequeueReusableCell(withIdentifier: "OutgoingMessageCell", for: indexPath) as! OutgoingMessageCell
+            (cell as! OutgoingMessageCell).configure(message)
+        }
         
         return cell
     }
