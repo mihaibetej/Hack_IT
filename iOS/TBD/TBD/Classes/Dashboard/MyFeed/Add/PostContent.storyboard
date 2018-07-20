@@ -26,24 +26,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write a few words" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ct-D6-sYM">
-                                <rect key="frame" x="20" y="84" width="374" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are you thinking about?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ct-D6-sYM">
+                                <rect key="frame" x="20" y="84" width="374" height="24"/>
                                 <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="SYf-df-h3n">
-                                <rect key="frame" x="20" y="124" width="374" height="299"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9cP-RG-PAV">
                                 <rect key="frame" x="20" y="431" width="374" height="285"/>
                                 <subviews>
@@ -84,27 +72,56 @@
                                     <action selector="addAttachment:" destination="ubG-ha-kye" eventType="touchUpInside" id="3fx-6E-swM"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ee-wd-pA8">
+                                <rect key="frame" x="20" y="128" width="374" height="295"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="SYf-df-h3n">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="294.66666666666669"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="SYf-df-h3n" firstAttribute="leading" secondItem="2ee-wd-pA8" secondAttribute="leading" id="9gL-cV-Axt"/>
+                                    <constraint firstAttribute="bottom" secondItem="SYf-df-h3n" secondAttribute="bottom" id="P79-Rc-gCC"/>
+                                    <constraint firstAttribute="trailing" secondItem="SYf-df-h3n" secondAttribute="trailing" id="muI-7v-4GK"/>
+                                    <constraint firstItem="SYf-df-h3n" firstAttribute="top" secondItem="2ee-wd-pA8" secondAttribute="top" id="yMH-Sp-dKs"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.95294117647058818" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="SYf-df-h3n" firstAttribute="top" secondItem="6ct-D6-sYM" secondAttribute="bottom" constant="20" id="043-kM-cB5"/>
-                            <constraint firstItem="SYf-df-h3n" firstAttribute="leading" secondItem="XcV-2f-X3B" secondAttribute="leading" constant="20" id="8eJ-p7-2W9"/>
+                            <constraint firstItem="2ee-wd-pA8" firstAttribute="width" secondItem="9cP-RG-PAV" secondAttribute="width" id="1jR-Pb-SIp"/>
+                            <constraint firstItem="2ee-wd-pA8" firstAttribute="top" secondItem="6ct-D6-sYM" secondAttribute="bottom" constant="20" id="3BH-fP-Fmy"/>
                             <constraint firstItem="azY-bl-fio" firstAttribute="bottom" secondItem="y7d-OR-dHK" secondAttribute="bottom" id="Fg3-JV-uya"/>
-                            <constraint firstItem="9cP-RG-PAV" firstAttribute="width" secondItem="SYf-df-h3n" secondAttribute="width" id="GSP-fM-czf"/>
-                            <constraint firstItem="9cP-RG-PAV" firstAttribute="top" secondItem="SYf-df-h3n" secondAttribute="bottom" constant="8" id="JPx-m2-Vxf"/>
                             <constraint firstItem="azY-bl-fio" firstAttribute="height" secondItem="y7d-OR-dHK" secondAttribute="height" id="Qkw-xX-0JQ"/>
                             <constraint firstItem="y7d-OR-dHK" firstAttribute="bottom" secondItem="9cP-RG-PAV" secondAttribute="bottom" id="T7o-QT-eFl"/>
-                            <constraint firstItem="XcV-2f-X3B" firstAttribute="trailing" secondItem="SYf-df-h3n" secondAttribute="trailing" constant="20" id="X1V-uX-ENG"/>
                             <constraint firstItem="XcV-2f-X3B" firstAttribute="bottom" secondItem="9cP-RG-PAV" secondAttribute="bottom" constant="20" id="aId-Sk-zKJ"/>
-                            <constraint firstItem="y7d-OR-dHK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="SYf-df-h3n" secondAttribute="bottom" constant="8" id="bJX-XV-Skv"/>
+                            <constraint firstItem="2ee-wd-pA8" firstAttribute="leading" secondItem="XcV-2f-X3B" secondAttribute="leading" constant="20" id="bQL-c3-Vay"/>
                             <constraint firstItem="6ct-D6-sYM" firstAttribute="leading" secondItem="XcV-2f-X3B" secondAttribute="leading" constant="20" id="bUW-5e-zVb"/>
+                            <constraint firstItem="9cP-RG-PAV" firstAttribute="top" secondItem="2ee-wd-pA8" secondAttribute="bottom" constant="8" id="gEi-Kk-pdT"/>
                             <constraint firstItem="XcV-2f-X3B" firstAttribute="trailing" secondItem="6ct-D6-sYM" secondAttribute="trailing" constant="20" id="kC4-6a-jpl"/>
                             <constraint firstItem="azY-bl-fio" firstAttribute="width" secondItem="y7d-OR-dHK" secondAttribute="width" id="lE3-1P-ZAp"/>
                             <constraint firstItem="azY-bl-fio" firstAttribute="trailing" secondItem="y7d-OR-dHK" secondAttribute="trailing" id="n0r-7e-Sio"/>
                             <constraint firstAttribute="trailing" secondItem="y7d-OR-dHK" secondAttribute="trailing" constant="20" id="pYW-j0-vf6"/>
                             <constraint firstItem="6ct-D6-sYM" firstAttribute="top" secondItem="XcV-2f-X3B" secondAttribute="top" constant="20" id="roB-MX-hoQ"/>
                             <constraint firstItem="9cP-RG-PAV" firstAttribute="leading" secondItem="XcV-2f-X3B" secondAttribute="leading" constant="20" id="sAb-jP-5hV"/>
+                            <constraint firstItem="XcV-2f-X3B" firstAttribute="trailing" secondItem="2ee-wd-pA8" secondAttribute="trailing" constant="20" id="sxU-pC-pbe"/>
+                            <constraint firstItem="y7d-OR-dHK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2ee-wd-pA8" secondAttribute="bottom" constant="8" id="zwu-2q-L6h"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XcV-2f-X3B"/>
                         <connections>
@@ -130,6 +147,7 @@
                         <outlet property="imageView" destination="c5h-Cu-ubF" id="fQt-dQ-f5n"/>
                         <outlet property="imageViewBottomConstraint" destination="aId-Sk-zKJ" id="DHP-kl-d0g"/>
                         <outlet property="imageViewHeight" destination="zFl-CE-4C2" id="GtO-um-Ogp"/>
+                        <outlet property="testAreaContainer" destination="2ee-wd-pA8" id="Fge-1M-nuS"/>
                         <outlet property="textArea" destination="SYf-df-h3n" id="beG-b6-koE"/>
                     </connections>
                 </viewController>
