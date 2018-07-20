@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let barButtonFont = UIFont(name: "ProximaNova-Regular", size: 17)!
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: barButtonFont], for: .normal)
 
-        //f63c0b
         UITabBar.appearance().tintColor = UIColor(rgb: 0xf63c0b)
         UITabBar.appearance().unselectedItemTintColor = UIColor(red: 32.0/255.0, green: 63.0/255.0, blue: 212.0/255.0, alpha: 1)
         return true

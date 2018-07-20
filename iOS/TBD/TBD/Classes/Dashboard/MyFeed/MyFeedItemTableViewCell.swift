@@ -35,6 +35,7 @@ class MyFeedItemTableViewCell: UITableViewCell {
     @IBOutlet weak var mediaThumbHeight: NSLayoutConstraint!
     @IBOutlet weak var userAvatarImageView: UIImageView!
     let mediaThumbHeightConstant: CGFloat = 98
+    var isExpandable = false
     
     weak var delegate: ItemExpandable?
     var index: Int?
@@ -77,9 +78,13 @@ class MyFeedItemTableViewCell: UITableViewCell {
             mediaThumbImageView.image = nil
             mediaThumbHeight.constant = 0
         }
+        
+        isExpandable = feedItem.username == "cureleukaemia" && feedItem.reactions == 43
     }
     
     @IBAction func expandItem(_ sender: Any) {
-        delegate?.expandItem(at: index!)
+        if isExpandable {
+            delegate?.expandItem(at: index!)
+        }
     }
 }
