@@ -89,7 +89,7 @@ class MessagesViewController: UIViewController {
     
     @IBAction func sendAction(_ sender: Any) {
         let myMessageContent = growingTextView.textView.text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        messages.append(Message(content: myMessageContent, type: .outgoing))
+        messages.append(Message(content: myMessageContent, type: .outgoing, sender: "Me"))
         if me.messages == nil {
             me.messages = [messages.last!]
         } else {
@@ -117,7 +117,12 @@ extension MessagesViewController: UITableViewDataSource, UITableViewDelegate {
         let message = messages[indexPath.row]
         if message.type == .incoming {
             cell = tableView.dequeueReusableCell(withIdentifier: "IncomingMessageCell", for: indexPath) as! IncomingMessageCell
-            (cell as! IncomingMessageCell).configure(message)
+            if group != nil {
+                let previousMessage: Message? = indexPath.row == 0 ? nil : messages[indexPath.row - 1]
+                (cell as! IncomingMessageCell).configure(message, previousMessage: previousMessage, isGroupMessage: true)
+            } else {
+                (cell as! IncomingMessageCell).configure(message)
+            }
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: "OutgoingMessageCell", for: indexPath) as! OutgoingMessageCell
             (cell as! OutgoingMessageCell).configure(message)

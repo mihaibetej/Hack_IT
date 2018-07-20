@@ -14,10 +14,17 @@ class IncomingMessageCell: UITableViewCell {
     @IBOutlet weak var incomingMessageContainer: UIView!
     @IBOutlet weak var incomingMessageContainerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var incomingMessageContainerTrailingConstraint: NSLayoutConstraint!
-
     
-    let defaultContainerHeight: CGFloat = 36
+    @IBOutlet weak var incomingContactImageView: UIImageView!
+    @IBOutlet weak var incomingContactImageViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var incomingContactImageViewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var incomingContactImageViewHeightConstraint: NSLayoutConstraint!
+    
+    
+    let defaultContainerHeight: CGFloat = 38
     let defaultContainerTrailing: CGFloat = 48
+    let defaultImageLeadingConstant: CGFloat = 10
+    let defaultImageWidthConstant: CGFloat = 28
 
     
     override func awakeFromNib() {
@@ -36,8 +43,18 @@ class IncomingMessageCell: UITableViewCell {
 
     }
     
-    func configure(_ message: Message) {
-        let maxW = bounds.width - defaultContainerTrailing - 10
+    func configure(_ message: Message, previousMessage: Message? = nil, isGroupMessage: Bool = false) {
+        var maxW = bounds.width - defaultContainerTrailing - 10
+        // Adjust for avatar
+        if message.type == .incoming && isGroupMessage {
+            maxW = maxW - 10 - incomingContactImageView.bounds.width
+            incomingContactImageViewLeadingConstraint.constant = defaultImageLeadingConstant
+            incomingContactImageViewWidthConstraint.constant = defaultImageWidthConstant
+        } else {
+            incomingContactImageViewLeadingConstraint.constant = 0
+            incomingContactImageViewWidthConstraint.constant = 0
+        }
+        
         let maxH = CGFloat.greatestFiniteMagnitude
         let requiredMessageLabelSize = (message.content as NSString).boundingRect(with: CGSize(width: maxW - 16, height: maxH), options: [.usesFontLeading, .usesLineFragmentOrigin], attributes: [NSAttributedStringKey.font : messageLabel.font], context: nil)
         
@@ -46,6 +63,12 @@ class IncomingMessageCell: UITableViewCell {
         layoutIfNeeded()
         
         messageLabel.text = message.content
+        
+        if previousMessage?.sender != message.sender && isGroupMessage {
+            incomingContactImageView.image = UIImage(named: "user_male")
+        } else {
+            incomingContactImageView.image = nil
+        }
 
     }
 

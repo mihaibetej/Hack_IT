@@ -257,15 +257,15 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IncomingMessageCell" id="dF2-Sf-sPJ" customClass="IncomingMessageCell" customModule="TBD" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dF2-Sf-sPJ" id="oX1-j2-q9r">
+                                        <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dF2-Sf-sPJ" id="oX1-j2-q9r">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8R-BB-kdm">
-                                                    <rect key="frame" x="10" y="0.0" width="356" height="36"/>
+                                                    <rect key="frame" x="48" y="0.0" width="318" height="38"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incoming message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EL7-DR-NuS">
-                                                            <rect key="frame" x="8" y="6" width="340" height="24"/>
+                                                            <rect key="frame" x="8" y="6" width="302" height="26"/>
                                                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -274,21 +274,34 @@
                                                     <color key="backgroundColor" red="1" green="0.64887800179999999" blue="0.66550772199999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="EL7-DR-NuS" firstAttribute="leading" secondItem="V8R-BB-kdm" secondAttribute="leading" constant="8" id="Vh3-Xt-hbx"/>
-                                                        <constraint firstAttribute="height" constant="36" id="fWo-i5-1sq"/>
+                                                        <constraint firstAttribute="height" constant="38" id="fWo-i5-1sq"/>
                                                         <constraint firstItem="EL7-DR-NuS" firstAttribute="top" secondItem="V8R-BB-kdm" secondAttribute="top" constant="6" id="huk-6g-f1m"/>
                                                         <constraint firstAttribute="bottom" secondItem="EL7-DR-NuS" secondAttribute="bottom" constant="6" id="osX-ip-ga1"/>
                                                         <constraint firstAttribute="trailing" secondItem="EL7-DR-NuS" secondAttribute="trailing" constant="8" id="xOa-P1-IQm"/>
                                                     </constraints>
                                                 </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UNx-aW-4zo">
+                                                    <rect key="frame" x="10" y="5" width="28" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="28" id="COx-V1-I0l"/>
+                                                        <constraint firstAttribute="height" constant="28" id="Xre-Jb-9xu"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="V8R-BB-kdm" secondAttribute="bottom" constant="8" id="BG3-af-AbH"/>
+                                                <constraint firstItem="V8R-BB-kdm" firstAttribute="leading" secondItem="UNx-aW-4zo" secondAttribute="trailing" constant="10" id="21x-cx-3NE"/>
+                                                <constraint firstAttribute="bottom" secondItem="V8R-BB-kdm" secondAttribute="bottom" constant="6" id="BG3-af-AbH"/>
                                                 <constraint firstItem="V8R-BB-kdm" firstAttribute="top" secondItem="oX1-j2-q9r" secondAttribute="top" id="C0s-Ga-sJy"/>
                                                 <constraint firstAttribute="trailing" secondItem="V8R-BB-kdm" secondAttribute="trailing" constant="48" id="XRn-9T-yGQ"/>
-                                                <constraint firstItem="V8R-BB-kdm" firstAttribute="leading" secondItem="oX1-j2-q9r" secondAttribute="leading" constant="10" id="nfd-r8-lCs"/>
+                                                <constraint firstItem="V8R-BB-kdm" firstAttribute="centerY" secondItem="UNx-aW-4zo" secondAttribute="centerY" id="c5b-8K-yJ4"/>
+                                                <constraint firstItem="UNx-aW-4zo" firstAttribute="leading" secondItem="oX1-j2-q9r" secondAttribute="leading" constant="10" id="vMa-xm-hmV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="incomingContactImageView" destination="UNx-aW-4zo" id="9qs-Zh-hi1"/>
+                                            <outlet property="incomingContactImageViewHeightConstraint" destination="Xre-Jb-9xu" id="gB0-Wz-Nrg"/>
+                                            <outlet property="incomingContactImageViewLeadingConstraint" destination="vMa-xm-hmV" id="U2p-cL-d8W"/>
+                                            <outlet property="incomingContactImageViewWidthConstraint" destination="COx-V1-I0l" id="P9B-eJ-dTe"/>
                                             <outlet property="incomingMessageContainer" destination="V8R-BB-kdm" id="BIY-sS-jaF"/>
                                             <outlet property="incomingMessageContainerHeightConstraint" destination="fWo-i5-1sq" id="LnR-jm-PWr"/>
                                             <outlet property="incomingMessageContainerTrailingConstraint" destination="XRn-9T-yGQ" id="GJY-y5-e8F"/>

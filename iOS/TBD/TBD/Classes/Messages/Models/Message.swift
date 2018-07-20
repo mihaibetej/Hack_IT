@@ -16,4 +16,5 @@ enum MessageType {
 struct Message {
     let content: String
     let type: MessageType
+    let sender: String
 }
