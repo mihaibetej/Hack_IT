@@ -12,3 +12,9 @@ struct Contact {
     let fullname: String
     var messages: [Message]?
 }
+
+extension Contact {
+    init(name: String) {
+        fullname = name
+    }
+}

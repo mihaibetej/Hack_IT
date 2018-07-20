@@ -377,12 +377,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="UcX-KS-UNu">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="UcX-KS-UNu">
                                 <rect key="frame" x="0.0" y="108" width="414" height="628"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Find a person and start a conversation" id="iEc-KW-5ac">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactCell" rowHeight="52" id="SCo-Gh-lUt" customClass="ContactCell" customModule="TBD" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="52"/>
+                                        <rect key="frame" x="0.0" y="99.333333333333343" width="414" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SCo-Gh-lUt" id="NfE-c0-TLQ">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="51.666666666666664"/>
@@ -395,25 +400,34 @@
                                                         <constraint firstAttribute="width" constant="36" id="p0r-I8-x98"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hercule Poirot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s33-zc-sKP">
-                                                    <rect key="frame" x="60" y="17.666666666666668" width="334" height="15.000000000000004"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Hercule Poirot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s33-zc-sKP">
+                                                    <rect key="frame" x="60" y="17.666666666666668" width="271" height="15.000000000000004"/>
                                                     <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalCompressionResistancePriority="751" text="2km away" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeV-4f-8U7">
+                                                    <rect key="frame" x="331" y="17.666666666666668" width="67" height="15.000000000000004"/>
+                                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="WeV-4f-8U7" secondAttribute="trailing" constant="16" id="778-Zc-LPk"/>
                                                 <constraint firstAttribute="bottom" secondItem="gKm-xo-mMt" secondAttribute="bottom" constant="8.6699999999999999" id="Cff-uO-yWF"/>
                                                 <constraint firstItem="s33-zc-sKP" firstAttribute="leading" secondItem="gKm-xo-mMt" secondAttribute="trailing" constant="8" id="Hhm-uf-f93"/>
-                                                <constraint firstItem="s33-zc-sKP" firstAttribute="trailing" secondItem="NfE-c0-TLQ" secondAttribute="trailingMargin" id="Tcl-oH-XSo"/>
                                                 <constraint firstItem="gKm-xo-mMt" firstAttribute="leading" secondItem="NfE-c0-TLQ" secondAttribute="leading" constant="16" id="U9z-Ju-4Oq"/>
                                                 <constraint firstItem="gKm-xo-mMt" firstAttribute="top" secondItem="NfE-c0-TLQ" secondAttribute="top" constant="7" id="Ykl-iw-NlF"/>
+                                                <constraint firstItem="WeV-4f-8U7" firstAttribute="centerY" secondItem="s33-zc-sKP" secondAttribute="centerY" id="eiv-6A-zzY"/>
+                                                <constraint firstItem="WeV-4f-8U7" firstAttribute="leading" secondItem="s33-zc-sKP" secondAttribute="trailing" id="goA-tS-36D"/>
                                                 <constraint firstItem="s33-zc-sKP" firstAttribute="centerY" secondItem="gKm-xo-mMt" secondAttribute="centerY" id="rkm-Ox-IaE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="contactImageView" destination="gKm-xo-mMt" id="zs2-Pk-tZb"/>
                                             <outlet property="contactNameLabel" destination="s33-zc-sKP" id="veH-vF-fa2"/>
+                                            <outlet property="distanceLabel" destination="WeV-4f-8U7" id="piH-dI-U0S"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

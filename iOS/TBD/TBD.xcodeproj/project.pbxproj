@@ -52,6 +52,7 @@
 		751A5A162100D8BD00E913A8 /* ProximaNova-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A5A052100D8BD00E913A8 /* ProximaNova-SemiboldItalic.otf */; };
 		751A5A172100D8BD00E913A8 /* ProximaNovaCond-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A5A062100D8BD00E913A8 /* ProximaNovaCond-Regular.otf */; };
 		751A5A182100D8BD00E913A8 /* ProximaNova-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A5A072100D8BD00E913A8 /* ProximaNova-LightItalic.otf */; };
+		7523EAD4210175F2003B22D3 /* ContactsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7523EAD3210175F2003B22D3 /* ContactsDataSource.swift */; };
 		756065142100DA4300C9B421 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756065132100DA4300C9B421 /* DashboardViewController.swift */; };
 		756DD8DB2100EC130037FF3C /* PostContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756DD8DA2100EC130037FF3C /* PostContent.storyboard */; };
 		756DD8DD2100EC230037FF3C /* PostContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756DD8DC2100EC230037FF3C /* PostContentViewController.swift */; };
@@ -59,9 +60,6 @@
 		75966F5B210107F600779E78 /* FeedDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75966F5A210107F600779E78 /* FeedDatasource.swift */; };
 		75966F5E21010CCC00779E78 /* MyFeedDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75966F5D21010CCC00779E78 /* MyFeedDetailsViewController.swift */; };
 		75966F6021010D1000779E78 /* MyFeedDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75966F5F21010D1000779E78 /* MyFeedDetails.storyboard */; };
-		BE70ADC12100EEBE00585157 /* MyScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC02100EEBE00585157 /* MyScheduleViewController.swift */; };
-		BE70ADC32101087600585157 /* RoutinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC22101087600585157 /* RoutinesViewController.swift */; };
-		BE70ADC521010E8F00585157 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC421010E8F00585157 /* CalendarViewController.swift */; };
 		BE70ADC12100EEBE00585157 /* MyScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC02100EEBE00585157 /* MyScheduleViewController.swift */; };
 		BE70ADC32101087600585157 /* RoutinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC22101087600585157 /* RoutinesViewController.swift */; };
 		BE70ADC521010E8F00585157 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC421010E8F00585157 /* CalendarViewController.swift */; };
@@ -116,6 +114,7 @@
 		751A5A052100D8BD00E913A8 /* ProximaNova-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-SemiboldItalic.otf"; sourceTree = "<group>"; };
 		751A5A062100D8BD00E913A8 /* ProximaNovaCond-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNovaCond-Regular.otf"; sourceTree = "<group>"; };
 		751A5A072100D8BD00E913A8 /* ProximaNova-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-LightItalic.otf"; sourceTree = "<group>"; };
+		7523EAD3210175F2003B22D3 /* ContactsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDataSource.swift; sourceTree = "<group>"; };
 		756065132100DA4300C9B421 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		756DD8DA2100EC130037FF3C /* PostContent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostContent.storyboard; sourceTree = "<group>"; };
 		756DD8DC2100EC230037FF3C /* PostContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContentViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +198,7 @@
 				27F1C6192100DE9D0083B6A7 /* Contact.swift */,
 				27F1C61B2100DEAC0083B6A7 /* Group.swift */,
 				27F1C61D2100DEB60083B6A7 /* Message.swift */,
+				7523EAD3210175F2003B22D3 /* ContactsDataSource.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -515,6 +515,7 @@
 				27DB63A82100F782009AECA4 /* MessagesViewController.swift in Sources */,
 				27DB63AF21014696009AECA4 /* OutgoingMessageCell.swift in Sources */,
 				27F1C6102100D4F00083B6A7 /* MessagesOverviewViewController.swift in Sources */,
+				7523EAD4210175F2003B22D3 /* ContactsDataSource.swift in Sources */,
 				27F1C6172100DE040083B6A7 /* GroupMessageCell.swift in Sources */,
 				27F1C61E2100DEB60083B6A7 /* Message.swift in Sources */,
 				633A31212100DF2800C6C253 /* MyFeedItemTableViewCell.swift in Sources */,
