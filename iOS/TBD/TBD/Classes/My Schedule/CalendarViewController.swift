@@ -14,8 +14,12 @@ class CalendarViewController: UIViewController {
     @IBOutlet var progressiveRelaxations: [UIStackView]!
     @IBOutlet var morningWorkouts: [UIStackView]!
     
+    @IBOutlet var appointments: [UIStackView]!
+    
     @IBOutlet weak var sundayCell: RoundedShadowView!
     @IBOutlet weak var mondayCell: RoundedShadowView!
+    
+    let transition = CircularTransition()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +27,21 @@ class CalendarViewController: UIViewController {
         sundayCell.isHidden = true
         mondayCell.isHidden = true
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let appointmentViewController = segue.destination as! AppointmentViewController
+        switch segue.identifier {
+        case "consultation":
+            appointmentViewController.appointmentNameString = "Dr. John Smith Consultation"
+        case "medication":
+            appointmentViewController.appointmentNameString = "Medication reminder: Predisone"
+        case "recovery":
+            appointmentViewController.appointmentNameString = "Recovery program"
+        default:
+            break
+        }
+    }
+    
 }
 
 extension CalendarViewController: RoutinesViewControllerDelegate {
@@ -42,3 +61,24 @@ extension CalendarViewController: RoutinesViewControllerDelegate {
         }
     }
 }
+
+// MARK: - UIViewControllerTransitioningDelegate
+extension CalendarViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = CGPoint.init(x: 0, y: self.view.frame.height)
+        transition.circleColor = UIColor.white
+        
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint =  CGPoint.init(x: 0, y: self.view.frame.height)
+        transition.circleColor = UIColor.white
+        
+        return transition
+    }
+}
+
