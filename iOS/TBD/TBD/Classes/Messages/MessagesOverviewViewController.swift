@@ -15,14 +15,17 @@ enum ChatMode: Int {
 
 class MessagesOverviewViewController: UIViewController {
     
+    static let erin = Contact(fullname: "Erin", messages: [Message]())
+    
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
-    private var contacts = [Contact]()
-    private var groups = [Group]()
+    var contacts = [Contact]()
+    var groups = [Group]()
     
     var chatMode: ChatMode = .private
     var showKeyboardInChatScreen: Bool = false
+    var addErinAndNavigate: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +44,10 @@ class MessagesOverviewViewController: UIViewController {
         let detectiveClub = Group(name: "Detective Club", contacts: [sherlock, poirot])
         groups = [chessClub, detectiveClub]
         
+        if addErinAndNavigate {
+            contacts.insert(MessagesOverviewViewController.erin, at: 0)
+        }
+        
         // Refresh
         tableView.reloadData()
     }
@@ -48,6 +55,11 @@ class MessagesOverviewViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+        
+        if addErinAndNavigate {
+            performSegue(withIdentifier: "showPrivateChat", sender: tableView.cellForRow(at: IndexPath(row: 0, section: 0)))
+            addErinAndNavigate = false
+        }
     }
     
     // MARK: Navigation
