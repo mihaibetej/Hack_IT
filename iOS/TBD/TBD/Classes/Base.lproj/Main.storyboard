@@ -34,7 +34,7 @@
         <scene sceneID="ygo-uz-oYw">
             <objects>
                 <viewControllerPlaceholder storyboardName="Dashboard" id="xx6-4x-TUw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dashboard" id="5Ar-E8-nRj"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="dashboard_blue" id="5Ar-E8-nRj"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jrt-xB-C4u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,7 +44,7 @@
         <scene sceneID="xQi-Do-KlO">
             <objects>
                 <viewControllerPlaceholder storyboardName="MySchedule" id="NBa-rH-ERs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Schedule" id="o3e-7y-HI4"/>
+                    <tabBarItem key="tabBarItem" title="My Schedule" image="schedule_blue" id="o3e-7y-HI4"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rpP-dh-dG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,7 +64,7 @@
         <scene sceneID="zAg-4e-a7s">
             <objects>
                 <viewControllerPlaceholder storyboardName="Information" id="QVh-7x-Ol1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Information" id="PxS-Ze-g9A"/>
+                    <tabBarItem key="tabBarItem" title="Information" image="medical_info_blue" id="PxS-Ze-g9A"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sxw-JR-pDu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -74,11 +74,17 @@
         <scene sceneID="LxR-Vk-E1q">
             <objects>
                 <viewControllerPlaceholder storyboardName="DirectMessages" id="HoL-Lz-nVg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="iz6-VN-clX"/>
+                    <tabBarItem key="tabBarItem" title="Messages" image="messages_blue" selectedImage="messages_blue" id="iz6-VN-clX"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qr6-TH-njB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1567" y="107"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dashboard_blue" width="27" height="27"/>
+        <image name="medical_info_blue" width="27" height="27"/>
+        <image name="messages_blue" width="27" height="27"/>
+        <image name="schedule_blue" width="27" height="27"/>
+    </resources>
 </document>
