@@ -65,6 +65,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="segmentedController" destination="7g5-ly-EGu" id="1da-pu-L1D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7c-Op-dcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

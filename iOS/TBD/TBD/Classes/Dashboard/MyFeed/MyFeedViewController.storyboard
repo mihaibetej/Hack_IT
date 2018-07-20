@@ -19,7 +19,7 @@
             <objects>
                 <tableViewController id="zMM-1S-a8M" customClass="MyFeedViewController" customModule="TBD" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wVh-cv-DUJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.95294117647058818" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
@@ -195,6 +195,7 @@
                     <navigationItem key="navigationItem" title="MyFeed" id="4fI-Fz-bxu">
                         <barButtonItem key="rightBarButtonItem" title="Help" id="Wjh-98-L0T"/>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="YfV-07-y7D" kind="show" identifier="showFeedItemDetails" id="I3M-U7-Rmn"/>

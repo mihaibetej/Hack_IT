@@ -42,10 +42,12 @@ class DashboardViewController: UIViewController {
     
     @IBAction func didTapOnSchedules(_ sender: UIButton) {
         print("Schedules")
+        navigateToMySchedules(tabIndex: 0)
     }
     
     @IBAction func didTapOnRoutines(_ sender: UIButton) {
         print("Routines")
+        navigateToMySchedules(tabIndex: 1)
     }
     
     @IBAction func didTapOnTheyveWonTheFight(_ sender: UIButton) {
@@ -54,5 +56,15 @@ class DashboardViewController: UIViewController {
     
     @IBAction func didTapOnFeed(_ sender: UIButton) {
         print("Feed")
+    }
+    
+    private func navigateToMySchedules(tabIndex: Int) {
+        
+        tabBarController?.selectedIndex = 1
+        guard let navController = tabBarController?.selectedViewController as? UINavigationController else { return }
+        guard let myScheduleViewController = navController.topViewController as? MyScheduleViewController else {return}
+        
+        myScheduleViewController.loadViewIfNeeded()
+        myScheduleViewController.segmentedController.selectedSegmentIndex = tabIndex
     }
 }

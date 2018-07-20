@@ -20,7 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().barTintColor = UIColor(red: 32.0/255.0, green: 63.0/255.0, blue: 212.0/255.0, alpha: 1)
         
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        let titleFont = UIFont(name: "ProximaNova-Semibold", size: 17)!
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: titleFont]
+        let barButtonFont = UIFont(name: "ProximaNova-Regular", size: 17)!
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: barButtonFont], for: .normal)
 
         UITabBar.appearance().tintColor = UIColor(rgb: 0xf63c0b)
         UITabBar.appearance().unselectedItemTintColor = UIColor(red: 32.0/255.0, green: 63.0/255.0, blue: 212.0/255.0, alpha: 1)

@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="1583" y="9"/>
         </scene>
-        <!--Settings-->
+        <!--DirectMessages-->
         <scene sceneID="LxR-Vk-E1q">
             <objects>
-                <viewControllerPlaceholder storyboardName="Settings" id="HoL-Lz-nVg" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="DirectMessages" id="HoL-Lz-nVg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" id="iz6-VN-clX"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qr6-TH-njB" userLabel="First Responder" sceneMemberID="firstResponder"/>
