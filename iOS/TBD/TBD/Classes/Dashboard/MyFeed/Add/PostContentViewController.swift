@@ -30,6 +30,7 @@ class PostContentViewController: UIViewController {
     @IBOutlet weak var imageContainer: UIView!
     let imageHeight: CGFloat = 200
     @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet weak var testAreaContainer: UIView!
     
     var videoName: String?
     
@@ -47,7 +48,7 @@ class PostContentViewController: UIViewController {
         super.viewDidLoad()
         
         textArea.text = nil
-        applyShadow(to: textArea)
+        applyShadow(to: testAreaContainer)
         applyShadow(to: imageContainer)
         imageView.image = nil
         imageViewHeight.constant = attachButtonHeight.constant
