@@ -13,17 +13,34 @@ class DashboardViewController: UIViewController {
     static var shouldLaunchHelp = false
 
     @IBOutlet weak var howAreYouView: UIView!
+    @IBOutlet weak var howAreYouViewHeight: NSLayoutConstraint!
     @IBOutlet weak var schedulesView: UIView!
     @IBOutlet weak var routinesView: UIView!
     @IBOutlet weak var theyveWonView: UIView!
     @IBOutlet weak var feedView: UIView!
+    @IBOutlet weak var feelingClosedImageView: UIImageView!
+    @IBOutlet weak var feelingOpenedImageView: UIImageView!
+    @IBOutlet weak var openButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
     
     @IBOutlet weak var accountButton: UIButton!
+    
+    @IBAction func openHowIFeel(_ sender: Any) {
+        openButton.isHidden = true
+        feelingClosedImageView.isHidden = true
+        closeButton.isHidden = false
+        feelingOpenedImageView.isHidden = false
+        howAreYouViewHeight.constant = 125
+    }
+    
+    @IBAction func closeHowIFeel(_ sender: Any) {
+        howAreYouViewHeight.constant = 0
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let shadowViews: [UIView] = [howAreYouView, schedulesView, routinesView, theyveWonView, feedView]
+        let shadowViews: [UIView] = [feelingClosedImageView, feelingOpenedImageView, schedulesView, routinesView, theyveWonView, feedView]
         
         for view in shadowViews {
             view.layer.masksToBounds = false
