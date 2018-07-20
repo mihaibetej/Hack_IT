@@ -11,6 +11,14 @@ import UIKit
 class CustomTabBarController: UITabBarController {
     
     let centerButton = UIButton(type: .custom)
+    
+    static var sharedInstance: CustomTabBarController!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        CustomTabBarController.sharedInstance = self
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

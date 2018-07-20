@@ -29,6 +29,10 @@
 		51E33FE92101301500C7CB27 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FE32100F0D400C7CB27 /* WebViewController.swift */; };
 		51E33FEB21014A6F00C7CB27 /* Glossary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51E33FEA21014A6F00C7CB27 /* Glossary.plist */; };
 		51E33FEE2101527300C7CB27 /* GlossaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FED2101527300C7CB27 /* GlossaryViewController.swift */; };
+		51E33FF12101B67A00C7CB27 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FF02101B67A00C7CB27 /* ArticlesViewController.swift */; };
+		51E33FF32101B84100C7CB27 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FF22101B84100C7CB27 /* ArticleTableViewCell.swift */; };
+		51E33FF52101C4EF00C7CB27 /* WhiteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FF42101C4EF00C7CB27 /* WhiteTableViewCell.swift */; };
+		51E33FF72101CB3300C7CB27 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FF62101CB3300C7CB27 /* ArticleViewController.swift */; };
 		633A311B2100D56800C6C253 /* MyFeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633A311A2100D56800C6C253 /* MyFeedViewController.storyboard */; };
 		633A311D2100D5B800C6C253 /* MyFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A311C2100D5B800C6C253 /* MyFeedViewController.swift */; };
 		633A311F2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A311E2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift */; };
@@ -72,11 +76,57 @@
 		75966F6021010D1000779E78 /* MyFeedDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75966F5F21010D1000779E78 /* MyFeedDetails.storyboard */; };
 		75E489132101CBC100A9EC29 /* FAQTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E489122101CBC100A9EC29 /* FAQTableViewController.swift */; };
 		75FD94D22101A13B00045872 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD94D12101A13B00045872 /* CustomTabBarController.swift */; };
+		75FD94D92101B52600045872 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75FD94D82101B52600045872 /* NotificationCenter.framework */; };
+		75FD94DC2101B52600045872 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD94DB2101B52600045872 /* TodayViewController.swift */; };
+		75FD94DF2101B52600045872 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75FD94DD2101B52600045872 /* MainInterface.storyboard */; };
+		75FD94E32101B52600045872 /* Companion Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 75FD94D72101B52600045872 /* Companion Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		75FD94E82101BA5A00045872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27992C192100841500F05763 /* Assets.xcassets */; };
+		75FD94E92101BAA300045872 /* ProximaNovaCond-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59F72100D8BD00E913A8 /* ProximaNovaCond-Semibold.otf */; };
+		75FD94EA2101BAA300045872 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59F82100D8BD00E913A8 /* ProximaNova-Light.otf */; };
+		75FD94EB2101BAA300045872 /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59F92100D8BD00E913A8 /* ProximaNova-Semibold.otf */; };
+		75FD94EC2101BAA300045872 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59FA2100D8BD00E913A8 /* ProximaNova-Bold.otf */; };
+		75FD94ED2101BAA300045872 /* ProximaNova-Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59FB2100D8BD00E913A8 /* ProximaNova-Extrabold.otf */; };
+		75FD94EE2101BAA300045872 /* ProximaNova-BoldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59FC2100D8BD00E913A8 /* ProximaNova-BoldIt.otf */; };
+		75FD94EF2101BAA300045872 /* ProximaNovaCond-LightIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59FD2100D8BD00E913A8 /* ProximaNovaCond-LightIt.otf */; };
+		75FD94F02101BAA300045872 /* ProximaNova-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59FE2100D8BD00E913A8 /* ProximaNova-RegularItalic.otf */; };
+		75FD94F12101BAA300045872 /* ProximaNovaCond-SemiboldIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A59FF2100D8BD00E913A8 /* ProximaNovaCond-SemiboldIt.otf */; };
+		75FD94F22101BAA300045872 /* ProximaNova-RegItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A5A002100D8BD00E913A8 /* ProximaNova-RegItalic.otf */; };
+		75FD94F32101BAA300045872 /* ProximaNovaCond-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A5A012100D8BD00E913A8 /* ProximaNovaCond-Light.otf */; };
+		75FD94F42101BAA300045872 /* ProximaNova-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A5A022100D8BD00E913A8 /* ProximaNova-Black.otf */; };
+		75FD94F52101BAA300045872 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A5A032100D8BD00E913A8 /* ProximaNova-Regular.otf */; };
+		75FD94F62101BAA300045872 /* ProximaNovaCond-RegularIt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A5A042100D8BD00E913A8 /* ProximaNovaCond-RegularIt.otf */; };
+		75FD94F72101BAA300045872 /* ProximaNova-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A5A052100D8BD00E913A8 /* ProximaNova-SemiboldItalic.otf */; };
+		75FD94F82101BAA300045872 /* ProximaNovaCond-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A5A062100D8BD00E913A8 /* ProximaNovaCond-Regular.otf */; };
+		75FD94F92101BAA300045872 /* ProximaNova-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A5A072100D8BD00E913A8 /* ProximaNova-LightItalic.otf */; };
 		BE70ADC12100EEBE00585157 /* MyScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC02100EEBE00585157 /* MyScheduleViewController.swift */; };
 		BE70ADC32101087600585157 /* RoutinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC22101087600585157 /* RoutinesViewController.swift */; };
 		BE70ADC521010E8F00585157 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC421010E8F00585157 /* CalendarViewController.swift */; };
 		BE70ADC82101247C00585157 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC72101247C00585157 /* RoundedShadowView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		75FD94E12101B52600045872 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27992C072100841300F05763 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75FD94D62101B52600045872;
+			remoteInfo = "Companion Widget";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		75FD94E72101B52600045872 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				75FD94E32101B52600045872 /* Companion Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		247D4A247F4770FC36831575 /* Pods_TBD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TBD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +153,10 @@
 		51E33FE52100F1BD00C7CB27 /* CircularTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 		51E33FEA21014A6F00C7CB27 /* Glossary.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Glossary.plist; sourceTree = "<group>"; };
 		51E33FED2101527300C7CB27 /* GlossaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryViewController.swift; sourceTree = "<group>"; };
+		51E33FF02101B67A00C7CB27 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
+		51E33FF22101B84100C7CB27 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		51E33FF42101C4EF00C7CB27 /* WhiteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteTableViewCell.swift; sourceTree = "<group>"; };
+		51E33FF62101CB3300C7CB27 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		633A311A2100D56800C6C253 /* MyFeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyFeedViewController.storyboard; sourceTree = "<group>"; };
 		633A311C2100D5B800C6C253 /* MyFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedViewController.swift; sourceTree = "<group>"; };
 		633A311E2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -146,6 +200,11 @@
 		75966F5F21010D1000779E78 /* MyFeedDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyFeedDetails.storyboard; sourceTree = "<group>"; };
 		75E489122101CBC100A9EC29 /* FAQTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewController.swift; sourceTree = "<group>"; };
 		75FD94D12101A13B00045872 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		75FD94D72101B52600045872 /* Companion Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Companion Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		75FD94D82101B52600045872 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		75FD94DB2101B52600045872 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		75FD94DE2101B52600045872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		75FD94E02101B52600045872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87F9D5360280F4D279EB21D9 /* Pods-TBD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBD.release.xcconfig"; path = "Pods/Target Support Files/Pods-TBD/Pods-TBD.release.xcconfig"; sourceTree = "<group>"; };
 		BE70ADC02100EEBE00585157 /* MyScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScheduleViewController.swift; sourceTree = "<group>"; };
 		BE70ADC22101087600585157 /* RoutinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutinesViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +224,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		75FD94D42101B52600045872 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75FD94D92101B52600045872 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -172,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				27992C112100841300F05763 /* TBD */,
+				75FD94DA2101B52600045872 /* Companion Widget */,
 				27992C102100841300F05763 /* Products */,
 				A74AAB9FB532D4EB87DE11D5 /* Pods */,
 				C5DB28BC024D03F6D5E08022 /* Frameworks */,
@@ -182,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				27992C0F2100841300F05763 /* TBD.app */,
+				75FD94D72101B52600045872 /* Companion Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,6 +303,17 @@
 				51E33FED2101527300C7CB27 /* GlossaryViewController.swift */,
 			);
 			path = Glossary;
+			sourceTree = "<group>";
+		};
+		51E33FEF2101B66200C7CB27 /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+				51E33FF02101B67A00C7CB27 /* ArticlesViewController.swift */,
+				51E33FF22101B84100C7CB27 /* ArticleTableViewCell.swift */,
+				51E33FF42101C4EF00C7CB27 /* WhiteTableViewCell.swift */,
+				51E33FF62101CB3300C7CB27 /* ArticleViewController.swift */,
+			);
+			path = Articles;
 			sourceTree = "<group>";
 		};
 		633A310F2100D09A00C6C253 /* MyFeed */ = {
@@ -298,6 +378,7 @@
 		751A59C42100B1E400E913A8 /* Information */ = {
 			isa = PBXGroup;
 			children = (
+				51E33FEF2101B66200C7CB27 /* Articles */,
 				51E33FEC21014EF600C7CB27 /* Glossary */,
 				751A59CB2100B43000E913A8 /* Information.storyboard */,
 				51E33FE52100F1BD00C7CB27 /* CircularTransition.swift */,
@@ -387,6 +468,16 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		75FD94DA2101B52600045872 /* Companion Widget */ = {
+			isa = PBXGroup;
+			children = (
+				75FD94DB2101B52600045872 /* TodayViewController.swift */,
+				75FD94DD2101B52600045872 /* MainInterface.storyboard */,
+				75FD94E02101B52600045872 /* Info.plist */,
+			);
+			path = "Companion Widget";
+			sourceTree = "<group>";
+		};
 		A74AAB9FB532D4EB87DE11D5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,6 +502,7 @@
 				633A3126210110AE00C6C253 /* MobileCoreServices.framework */,
 				633A3124210110A800C6C253 /* AVFoundation.framework */,
 				247D4A247F4770FC36831575 /* Pods_TBD.framework */,
+				75FD94D82101B52600045872 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -427,15 +519,34 @@
 				27992C0C2100841300F05763 /* Frameworks */,
 				27992C0D2100841300F05763 /* Resources */,
 				49D762FE2A571FC320945FA6 /* [CP] Embed Pods Frameworks */,
+				75FD94E72101B52600045872 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				75FD94E22101B52600045872 /* PBXTargetDependency */,
 			);
 			name = TBD;
 			productName = TBD;
 			productReference = 27992C0F2100841300F05763 /* TBD.app */;
 			productType = "com.apple.product-type.application";
+		};
+		75FD94D62101B52600045872 /* Companion Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75FD94E62101B52600045872 /* Build configuration list for PBXNativeTarget "Companion Widget" */;
+			buildPhases = (
+				75FD94D32101B52600045872 /* Sources */,
+				75FD94D42101B52600045872 /* Frameworks */,
+				75FD94D52101B52600045872 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Companion Widget";
+			productName = "Companion Widget";
+			productReference = 75FD94D72101B52600045872 /* Companion Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -448,6 +559,9 @@
 				ORGANIZATIONNAME = "Shivering Singletons";
 				TargetAttributes = {
 					27992C0E2100841300F05763 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					75FD94D62101B52600045872 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
@@ -466,6 +580,7 @@
 			projectRoot = "";
 			targets = (
 				27992C0E2100841300F05763 /* TBD */,
+				75FD94D62101B52600045872 /* Companion Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -505,6 +620,32 @@
 				751A59CA2100B41600E913A8 /* DirectMessages.storyboard in Resources */,
 				751A5A152100D8BD00E913A8 /* ProximaNovaCond-RegularIt.otf in Resources */,
 				751A5A122100D8BD00E913A8 /* ProximaNovaCond-Light.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75FD94D52101B52600045872 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75FD94E82101BA5A00045872 /* Assets.xcassets in Resources */,
+				75FD94EA2101BAA300045872 /* ProximaNova-Light.otf in Resources */,
+				75FD94F32101BAA300045872 /* ProximaNovaCond-Light.otf in Resources */,
+				75FD94EB2101BAA300045872 /* ProximaNova-Semibold.otf in Resources */,
+				75FD94F12101BAA300045872 /* ProximaNovaCond-SemiboldIt.otf in Resources */,
+				75FD94EC2101BAA300045872 /* ProximaNova-Bold.otf in Resources */,
+				75FD94EF2101BAA300045872 /* ProximaNovaCond-LightIt.otf in Resources */,
+				75FD94F02101BAA300045872 /* ProximaNova-RegularItalic.otf in Resources */,
+				75FD94F62101BAA300045872 /* ProximaNovaCond-RegularIt.otf in Resources */,
+				75FD94EE2101BAA300045872 /* ProximaNova-BoldIt.otf in Resources */,
+				75FD94ED2101BAA300045872 /* ProximaNova-Extrabold.otf in Resources */,
+				75FD94F22101BAA300045872 /* ProximaNova-RegItalic.otf in Resources */,
+				75FD94F72101BAA300045872 /* ProximaNova-SemiboldItalic.otf in Resources */,
+				75FD94F82101BAA300045872 /* ProximaNovaCond-Regular.otf in Resources */,
+				75FD94F52101BAA300045872 /* ProximaNova-Regular.otf in Resources */,
+				75FD94DF2101B52600045872 /* MainInterface.storyboard in Resources */,
+				75FD94F92101BAA300045872 /* ProximaNova-LightItalic.otf in Resources */,
+				75FD94F42101BAA300045872 /* ProximaNova-Black.otf in Resources */,
+				75FD94E92101BAA300045872 /* ProximaNovaCond-Semibold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,7 +703,9 @@
 				27DB63A82100F782009AECA4 /* MessagesViewController.swift in Sources */,
 				633A312F2101806300C6C253 /* CommentModel.swift in Sources */,
 				27DB63AF21014696009AECA4 /* OutgoingMessageCell.swift in Sources */,
+				51E33FF32101B84100C7CB27 /* ArticleTableViewCell.swift in Sources */,
 				27F1C6102100D4F00083B6A7 /* MessagesOverviewViewController.swift in Sources */,
+				51E33FF72101CB3300C7CB27 /* ArticleViewController.swift in Sources */,
 				7523EAD4210175F2003B22D3 /* ContactsDataSource.swift in Sources */,
 				27F1C6172100DE040083B6A7 /* GroupMessageCell.swift in Sources */,
 				27F1C61E2100DEB60083B6A7 /* Message.swift in Sources */,
@@ -570,11 +713,13 @@
 				633A311F2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift in Sources */,
 				633A312D21017ECA00C6C253 /* CommentsTableViewCell.swift in Sources */,
 				756DD8DF2100EE750037FF3C /* FeedItemModel.swift in Sources */,
+				51E33FF52101C4EF00C7CB27 /* WhiteTableViewCell.swift in Sources */,
 				633A31232101109400C6C253 /* VideoHelper.swift in Sources */,
 				756DD8DD2100EC230037FF3C /* PostContentViewController.swift in Sources */,
 				75966F5E21010CCC00779E78 /* MyFeedDetailsTableViewController.swift in Sources */,
 				633A311D2100D5B800C6C253 /* MyFeedViewController.swift in Sources */,
 				BE70ADC521010E8F00585157 /* CalendarViewController.swift in Sources */,
+				51E33FF12101B67A00C7CB27 /* ArticlesViewController.swift in Sources */,
 				51E33FE82101300900C7CB27 /* CircularTransition.swift in Sources */,
 				75E489132101CBC100A9EC29 /* FAQTableViewController.swift in Sources */,
 				51E33FEE2101527300C7CB27 /* GlossaryViewController.swift in Sources */,
@@ -593,7 +738,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		75FD94D32101B52600045872 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75FD94DC2101B52600045872 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		75FD94E22101B52600045872 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75FD94D62101B52600045872 /* Companion Widget */;
+			targetProxy = 75FD94E12101B52600045872 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		27992C162100841300F05763 /* Main.storyboard */ = {
@@ -610,6 +771,14 @@
 				27992C1C2100841500F05763 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		75FD94DD2101B52600045872 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75FD94DE2101B52600045872 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -733,6 +902,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E425451493A9A4022C6B075F /* Pods-TBD.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6E245HX4RD;
@@ -752,6 +922,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 87F9D5360280F4D279EB21D9 /* Pods-TBD.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6E245HX4RD;
@@ -762,6 +933,44 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shiveringsingletons.TBDFlorin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		75FD94E42101B52600045872 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6E245HX4RD;
+				INFOPLIST_FILE = "Companion Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shiveringsingletons.TBDFlorin.Companion-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		75FD94E52101B52600045872 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6E245HX4RD;
+				INFOPLIST_FILE = "Companion Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shiveringsingletons.TBDFlorin.Companion-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -784,6 +993,15 @@
 			buildConfigurations = (
 				27992C222100841500F05763 /* Debug */,
 				27992C232100841500F05763 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75FD94E62101B52600045872 /* Build configuration list for PBXNativeTarget "Companion Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75FD94E42101B52600045872 /* Debug */,
+				75FD94E52101B52600045872 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
