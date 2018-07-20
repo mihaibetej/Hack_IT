@@ -70,7 +70,6 @@ class MessagesOverviewViewController: UIViewController {
             
             if chatMode == .private {
                 messagesController.contact = contacts[index]
-                messagesController.showKeyboardInChatScreen = showKeyboardInChatScreen
                 messagesController.delegate = self
                 showKeyboardInChatScreen = false
             } else {

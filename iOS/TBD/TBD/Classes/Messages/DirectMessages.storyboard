@@ -204,25 +204,24 @@
                                             <constraint firstAttribute="height" constant="1" id="ctY-Yn-G5m"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdy-9g-f4g">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdy-9g-f4g">
                                         <rect key="frame" x="8" y="7" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="0Xr-hf-nw7"/>
                                             <constraint firstAttribute="height" constant="30" id="4T5-o1-eS8"/>
                                         </constraints>
-                                        <state key="normal" title="Add"/>
+                                        <state key="normal" image="send"/>
                                         <connections>
                                             <action selector="addMediaAction:" destination="o1B-I1-sTt" eventType="touchUpInside" id="mY1-tm-5em"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPi-9i-0em">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPi-9i-0em">
                                         <rect key="frame" x="376" y="7" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="P8u-Jy-SkI"/>
                                             <constraint firstAttribute="width" constant="30" id="hIJ-7h-Zgh"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <state key="normal" title="GO"/>
+                                        <state key="normal" title="GO" image="send_msg"/>
                                         <connections>
                                             <action selector="sendAction:" destination="o1B-I1-sTt" eventType="touchUpInside" id="ILW-Dw-tQm"/>
                                         </connections>
@@ -583,6 +582,8 @@
     </scenes>
     <resources>
         <image name="messages_blue" width="27" height="27"/>
+        <image name="send" width="16" height="16"/>
+        <image name="send_msg" width="16" height="16"/>
         <image name="user_male" width="44" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>

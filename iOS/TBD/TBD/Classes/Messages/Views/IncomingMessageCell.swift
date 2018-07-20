@@ -135,7 +135,21 @@ class IncomingMessageCell: UITableViewCell {
         messageLabel.text = message.content
         
         if previousMessage?.sender != message.sender && isGroupMessage {
-            incomingContactImageView.image = UIImage(named: "user_male")
+            if isGroupMessage {
+                if message.sender == "Erin" {
+                    incomingContactImageView.image = #imageLiteral(resourceName: "avatar_2")
+                }
+                else if message.sender == "Alfred" {
+                    incomingContactImageView.image = #imageLiteral(resourceName: "avatar_1")
+                }
+                else {
+                    incomingContactImageView.image = UIImage(named: "user_male")
+                }
+            }
+            else {
+                incomingContactImageView.image = UIImage(named: "user_male")
+            }
+            
         } else {
             incomingContactImageView.image = nil
         }

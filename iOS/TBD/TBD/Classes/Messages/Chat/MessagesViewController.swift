@@ -28,7 +28,6 @@ class MessagesViewController: UIViewController {
     @IBOutlet weak var inputContainerViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var sendButton: UIButton!
     
-    var showKeyboardInChatScreen: Bool = true
     var delegate: MessagesDelegate?
     var alfyMessageIndex = 0
     
@@ -108,9 +107,8 @@ class MessagesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if showKeyboardInChatScreen {
-            growingTextView.textView.becomeFirstResponder()
-        }
+     
+        growingTextView.textView.becomeFirstResponder() 
     }
     
     @objc func dismissController(sender: Any) {
