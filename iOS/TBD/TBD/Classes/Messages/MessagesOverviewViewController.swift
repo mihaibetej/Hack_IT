@@ -52,16 +52,20 @@ class MessagesOverviewViewController: UIViewController {
     // MARK: Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let senderCell = sender as? UITableViewCell, let index = tableView.indexPath(for: senderCell)?.row else {
-            return
+        if let senderCell = sender as? UITableViewCell, let index = tableView.indexPath(for: senderCell)?.row {
+            let messagesController = segue.destination as! MessagesViewController
+            
+            if chatMode == .private {
+                messagesController.contact = contacts[index]
+            } else {
+                messagesController.group = groups[index]
+            }
         }
         
-        let messagesController = segue.destination as! MessagesViewController
-        
-        if chatMode == .private {
-            messagesController.contact = contacts[index]
-        } else {
-            messagesController.group = groups[index]
+        if let navController = segue.destination as? UINavigationController {
+            if let addContactsViewController = navController.topViewController as? AddContactsViewController {
+                addContactsViewController.delegate = self
+            }
         }
     }
     
@@ -105,4 +109,15 @@ extension MessagesOverviewViewController: UITableViewDataSource, UITableViewDele
         return 0.5
     }
     
+}
+
+extension MessagesOverviewViewController : AddContactsViewControllerDelegate {
+    func addContactsViewControllerDidSelectContact(contact: Contact) {
+        segmentedControl.selectedSegmentIndex = 0
+        chatMode = .private
+        contacts.insert(contact, at: 0)
+        tableView.reloadData()
+        
+        performSegue(withIdentifier: "showPrivateChat", sender: tableView.cellForRow(at: IndexPath(row: 0, section: 0)))
+    }
 }

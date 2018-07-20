@@ -100,8 +100,20 @@ extension AddContactsViewController: UITableViewDataSource, UITableViewDelegate 
     // MARK: Delegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let contacts = ContactsDataSource.instance.allContacts
-        delegate?.addContactsViewControllerDidSelectContact(contact: contacts[contacts.keys.sorted()[indexPath.section]]![indexPath.row])
-        dismiss(animated: true, completion: nil)
+        
+        let contact: Contact
+        
+        if contactType == .nearby {
+            let tuple = ContactsDataSource.instance.nearbyContacts[indexPath.row]
+            contact = tuple.contact
+        } else {
+            let contacts = ContactsDataSource.instance.allContacts
+            contact = contacts[contacts.keys.sorted()[indexPath.section]]![indexPath.row]
+        }
+        
+        
+        dismiss(animated: true) {
+            self.delegate?.addContactsViewControllerDidSelectContact(contact: contact)
+        }
     }
 }
