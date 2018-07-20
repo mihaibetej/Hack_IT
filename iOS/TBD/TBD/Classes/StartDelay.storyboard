@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d7M-vy-NBh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="YOK-US-rns">
+            <objects>
+                <viewController id="d7M-vy-NBh" customClass="StartViewController" customModule="TBD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7NE-lF-HFr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="SlG-xH-7OM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJY-7e-kRJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="getToMain:" destination="d7M-vy-NBh" eventType="touchUpInside" id="5ST-Od-cD8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SlG-xH-7OM" firstAttribute="top" secondItem="7NE-lF-HFr" secondAttribute="top" id="0xN-em-adU"/>
+                            <constraint firstItem="SlG-xH-7OM" firstAttribute="leading" secondItem="jo0-NM-diL" secondAttribute="leading" id="TSs-vg-lHa"/>
+                            <constraint firstItem="SlG-xH-7OM" firstAttribute="bottom" secondItem="jo0-NM-diL" secondAttribute="bottom" id="h9Z-JL-cnx"/>
+                            <constraint firstItem="SlG-xH-7OM" firstAttribute="trailing" secondItem="jo0-NM-diL" secondAttribute="trailing" id="lVP-PZ-QdC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jo0-NM-diL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="T8D-Z2-nPD"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6iP-i1-ZEW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884" y="124.58770614692655"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="splash" width="360" height="640"/>
+    </resources>
+</document>

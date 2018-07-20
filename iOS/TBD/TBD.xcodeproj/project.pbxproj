@@ -35,6 +35,8 @@
 		51E33FF72101CB3300C7CB27 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FF62101CB3300C7CB27 /* ArticleViewController.swift */; };
 		51E33FFA2101DA2C00C7CB27 /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FF92101DA2C00C7CB27 /* StoriesViewController.swift */; };
 		6339642A2101FA1400687DE5 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633964292101FA1400687DE5 /* LaunchViewController.swift */; };
+		6339642C210211A600687DE5 /* StartDelay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6339642B210211A600687DE5 /* StartDelay.storyboard */; };
+		6339642E2102133100687DE5 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6339642D2102133100687DE5 /* StartViewController.swift */; };
 		633A311B2100D56800C6C253 /* MyFeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633A311A2100D56800C6C253 /* MyFeedViewController.storyboard */; };
 		633A311D2100D5B800C6C253 /* MyFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A311C2100D5B800C6C253 /* MyFeedViewController.swift */; };
 		633A311F2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A311E2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift */; };
@@ -164,6 +166,8 @@
 		51E33FF62101CB3300C7CB27 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		51E33FF92101DA2C00C7CB27 /* StoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewController.swift; sourceTree = "<group>"; };
 		633964292101FA1400687DE5 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		6339642B210211A600687DE5 /* StartDelay.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartDelay.storyboard; sourceTree = "<group>"; };
+		6339642D2102133100687DE5 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		633A311A2100D56800C6C253 /* MyFeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyFeedViewController.storyboard; sourceTree = "<group>"; };
 		633A311C2100D5B800C6C253 /* MyFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedViewController.swift; sourceTree = "<group>"; };
 		633A311E2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -449,6 +453,8 @@
 				751A59C32100B1DC00E913A8 /* Settings */,
 				27992C122100841300F05763 /* AppDelegate.swift */,
 				27992C162100841300F05763 /* Main.storyboard */,
+				6339642B210211A600687DE5 /* StartDelay.storyboard */,
+				6339642D2102133100687DE5 /* StartViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -630,6 +636,7 @@
 				27992C182100841300F05763 /* Main.storyboard in Resources */,
 				751A5A0D2100D8BD00E913A8 /* ProximaNova-BoldIt.otf in Resources */,
 				75966F6021010D1000779E78 /* MyFeedDetails.storyboard in Resources */,
+				6339642C210211A600687DE5 /* StartDelay.storyboard in Resources */,
 				751A5A0C2100D8BD00E913A8 /* ProximaNova-Extrabold.otf in Resources */,
 				751A5A132100D8BD00E913A8 /* ProximaNova-Black.otf in Resources */,
 				633A311B2100D56800C6C253 /* MyFeedViewController.storyboard in Resources */,
@@ -732,6 +739,7 @@
 				27F1C61A2100DE9D0083B6A7 /* Contact.swift in Sources */,
 				75FD94D22101A13B00045872 /* CustomTabBarController.swift in Sources */,
 				27F1C6122100D8CC0083B6A7 /* AddContactsViewController.swift in Sources */,
+				6339642E2102133100687DE5 /* StartViewController.swift in Sources */,
 				27DB63A82100F782009AECA4 /* MessagesViewController.swift in Sources */,
 				633A31322101D8FB00C6C253 /* ProfileViewController.swift in Sources */,
 				633A312F2101806300C6C253 /* CommentModel.swift in Sources */,
