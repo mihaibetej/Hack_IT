@@ -31,8 +31,8 @@ class OutgoingMessageCell: UITableViewCell {
         let maxH = CGFloat.greatestFiniteMagnitude
         let requiredMessageLabelSize = (message.content as NSString).boundingRect(with: CGSize(width: maxW - 16, height: maxH), options: [.usesFontLeading, .usesLineFragmentOrigin], attributes: [NSAttributedStringKey.font : messageLabel.font], context: nil)
         
-        outgoingMessageContainerHeightConstant.constant = requiredMessageLabelSize.height + 12
-        outgoingMessageContainerLeadingConstraint.constant = bounds.width - requiredMessageLabelSize.width - 16 - 10
+        outgoingMessageContainerHeightConstant.constant = ceil(requiredMessageLabelSize.height) + 12
+        outgoingMessageContainerLeadingConstraint.constant = bounds.width - ceil(requiredMessageLabelSize.width) - 16 - 10
         layoutIfNeeded()
         
         messageLabel.text = message.content

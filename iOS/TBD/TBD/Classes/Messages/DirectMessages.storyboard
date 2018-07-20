@@ -36,7 +36,7 @@
                                     <segment title="Private"/>
                                     <segment title="Groups"/>
                                 </segments>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.12549019607843137" green="0.24705882352941178" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="selectionUpdate:" destination="Bv6-9e-4tg" eventType="valueChanged" id="pGz-L8-MZr"/>
                                 </connections>
@@ -156,7 +156,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.5490196078431373" green="0.5490196078431373" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="snE-Hs-Jdb" firstAttribute="leading" secondItem="uGh-xZ-bW3" secondAttribute="leading" id="5mt-ge-q44"/>
                             <constraint firstItem="nbX-GA-mfn" firstAttribute="top" secondItem="uGh-xZ-bW3" secondAttribute="top" constant="8" id="Euf-b1-002"/>
@@ -289,7 +289,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="messageContainer" destination="V8R-BB-kdm" id="MHG-QV-q66"/>
+                                            <outlet property="incomingMessageContainer" destination="V8R-BB-kdm" id="BIY-sS-jaF"/>
+                                            <outlet property="incomingMessageContainerHeightConstraint" destination="fWo-i5-1sq" id="LnR-jm-PWr"/>
+                                            <outlet property="incomingMessageContainerTrailingConstraint" destination="XRn-9T-yGQ" id="GJY-y5-e8F"/>
+                                            <outlet property="messageLabel" destination="EL7-DR-NuS" id="EEA-Bd-iQh"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OutgoingMessageCell" id="R7N-B3-5Lt" customClass="OutgoingMessageCell" customModule="TBD" customModuleProvider="target">
@@ -425,14 +428,14 @@
                                     <segment title="Nearby"/>
                                     <segment title="All"/>
                                 </segments>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.12549019607843137" green="0.24705882352941178" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="segmentChange:" destination="HzJ-T9-acr" eventType="valueChanged" id="g9r-vX-qJx"/>
                                     <action selector="selectionUpdate:" destination="Bv6-9e-4tg" eventType="valueChanged" id="Zdr-g2-Xad"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" red="0.5490196078431373" green="0.5490196078431373" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hu3-09-03M" firstAttribute="leading" secondItem="HCW-Ck-9AI" secondAttribute="leading" constant="16" id="Gtk-zf-0ve"/>
                             <constraint firstItem="HCW-Ck-9AI" firstAttribute="trailing" secondItem="hu3-09-03M" secondAttribute="trailing" constant="16" id="H1P-uG-qjm"/>

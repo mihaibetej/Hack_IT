@@ -35,6 +35,7 @@
                                     <segment title="Calendar"/>
                                     <segment title="Routines"/>
                                 </segments>
+                                <color key="tintColor" red="0.12549019607843137" green="0.24705882352941178" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="segmentedControlDidToggle:" destination="Pw0-Vx-cQ8" eventType="valueChanged" id="eD9-3o-GoT"/>
                                 </connections>
