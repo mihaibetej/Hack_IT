@@ -50,6 +50,9 @@ class MessagesViewController: UIViewController {
             installAlfieMock()
             group = Group(name: "Alfy", contacts: [Contact(fullname: "Alfy", messages: [alfieMessages.first!])])
             alfyMessageIndex += 1
+
+            let button = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissController))
+            navigationItem.rightBarButtonItem = button
         }
         title = contact?.fullname ?? group!.name
         
@@ -101,6 +104,11 @@ class MessagesViewController: UIViewController {
         if showKeyboardInChatScreen {
             growingTextView.textView.becomeFirstResponder()
         }
+    }
+    
+    @objc func dismissController(sender: Any) {
+        view.endEditing(true)
+        dismiss(animated: true, completion: nil)
     }
     
     // MARK: Actions
