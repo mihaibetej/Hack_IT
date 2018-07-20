@@ -97,6 +97,7 @@
 		BE70ADC32101087600585157 /* RoutinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC22101087600585157 /* RoutinesViewController.swift */; };
 		BE70ADC521010E8F00585157 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC421010E8F00585157 /* CalendarViewController.swift */; };
 		BE70ADC82101247C00585157 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC72101247C00585157 /* RoundedShadowView.swift */; };
+		BE70ADCA2101D17100585157 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC92101D17100585157 /* AppointmentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,6 +201,7 @@
 		BE70ADC22101087600585157 /* RoutinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutinesViewController.swift; sourceTree = "<group>"; };
 		BE70ADC421010E8F00585157 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		BE70ADC72101247C00585157 /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
+		BE70ADC92101D17100585157 /* AppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
 		E425451493A9A4022C6B075F /* Pods-TBD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TBD/Pods-TBD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -328,6 +330,7 @@
 				BE70ADC02100EEBE00585157 /* MyScheduleViewController.swift */,
 				BE70ADC22101087600585157 /* RoutinesViewController.swift */,
 				BE70ADC421010E8F00585157 /* CalendarViewController.swift */,
+				BE70ADC92101D17100585157 /* AppointmentViewController.swift */,
 			);
 			path = "My Schedule";
 			sourceTree = "<group>";
@@ -696,6 +699,7 @@
 				51E33FE82101300900C7CB27 /* CircularTransition.swift in Sources */,
 				51E33FEE2101527300C7CB27 /* GlossaryViewController.swift in Sources */,
 				27DB63AD2101466E009AECA4 /* IncomingMessageCell.swift in Sources */,
+				BE70ADCA2101D17100585157 /* AppointmentViewController.swift in Sources */,
 				27992C132100841300F05763 /* AppDelegate.swift in Sources */,
 				633A312B21017EB900C6C253 /* ItemDetailsTableViewCell.swift in Sources */,
 				27F1C6152100DDE90083B6A7 /* PrivateMessageCell.swift in Sources */,

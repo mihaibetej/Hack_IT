@@ -32,11 +32,11 @@ class CalendarViewController: UIViewController {
         let appointmentViewController = segue.destination as! AppointmentViewController
         switch segue.identifier {
         case "consultation":
-            appointmentViewController.appointmentNameString = "Dr. John Smith Consultation"
+            appointmentViewController.appointmentNameString = "Recovery program"
         case "medication":
             appointmentViewController.appointmentNameString = "Medication reminder: Predisone"
         case "recovery":
-            appointmentViewController.appointmentNameString = "Recovery program"
+            appointmentViewController.appointmentNameString = "Dr. John Smith Consultation"
         default:
             break
         }
