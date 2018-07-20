@@ -28,13 +28,16 @@ class MessagesViewController: UIViewController {
     @IBOutlet weak var inputContainerViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var sendButton: UIButton!
     
-    var showKeyboardInChatScreen: Bool = false
+    var showKeyboardInChatScreen: Bool = true
     var delegate: MessagesDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        if contact == nil && group == nil {
+            group = Group(name: "Alfie", contacts: [Contact(fullname: "Alfie", messages: [Message]())])
+        }
         title = contact?.fullname ?? group!.name
         
         // Input separator

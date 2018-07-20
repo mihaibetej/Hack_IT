@@ -50,11 +50,11 @@
             </objects>
             <point key="canvasLocation" x="1586" y="-166"/>
         </scene>
-        <!--DirectMessages-->
+        <!--Alfie-->
         <scene sceneID="qQJ-WW-n5d">
             <objects>
-                <viewControllerPlaceholder storyboardName="DirectMessages" id="Tc4-eY-7e0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Direct Messages" id="dlB-Pe-IBa"/>
+                <viewControllerPlaceholder storyboardName="Alfie" id="Tc4-eY-7e0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Instant Help" id="dlB-Pe-IBa"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RkD-iE-vNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
