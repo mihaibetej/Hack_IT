@@ -33,7 +33,7 @@ class MessagesViewController: UIViewController {
     var alfyMessageIndex = 0
     
     var alfieMessagesContents = [
-        "Hi there, Mark! My name is Alfy and I am your personal assistant. I can help you with advice, information or I can find a new friend for you. Please select one of the options at the bottom of the screen",
+        "Hi there, Rafael! My name is Alfred and I am your personal assistant. I can help you with advice, information or I can find a new friend for you. Please select one of the options at the bottom of the screen",
         "Can do! I can give you information about different aspects of leukaemia such as treatment, medication, side effects or ways to recover after treatment.",
         "I can access a huge database for you, all you have to do is tell me the name of the medicine you're interested about.",
         "I found 2 articles and one glossary entry for Cytarabine",
@@ -48,7 +48,7 @@ class MessagesViewController: UIViewController {
         // Do any additional setup after loading the view.
         if contact == nil && group == nil {
             installAlfieMock()
-            group = Group(name: "Alfy", contacts: [Contact(fullname: "Alfy", messages: [alfieMessages.first!])])
+            group = Group(name: "Alfred", contacts: [Contact(fullname: "Alfred", messages: [alfieMessages.first!])])
             alfyMessageIndex += 1
 
             let button = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissController))
