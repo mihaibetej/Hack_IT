@@ -37,6 +37,8 @@ class MessagesViewController: UIViewController {
         // Do any additional setup after loading the view.
         if contact == nil && group == nil {
             group = Group(name: "Alfie", contacts: [Contact(fullname: "Alfie", messages: [Message]())])
+            let button = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissController))
+            navigationItem.rightBarButtonItem = button
         }
         title = contact?.fullname ?? group!.name
         
@@ -88,6 +90,11 @@ class MessagesViewController: UIViewController {
         if showKeyboardInChatScreen {
             growingTextView.textView.becomeFirstResponder()
         }
+    }
+    
+    @objc func dismissController(sender: Any) {
+        view.endEditing(true)
+        dismiss(animated: true, completion: nil)
     }
     
     // MARK: Actions
