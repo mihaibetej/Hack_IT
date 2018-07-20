@@ -228,28 +228,28 @@
                                                 <rect key="frame" x="16" y="278" width="343" height="190"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="They've won the fight" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Sn-T5-6E0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="14"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="16.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
                                                         <color key="textColor" red="0.12549019610000001" green="0.2470588235" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2SZ-wU-xQ9">
-                                                        <rect key="frame" x="0.0" y="26" width="343" height="164"/>
+                                                        <rect key="frame" x="0.0" y="28.333333333333314" width="343" height="161.66666666666666"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poza_1" translatesAutoresizingMaskIntoConstraints="NO" id="8Sb-dW-Cuy">
-                                                                <rect key="frame" x="0.0" y="0.0" width="343" height="94"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="343" height="92.666666666666671"/>
                                                             </imageView>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Mc-1n-Tdk">
-                                                                <rect key="frame" x="0.0" y="94" width="343" height="70"/>
+                                                                <rect key="frame" x="0.0" y="92.666666666666686" width="343" height="69"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Inspirational Karl courageously completes Half Marathon" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhE-bj-5ha">
-                                                                        <rect key="frame" x="12" y="10" width="319" height="28"/>
+                                                                        <rect key="frame" x="12" y="10" width="319" height="32.666666666666664"/>
                                                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6X2-yA-hQP">
-                                                                        <rect key="frame" x="12" y="44" width="319" height="20"/>
+                                                                        <rect key="frame" x="12" y="48.666666666666686" width="319" height="14.333333333333336"/>
                                                                         <string key="text">With days until the 2013 BUPA Great Birmingham Run ‘Team Cure Leukaemia’ had a staggering 454 runners ready to take on the 13.1 miles to raise money for the charity. Four weeks previously 41 year-old leukaemia patient Karl Murphy from Sutton Coldfield had a bone marrow transplant at the Queen Elizabeth Hospital under the supervision of our co-founder Professor Charlie Craddock.</string>
                                                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="10"/>
                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -313,16 +313,16 @@
                                                 <rect key="frame" x="16" y="484" width="343" height="178"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="News Feed" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHd-8w-68i">
-                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="14"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="16.333333333333332"/>
                                                         <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="14"/>
                                                         <color key="textColor" red="0.12549019610000001" green="0.2470588235" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npE-nU-xj0">
-                                                        <rect key="frame" x="0.0" y="26" width="343" height="152"/>
+                                                        <rect key="frame" x="0.0" y="28.333333333333371" width="343" height="149.66666666666666"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stire_1" translatesAutoresizingMaskIntoConstraints="NO" id="iXG-M6-W7d">
-                                                                <rect key="frame" x="0.0" y="0.0" width="343" height="152"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="343" height="149.66666666666666"/>
                                                             </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -406,13 +406,15 @@
                         <viewLayoutGuide key="safeArea" id="9IX-rD-ndy"/>
                     </view>
                     <navigationItem key="navigationItem" title="Dashboard" id="fkH-le-5mr">
-                        <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="68S-6g-szT">
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="68S-6g-szT">
                             <button key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Pp5-SB-qxL">
-                                <rect key="frame" x="16" y="0.0" width="48" height="44"/>
+                                <rect key="frame" x="319" y="2" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="contentEdgeInsets" minX="-11" minY="0.0" maxX="11" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="12" minY="2" maxX="0.0" maxY="6"/>
-                                <state key="normal" image="av_3"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-3" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="user_icon"/>
+                                <connections>
+                                    <segue destination="1o5-oA-VJx" kind="presentation" identifier="ShowUserProfile" modalTransitionStyle="coverVertical" id="bX7-4L-sHD"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -436,6 +438,14 @@
             </objects>
             <point key="canvasLocation" x="2493.5999999999999" y="-273.4632683658171"/>
         </scene>
+        <!--ProfileViewController-->
+        <scene sceneID="Upb-6m-DRx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProfileViewController" id="1o5-oA-VJx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4kg-5I-WAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3143" y="-465"/>
+        </scene>
         <!--MyFeedViewController-->
         <scene sceneID="T7k-vg-2ZE">
             <objects>
@@ -447,11 +457,11 @@
     </scenes>
     <resources>
         <image name="active_routine" width="183" height="127"/>
-        <image name="av_3" width="48" height="48"/>
         <image name="feeling_today" width="380" height="76"/>
         <image name="feeling_today_expanded" width="383" height="126"/>
         <image name="poza_1" width="380" height="98"/>
         <image name="schedule" width="183" height="127"/>
         <image name="stire_1" width="383" height="173"/>
+        <image name="user_icon" width="40" height="40"/>
     </resources>
 </document>

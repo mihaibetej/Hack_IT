@@ -40,6 +40,8 @@
 		633A312B21017EB900C6C253 /* ItemDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A312A21017EB900C6C253 /* ItemDetailsTableViewCell.swift */; };
 		633A312D21017ECA00C6C253 /* CommentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A312C21017ECA00C6C253 /* CommentsTableViewCell.swift */; };
 		633A312F2101806300C6C253 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A312E2101806300C6C253 /* CommentModel.swift */; };
+		633A31322101D8FB00C6C253 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A31312101D8FB00C6C253 /* ProfileViewController.swift */; };
+		633A31342101D90F00C6C253 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633A31332101D90F00C6C253 /* ProfileViewController.storyboard */; };
 		751A59C62100B2ED00E913A8 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C52100B2ED00E913A8 /* Dashboard.storyboard */; };
 		751A59C82100B35900E913A8 /* MySchedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C72100B35900E913A8 /* MySchedule.storyboard */; };
 		751A59CA2100B41600E913A8 /* DirectMessages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 751A59C92100B41600E913A8 /* DirectMessages.storyboard */; };
@@ -159,6 +161,8 @@
 		633A312A21017EB900C6C253 /* ItemDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		633A312C21017ECA00C6C253 /* CommentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewCell.swift; sourceTree = "<group>"; };
 		633A312E2101806300C6C253 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
+		633A31312101D8FB00C6C253 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		633A31332101D90F00C6C253 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
 		751A59C52100B2ED00E913A8 /* Dashboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		751A59C72100B35900E913A8 /* MySchedule.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MySchedule.storyboard; sourceTree = "<group>"; };
 		751A59C92100B41600E913A8 /* DirectMessages.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DirectMessages.storyboard; sourceTree = "<group>"; };
@@ -311,9 +315,19 @@
 			path = MyFeed;
 			sourceTree = "<group>";
 		};
+		633A31302101D8DD00C6C253 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				633A31312101D8FB00C6C253 /* ProfileViewController.swift */,
+				633A31332101D90F00C6C253 /* ProfileViewController.storyboard */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
 		751A59C02100B1B000E913A8 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				633A31302101D8DD00C6C253 /* UserProfile */,
 				633A310F2100D09A00C6C253 /* MyFeed */,
 				756065132100DA4300C9B421 /* DashboardViewController.swift */,
 				751A59C52100B2ED00E913A8 /* Dashboard.storyboard */,
@@ -583,6 +597,7 @@
 				751A5A142100D8BD00E913A8 /* ProximaNova-Regular.otf in Resources */,
 				751A5A0E2100D8BD00E913A8 /* ProximaNovaCond-LightIt.otf in Resources */,
 				751A5A0A2100D8BD00E913A8 /* ProximaNova-Semibold.otf in Resources */,
+				633A31342101D90F00C6C253 /* ProfileViewController.storyboard in Resources */,
 				751A5A112100D8BD00E913A8 /* ProximaNova-RegItalic.otf in Resources */,
 				751A5A092100D8BD00E913A8 /* ProximaNova-Light.otf in Resources */,
 				751A5A102100D8BD00E913A8 /* ProximaNovaCond-SemiboldIt.otf in Resources */,
@@ -678,6 +693,7 @@
 				75FD94D22101A13B00045872 /* CustomTabBarController.swift in Sources */,
 				27F1C6122100D8CC0083B6A7 /* AddContactsViewController.swift in Sources */,
 				27DB63A82100F782009AECA4 /* MessagesViewController.swift in Sources */,
+				633A31322101D8FB00C6C253 /* ProfileViewController.swift in Sources */,
 				633A312F2101806300C6C253 /* CommentModel.swift in Sources */,
 				27DB63AF21014696009AECA4 /* OutgoingMessageCell.swift in Sources */,
 				27F1C6102100D4F00083B6A7 /* MessagesOverviewViewController.swift in Sources */,
