@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -69,6 +70,7 @@
                                 <state key="normal" backgroundImage="leukaemia_articles"/>
                                 <connections>
                                     <action selector="articlesAction:" destination="eP4-zo-oMj" eventType="touchUpInside" id="rtj-F6-AfV"/>
+                                    <segue destination="mKm-65-Sks" kind="show" id="lQj-SG-Vwh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kk-Ce-gbU">
@@ -320,6 +322,130 @@
             </objects>
             <point key="canvasLocation" x="2456" y="2359"/>
         </scene>
+        <!--Articles View Controller-->
+        <scene sceneID="eY8-vP-rC0">
+            <objects>
+                <viewController id="mKm-65-Sks" customClass="ArticlesViewController" customModule="TBD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MhW-Sm-OuJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l2L-Ng-JAN">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleCell" rowHeight="178" id="9sL-wb-5N8" customClass="ArticleTableViewCell" customModule="TBD" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="178"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9sL-wb-5N8" id="d6i-fF-MJP">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="178"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="A33-g4-eTp">
+                                                    <rect key="frame" x="16" y="0.0" width="382" height="178"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="A33-g4-eTp" secondAttribute="trailing" constant="16" id="GU6-Nf-ek4"/>
+                                                <constraint firstItem="A33-g4-eTp" firstAttribute="top" secondItem="d6i-fF-MJP" secondAttribute="top" id="LJk-6z-Wga"/>
+                                                <constraint firstItem="A33-g4-eTp" firstAttribute="leading" secondItem="d6i-fF-MJP" secondAttribute="leading" constant="16" id="osf-9O-dGr"/>
+                                                <constraint firstAttribute="bottom" secondItem="A33-g4-eTp" secondAttribute="bottom" id="z6r-h3-ReX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="articleImage" destination="A33-g4-eTp" id="k7Y-lL-5WY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="WhiteCell" rowHeight="8" id="ICz-ZK-WEz" customClass="WhiteTableViewCell" customModule="TBD" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="206" width="414" height="8"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ICz-ZK-WEz" id="Stk-LZ-J5T">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="8"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="mKm-65-Sks" id="HpB-By-oKe"/>
+                                    <outlet property="delegate" destination="mKm-65-Sks" id="1si-qu-Dxz"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wFL-ly-QlM" firstAttribute="bottom" secondItem="l2L-Ng-JAN" secondAttribute="bottom" id="81P-PF-KeN"/>
+                            <constraint firstItem="l2L-Ng-JAN" firstAttribute="top" secondItem="wFL-ly-QlM" secondAttribute="top" id="92f-WW-d9j"/>
+                            <constraint firstItem="l2L-Ng-JAN" firstAttribute="leading" secondItem="wFL-ly-QlM" secondAttribute="leading" id="a1d-W6-3LY"/>
+                            <constraint firstItem="wFL-ly-QlM" firstAttribute="trailing" secondItem="l2L-Ng-JAN" secondAttribute="trailing" id="cyR-Pq-XpY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wFL-ly-QlM"/>
+                    </view>
+                    <connections>
+                        <segue destination="pUs-R1-lly" kind="show" identifier="showArticle" id="gGx-wR-0Ez"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mh4-46-LSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3416" y="2383"/>
+        </scene>
+        <!--Article View Controller-->
+        <scene sceneID="TDa-Cm-UBs">
+            <objects>
+                <viewController id="pUs-R1-lly" customClass="ArticleViewController" customModule="TBD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xXL-7h-Qam">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoN-G1-2li">
+                                <rect key="frame" x="16" y="84" width="383" height="165"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="My6-dz-gov"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="poza_mare"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="20E-Qf-7nW">
+                                <rect key="frame" x="20" y="316" width="374" height="400"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Recent studies have suggested that development of childhood acute lymphoblastic leukaemia may often be initiated in utero. To provide further evidence of an prenatal origin of childhood leukaemia, we conducted a molecular biological investigation of nine children with B-precursor acute lymphoblastic leukaemia carrying the chromosomal translocation t(12;21), the most common subtype of all childhood acute lymphoblastic leukaemia. Specifically, for each child we identified the non-constitutive chromosomal sequences made up by the t(12;21) fusion gene. From these, leukaemia clone-specific DNA primers were constructed and applied in nested polymerase chain reaction analyses of DNA extracted from the patients' Guthrie cards obtained at birth. Leukaemia clone-specific fusion gene regions were demonstrated in Guthrie card DNA of three patients, age 2 years 11 months, 3 years 4 months, and 5 years 8 months at leukaemia diagnosis. Our findings are consistent with previous observations, and thus provide further evidence that the development of t(12;21) B-precursor acute lymphoblastic leukaemia may be initiated in utero. Review of the current literature moreover indicates that age at leukaemia may be inversely correlated with the burden of cells with leukaemia clonal markers, i.e. leukaemia predisposed cells at birth, and that certain types of childhood acute lymphoblastic leukaemia develop as a multiple step process involving both pre- and postnatal genetic events.</mutableString>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presence of clone-specific markers at birth in children with acute lymphoblastic leukaemia." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhh-vq-mvd">
+                                <rect key="frame" x="20" y="267" width="374" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="1Xk-En-ilI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nhh-vq-mvd" firstAttribute="trailing" secondItem="20E-Qf-7nW" secondAttribute="trailing" id="3gv-Cy-HcE"/>
+                            <constraint firstItem="Nhh-vq-mvd" firstAttribute="leading" secondItem="20E-Qf-7nW" secondAttribute="leading" id="5yn-o5-k6U"/>
+                            <constraint firstItem="Nhh-vq-mvd" firstAttribute="top" secondItem="CoN-G1-2li" secondAttribute="bottom" constant="18" id="6uS-jy-JOu"/>
+                            <constraint firstItem="20E-Qf-7nW" firstAttribute="top" secondItem="Nhh-vq-mvd" secondAttribute="bottom" constant="8" symbolic="YES" id="LK4-Sb-7vM"/>
+                            <constraint firstAttribute="bottom" secondItem="20E-Qf-7nW" secondAttribute="bottom" constant="20" symbolic="YES" id="f6a-Jy-l6O"/>
+                            <constraint firstItem="Nhh-vq-mvd" firstAttribute="centerX" secondItem="CoN-G1-2li" secondAttribute="centerX" id="i9H-Fg-MbX"/>
+                            <constraint firstItem="Nhh-vq-mvd" firstAttribute="leading" secondItem="xXL-7h-Qam" secondAttribute="leadingMargin" id="lVw-iU-l11"/>
+                            <constraint firstItem="fg0-eq-bBx" firstAttribute="trailing" secondItem="CoN-G1-2li" secondAttribute="trailing" constant="15" id="mcD-LE-PjF"/>
+                            <constraint firstItem="CoN-G1-2li" firstAttribute="leading" secondItem="fg0-eq-bBx" secondAttribute="leading" constant="16" id="mgG-eK-ecE"/>
+                            <constraint firstItem="CoN-G1-2li" firstAttribute="top" secondItem="fg0-eq-bBx" secondAttribute="top" constant="20" id="ufx-Gr-LLY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fg0-eq-bBx"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageArticle" destination="CoN-G1-2li" id="zmC-e7-wsS"/>
+                        <outlet property="textView" destination="20E-Qf-7nW" id="63N-9b-88L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9rl-NK-BzY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4345" y="2383"/>
+        </scene>
         <!--Information-->
         <scene sceneID="TMO-Zq-Xq4">
             <objects>
@@ -341,6 +467,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="383" height="178"/>
         <image name="faq" width="186" height="104"/>
         <image name="glossary" width="186" height="105"/>
         <image name="if_Facebook" width="42" height="42"/>
@@ -351,6 +478,7 @@
         <image name="info_mail" width="40" height="40"/>
         <image name="info_phone" width="40" height="40"/>
         <image name="leukaemia_articles" width="383" height="178"/>
+        <image name="poza_mare" width="383" height="165"/>
         <image name="they_won_the_fight" width="383" height="173"/>
     </resources>
 </document>

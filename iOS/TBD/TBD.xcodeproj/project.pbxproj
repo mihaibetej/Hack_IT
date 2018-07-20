@@ -29,6 +29,10 @@
 		51E33FE92101301500C7CB27 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FE32100F0D400C7CB27 /* WebViewController.swift */; };
 		51E33FEB21014A6F00C7CB27 /* Glossary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51E33FEA21014A6F00C7CB27 /* Glossary.plist */; };
 		51E33FEE2101527300C7CB27 /* GlossaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FED2101527300C7CB27 /* GlossaryViewController.swift */; };
+		51E33FF12101B67A00C7CB27 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FF02101B67A00C7CB27 /* ArticlesViewController.swift */; };
+		51E33FF32101B84100C7CB27 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FF22101B84100C7CB27 /* ArticleTableViewCell.swift */; };
+		51E33FF52101C4EF00C7CB27 /* WhiteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FF42101C4EF00C7CB27 /* WhiteTableViewCell.swift */; };
+		51E33FF72101CB3300C7CB27 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FF62101CB3300C7CB27 /* ArticleViewController.swift */; };
 		633A311B2100D56800C6C253 /* MyFeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633A311A2100D56800C6C253 /* MyFeedViewController.storyboard */; };
 		633A311D2100D5B800C6C253 /* MyFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A311C2100D5B800C6C253 /* MyFeedViewController.swift */; };
 		633A311F2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A311E2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift */; };
@@ -102,6 +106,10 @@
 		51E33FE52100F1BD00C7CB27 /* CircularTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 		51E33FEA21014A6F00C7CB27 /* Glossary.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Glossary.plist; sourceTree = "<group>"; };
 		51E33FED2101527300C7CB27 /* GlossaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryViewController.swift; sourceTree = "<group>"; };
+		51E33FF02101B67A00C7CB27 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
+		51E33FF22101B84100C7CB27 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		51E33FF42101C4EF00C7CB27 /* WhiteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteTableViewCell.swift; sourceTree = "<group>"; };
+		51E33FF62101CB3300C7CB27 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		633A311A2100D56800C6C253 /* MyFeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyFeedViewController.storyboard; sourceTree = "<group>"; };
 		633A311C2100D5B800C6C253 /* MyFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedViewController.swift; sourceTree = "<group>"; };
 		633A311E2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -234,6 +242,17 @@
 			path = Glossary;
 			sourceTree = "<group>";
 		};
+		51E33FEF2101B66200C7CB27 /* Articles */ = {
+			isa = PBXGroup;
+			children = (
+				51E33FF02101B67A00C7CB27 /* ArticlesViewController.swift */,
+				51E33FF22101B84100C7CB27 /* ArticleTableViewCell.swift */,
+				51E33FF42101C4EF00C7CB27 /* WhiteTableViewCell.swift */,
+				51E33FF62101CB3300C7CB27 /* ArticleViewController.swift */,
+			);
+			path = Articles;
+			sourceTree = "<group>";
+		};
 		633A310F2100D09A00C6C253 /* MyFeed */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +315,7 @@
 		751A59C42100B1E400E913A8 /* Information */ = {
 			isa = PBXGroup;
 			children = (
+				51E33FEF2101B66200C7CB27 /* Articles */,
 				51E33FEC21014EF600C7CB27 /* Glossary */,
 				751A59CB2100B43000E913A8 /* Information.storyboard */,
 				51E33FE52100F1BD00C7CB27 /* CircularTransition.swift */,
@@ -559,7 +579,9 @@
 				27DB63A82100F782009AECA4 /* MessagesViewController.swift in Sources */,
 				633A312F2101806300C6C253 /* CommentModel.swift in Sources */,
 				27DB63AF21014696009AECA4 /* OutgoingMessageCell.swift in Sources */,
+				51E33FF32101B84100C7CB27 /* ArticleTableViewCell.swift in Sources */,
 				27F1C6102100D4F00083B6A7 /* MessagesOverviewViewController.swift in Sources */,
+				51E33FF72101CB3300C7CB27 /* ArticleViewController.swift in Sources */,
 				7523EAD4210175F2003B22D3 /* ContactsDataSource.swift in Sources */,
 				27F1C6172100DE040083B6A7 /* GroupMessageCell.swift in Sources */,
 				27F1C61E2100DEB60083B6A7 /* Message.swift in Sources */,
@@ -567,11 +589,13 @@
 				633A311F2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift in Sources */,
 				633A312D21017ECA00C6C253 /* CommentsTableViewCell.swift in Sources */,
 				756DD8DF2100EE750037FF3C /* FeedItemModel.swift in Sources */,
+				51E33FF52101C4EF00C7CB27 /* WhiteTableViewCell.swift in Sources */,
 				633A31232101109400C6C253 /* VideoHelper.swift in Sources */,
 				756DD8DD2100EC230037FF3C /* PostContentViewController.swift in Sources */,
 				75966F5E21010CCC00779E78 /* MyFeedDetailsTableViewController.swift in Sources */,
 				633A311D2100D5B800C6C253 /* MyFeedViewController.swift in Sources */,
 				BE70ADC521010E8F00585157 /* CalendarViewController.swift in Sources */,
+				51E33FF12101B67A00C7CB27 /* ArticlesViewController.swift in Sources */,
 				51E33FE82101300900C7CB27 /* CircularTransition.swift in Sources */,
 				51E33FEE2101527300C7CB27 /* GlossaryViewController.swift in Sources */,
 				27DB63AD2101466E009AECA4 /* IncomingMessageCell.swift in Sources */,
