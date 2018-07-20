@@ -22,6 +22,60 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Stories View Controller-->
+        <scene sceneID="LHb-tW-1wF">
+            <objects>
+                <viewController id="1Kk-Yd-je3" customClass="StoriesViewController" customModule="TBD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U5P-KP-7Zc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zVW-Zx-80C">
+                                <rect key="frame" x="16" y="80" width="382" height="640"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zv-Md-QgW">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="206.66666666666666"/>
+                                        <state key="normal" backgroundImage="first"/>
+                                        <connections>
+                                            <action selector="firstAction:" destination="1Kk-Yd-je3" eventType="touchUpInside" id="yBQ-0s-hUP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buE-hk-0Yz">
+                                        <rect key="frame" x="0.0" y="216.66666666666669" width="382" height="206.66666666666669"/>
+                                        <state key="normal" backgroundImage="second"/>
+                                        <connections>
+                                            <action selector="secondAction:" destination="1Kk-Yd-je3" eventType="touchUpInside" id="OtL-XQ-aJO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFx-qZ-Dgz">
+                                        <rect key="frame" x="0.0" y="433.33333333333343" width="382" height="206.66666666666669"/>
+                                        <state key="normal" backgroundImage="third"/>
+                                        <connections>
+                                            <action selector="thirdAction:" destination="1Kk-Yd-je3" eventType="touchUpInside" id="eWn-qc-2EE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="zVW-Zx-80C" secondAttribute="bottom" constant="16" id="HKO-pp-2Rx"/>
+                            <constraint firstItem="zVW-Zx-80C" firstAttribute="top" secondItem="tLx-TN-zFK" secondAttribute="top" constant="16" id="HVH-m9-bgp"/>
+                            <constraint firstItem="zVW-Zx-80C" firstAttribute="leading" secondItem="tLx-TN-zFK" secondAttribute="leading" constant="16" id="Xku-Ys-6ho"/>
+                            <constraint firstAttribute="trailing" secondItem="zVW-Zx-80C" secondAttribute="trailing" constant="16" id="fo4-LG-LfO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tLx-TN-zFK"/>
+                    </view>
+                    <connections>
+                        <outlet property="first" destination="8zv-Md-QgW" id="VRj-QW-8b4"/>
+                        <outlet property="second" destination="buE-hk-0Yz" id="0lJ-nv-TJh"/>
+                        <outlet property="third" destination="dFx-qZ-Dgz" id="ku1-qe-dD0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Li-bd-M3f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2456.521739130435" y="684.78260869565224"/>
+        </scene>
         <!--Information-->
         <scene sceneID="ouK-kD-LrO">
             <objects>
@@ -81,6 +135,7 @@
                                 <state key="normal" backgroundImage="they_won_the_fight"/>
                                 <connections>
                                     <action selector="winnerAction:" destination="eP4-zo-oMj" eventType="touchUpInside" id="CzX-DQ-ub1"/>
+                                    <segue destination="1Kk-Yd-je3" kind="show" identifier="winners" id="gr4-m3-rC6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact us:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJO-ma-adZ">
@@ -261,7 +316,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eiz-AM-hrv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3269.5652173913045" y="1537.5000000000002"/>
+            <point key="canvasLocation" x="4345" y="1538"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="YBp-On-b1Y">
@@ -320,7 +375,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUL-yA-vLG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2456" y="2359"/>
+            <point key="canvasLocation" x="1517" y="2383"/>
         </scene>
         <!--Articles View Controller-->
         <scene sceneID="eY8-vP-rC0">
@@ -388,7 +443,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mh4-46-LSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3416" y="2383"/>
+            <point key="canvasLocation" x="2457" y="2383"/>
         </scene>
         <!--Article View Controller-->
         <scene sceneID="TDa-Cm-UBs">
@@ -469,6 +524,7 @@
     <resources>
         <image name="1" width="383" height="178"/>
         <image name="faq" width="186" height="104"/>
+        <image name="first" width="584" height="354"/>
         <image name="glossary" width="186" height="105"/>
         <image name="if_Facebook" width="42" height="42"/>
         <image name="if_Instagram" width="42" height="42"/>
@@ -479,6 +535,8 @@
         <image name="info_phone" width="40" height="40"/>
         <image name="leukaemia_articles" width="383" height="178"/>
         <image name="poza_mare" width="383" height="165"/>
+        <image name="second" width="582" height="356"/>
         <image name="they_won_the_fight" width="383" height="173"/>
+        <image name="third" width="579" height="354"/>
     </resources>
 </document>
