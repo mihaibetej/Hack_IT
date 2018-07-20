@@ -8,6 +8,12 @@
 
 import Foundation
 
+enum MessageType {
+    case incoming
+    case outgoing
+}
+
 struct Message {
     let content: String
+    let type: MessageType
 }

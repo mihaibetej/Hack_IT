@@ -12,6 +12,11 @@
 		27992C182100841300F05763 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27992C162100841300F05763 /* Main.storyboard */; };
 		27992C1A2100841500F05763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27992C192100841500F05763 /* Assets.xcassets */; };
 		27992C1D2100841500F05763 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27992C1B2100841500F05763 /* LaunchScreen.storyboard */; };
+		51E33FE72101300000C7CB27 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FE12100E3ED00C7CB27 /* InformationViewController.swift */; };
+		51E33FE82101300900C7CB27 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FE52100F1BD00C7CB27 /* CircularTransition.swift */; };
+		51E33FE92101301500C7CB27 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FE32100F0D400C7CB27 /* WebViewController.swift */; };
+		51E33FEB21014A6F00C7CB27 /* Glossary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51E33FEA21014A6F00C7CB27 /* Glossary.plist */; };
+		51E33FEE2101527300C7CB27 /* GlossaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FED2101527300C7CB27 /* GlossaryViewController.swift */; };
 		27DB63A82100F782009AECA4 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DB63A72100F782009AECA4 /* MessagesViewController.swift */; };
 		27DB63AA21011798009AECA4 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DB63A921011798009AECA4 /* ContactCell.swift */; };
 		27DB63AD2101466E009AECA4 /* IncomingMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DB63AC2101466E009AECA4 /* IncomingMessageCell.swift */; };
@@ -56,6 +61,9 @@
 		751A5A162100D8BD00E913A8 /* ProximaNova-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A5A052100D8BD00E913A8 /* ProximaNova-SemiboldItalic.otf */; };
 		751A5A172100D8BD00E913A8 /* ProximaNovaCond-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A5A062100D8BD00E913A8 /* ProximaNovaCond-Regular.otf */; };
 		751A5A182100D8BD00E913A8 /* ProximaNova-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 751A5A072100D8BD00E913A8 /* ProximaNova-LightItalic.otf */; };
+		BE70ADC12100EEBE00585157 /* MyScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC02100EEBE00585157 /* MyScheduleViewController.swift */; };
+		BE70ADC32101087600585157 /* RoutinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC22101087600585157 /* RoutinesViewController.swift */; };
+		BE70ADC521010E8F00585157 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC421010E8F00585157 /* CalendarViewController.swift */; };
 		756065142100DA4300C9B421 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756065132100DA4300C9B421 /* DashboardViewController.swift */; };
 		756DD8DB2100EC130037FF3C /* PostContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756DD8DA2100EC130037FF3C /* PostContent.storyboard */; };
 		756DD8DD2100EC230037FF3C /* PostContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756DD8DC2100EC230037FF3C /* PostContentViewController.swift */; };
@@ -77,6 +85,11 @@
 		27992C192100841500F05763 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27992C1C2100841500F05763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27992C1E2100841500F05763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51E33FE12100E3ED00C7CB27 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		51E33FE32100F0D400C7CB27 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		51E33FE52100F1BD00C7CB27 /* CircularTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
+		51E33FEA21014A6F00C7CB27 /* Glossary.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Glossary.plist; sourceTree = "<group>"; };
+		51E33FED2101527300C7CB27 /* GlossaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryViewController.swift; sourceTree = "<group>"; };
 		27DB63A72100F782009AECA4 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		27DB63A921011798009AECA4 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		27DB63AC2101466E009AECA4 /* IncomingMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingMessageCell.swift; sourceTree = "<group>"; };
@@ -178,6 +191,15 @@
 			path = TBD;
 			sourceTree = "<group>";
 		};
+		51E33FEC21014EF600C7CB27 /* Glossary */ = {
+			isa = PBXGroup;
+			children = (
+				51E33FEA21014A6F00C7CB27 /* Glossary.plist */,
+				51E33FED2101527300C7CB27 /* GlossaryViewController.swift */,
+			);
+			path = Glossary;
+			sourceTree = "<group>";
+		};
 		27DB63AB21012A10009AECA4 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,7 +291,11 @@
 		751A59C42100B1E400E913A8 /* Information */ = {
 			isa = PBXGroup;
 			children = (
+				51E33FEC21014EF600C7CB27 /* Glossary */,
 				751A59CB2100B43000E913A8 /* Information.storyboard */,
+				51E33FE52100F1BD00C7CB27 /* CircularTransition.swift */,
+				51E33FE12100E3ED00C7CB27 /* InformationViewController.swift */,
+				51E33FE32100F0D400C7CB27 /* WebViewController.swift */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -458,6 +484,7 @@
 				751A5A112100D8BD00E913A8 /* ProximaNova-RegItalic.otf in Resources */,
 				751A5A092100D8BD00E913A8 /* ProximaNova-Light.otf in Resources */,
 				751A5A102100D8BD00E913A8 /* ProximaNovaCond-SemiboldIt.otf in Resources */,
+				51E33FEB21014A6F00C7CB27 /* Glossary.plist in Resources */,
 				751A59CC2100B43000E913A8 /* Information.storyboard in Resources */,
 				751A59C62100B2ED00E913A8 /* Dashboard.storyboard in Resources */,
 				751A5A0B2100D8BD00E913A8 /* ProximaNova-Bold.otf in Resources */,
@@ -536,6 +563,8 @@
 				75966F5E21010CCC00779E78 /* MyFeedDetailsTableViewController.swift in Sources */,
 				633A311D2100D5B800C6C253 /* MyFeedViewController.swift in Sources */,
 				BE70ADC521010E8F00585157 /* CalendarViewController.swift in Sources */,
+				51E33FE82101300900C7CB27 /* CircularTransition.swift in Sources */,
+				51E33FEE2101527300C7CB27 /* GlossaryViewController.swift in Sources */,
 				27DB63AD2101466E009AECA4 /* IncomingMessageCell.swift in Sources */,
 				27992C132100841300F05763 /* AppDelegate.swift in Sources */,
 				633A312B21017EB900C6C253 /* ItemDetailsTableViewCell.swift in Sources */,
@@ -544,7 +573,9 @@
 				75966F5B210107F600779E78 /* FeedDatasource.swift in Sources */,
 				756065142100DA4300C9B421 /* DashboardViewController.swift in Sources */,
 				BE70ADC32101087600585157 /* RoutinesViewController.swift in Sources */,
+				51E33FE92101301500C7CB27 /* WebViewController.swift in Sources */,
 				BE70ADC12100EEBE00585157 /* MyScheduleViewController.swift in Sources */,
+				51E33FE72101300000C7CB27 /* InformationViewController.swift in Sources */,
 				BE70ADC82101247C00585157 /* RoundedShadowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

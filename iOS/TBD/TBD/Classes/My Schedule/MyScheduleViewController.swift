@@ -15,6 +15,8 @@ class MyScheduleViewController: UIViewController, EKEventEditViewDelegate {
     var calendarViewController: CalendarViewController!
     var routinesViewController: RoutinesViewController!
     
+    @IBOutlet weak var segmentedController: UISegmentedControl!
+    
     @IBAction func segmentedControlDidToggle(_ sender: UISegmentedControl) {
         tabBar.selectedIndex = sender.selectedSegmentIndex
     }
