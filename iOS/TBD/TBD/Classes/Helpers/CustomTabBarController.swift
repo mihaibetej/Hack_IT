@@ -23,10 +23,11 @@ class CustomTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        centerButton.setImage(#imageLiteral(resourceName: "av_3x"), for: .normal)
+        centerButton.setImage(#imageLiteral(resourceName: "help_blue"), for: .normal)
+        centerButton.setImage(#imageLiteral(resourceName: "help_orange"), for: .highlighted)
         let extraWidth = CGFloat(6.0)
-        let extraHeight = CGFloat(16.0)
-        centerButton.frame = CGRect(x: tabBar.frame.width / 5 * 2 - extraWidth/2, y: -extraHeight*0.75, width: tabBar.frame.width / 5 + extraWidth, height: tabBar.frame.height + extraHeight)
+        let extraHeight = CGFloat(24.0)
+        centerButton.frame = CGRect(x: tabBar.frame.width / 5 * 2 - extraWidth/2, y: -extraHeight, width: tabBar.frame.width / 5 + extraWidth, height: tabBar.frame.height + extraHeight)
         tabBar.addSubview(centerButton)
         
         centerButton.addTarget(self, action: #selector(didTapOnCenterButton), for: .touchUpInside)

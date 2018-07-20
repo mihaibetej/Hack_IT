@@ -568,7 +568,7 @@
         <scene sceneID="TMO-Zq-Xq4">
             <objects>
                 <navigationController title="Information" automaticallyAdjustsScrollViewInsets="NO" id="M7m-eC-idF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Information" id="nGE-DT-kvg"/>
+                    <tabBarItem key="tabBarItem" title="Information" image="medical_info_blue" id="nGE-DT-kvg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Odg-Ys-0Mx">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -597,6 +597,7 @@
         <image name="info_mail" width="40" height="40"/>
         <image name="info_phone" width="40" height="40"/>
         <image name="leukaemia_articles" width="383" height="178"/>
+        <image name="medical_info_blue" width="27" height="27"/>
         <image name="poza_mare" width="383" height="165"/>
         <image name="second" width="582" height="356"/>
         <image name="they_won_the_fight" width="383" height="173"/>
