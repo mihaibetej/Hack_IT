@@ -131,7 +131,7 @@ extension MessagesViewController: UITableViewDataSource, UITableViewDelegate {
             cell = tableView.dequeueReusableCell(withIdentifier: "IncomingMessageCell", for: indexPath) as! IncomingMessageCell
             if group != nil {
                 let previousMessage: Message? = indexPath.row == 0 ? nil : messages[indexPath.row - 1]
-                (cell as! IncomingMessageCell).configure(message, previousMessage: previousMessage, isGroupMessage: true)
+                (cell as! IncomingMessageCell).configure(message, previousMessage: previousMessage, isGroupMessage: true, showActions: indexPath.row == 0 ? false : true)
             } else {
                 (cell as! IncomingMessageCell).configure(message)
             }
