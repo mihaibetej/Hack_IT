@@ -26,6 +26,14 @@ class IncomingMessageCell: UITableViewCell {
         backgroundColor = .clear
         contentView.backgroundColor = .clear
         incomingMessageContainer.layer.cornerRadius = 8
+        
+        // Shadow mask
+        contentView.layer.masksToBounds = false
+        contentView.layer.shadowOpacity = 0.3
+        contentView.layer.shadowColor = UIColor.black.cgColor
+        contentView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        contentView.layer.shadowRadius = 1
+
     }
     
     func configure(_ message: Message) {

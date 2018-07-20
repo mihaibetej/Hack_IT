@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
 
-        //f63c0b
         UITabBar.appearance().tintColor = UIColor(rgb: 0xf63c0b)
         UITabBar.appearance().unselectedItemTintColor = UIColor(red: 32.0/255.0, green: 63.0/255.0, blue: 212.0/255.0, alpha: 1)
         return true
