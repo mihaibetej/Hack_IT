@@ -70,6 +70,7 @@
 		75966F5B210107F600779E78 /* FeedDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75966F5A210107F600779E78 /* FeedDatasource.swift */; };
 		75966F5E21010CCC00779E78 /* MyFeedDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75966F5D21010CCC00779E78 /* MyFeedDetailsTableViewController.swift */; };
 		75966F6021010D1000779E78 /* MyFeedDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75966F5F21010D1000779E78 /* MyFeedDetails.storyboard */; };
+		75E489132101CBC100A9EC29 /* FAQTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E489122101CBC100A9EC29 /* FAQTableViewController.swift */; };
 		75FD94D22101A13B00045872 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FD94D12101A13B00045872 /* CustomTabBarController.swift */; };
 		BE70ADC12100EEBE00585157 /* MyScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC02100EEBE00585157 /* MyScheduleViewController.swift */; };
 		BE70ADC32101087600585157 /* RoutinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE70ADC22101087600585157 /* RoutinesViewController.swift */; };
@@ -143,6 +144,7 @@
 		75966F5A210107F600779E78 /* FeedDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDatasource.swift; sourceTree = "<group>"; };
 		75966F5D21010CCC00779E78 /* MyFeedDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedDetailsTableViewController.swift; sourceTree = "<group>"; };
 		75966F5F21010D1000779E78 /* MyFeedDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyFeedDetails.storyboard; sourceTree = "<group>"; };
+		75E489122101CBC100A9EC29 /* FAQTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQTableViewController.swift; sourceTree = "<group>"; };
 		75FD94D12101A13B00045872 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		87F9D5360280F4D279EB21D9 /* Pods-TBD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBD.release.xcconfig"; path = "Pods/Target Support Files/Pods-TBD/Pods-TBD.release.xcconfig"; sourceTree = "<group>"; };
 		BE70ADC02100EEBE00585157 /* MyScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScheduleViewController.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				51E33FE52100F1BD00C7CB27 /* CircularTransition.swift */,
 				51E33FE12100E3ED00C7CB27 /* InformationViewController.swift */,
 				51E33FE32100F0D400C7CB27 /* WebViewController.swift */,
+				75E489122101CBC100A9EC29 /* FAQTableViewController.swift */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 				633A311D2100D5B800C6C253 /* MyFeedViewController.swift in Sources */,
 				BE70ADC521010E8F00585157 /* CalendarViewController.swift in Sources */,
 				51E33FE82101300900C7CB27 /* CircularTransition.swift in Sources */,
+				75E489132101CBC100A9EC29 /* FAQTableViewController.swift in Sources */,
 				51E33FEE2101527300C7CB27 /* GlossaryViewController.swift in Sources */,
 				27DB63AD2101466E009AECA4 /* IncomingMessageCell.swift in Sources */,
 				27992C132100841300F05763 /* AppDelegate.swift in Sources */,

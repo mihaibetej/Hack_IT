@@ -124,6 +124,7 @@
                                 <state key="normal" backgroundImage="faq"/>
                                 <connections>
                                     <action selector="faqAction:" destination="eP4-zo-oMj" eventType="touchUpInside" id="SK5-gI-mgA"/>
+                                    <segue destination="ZFb-pA-ac0" kind="show" id="BVH-sv-Twq"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leukaemia articles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfi-vQ-6X7">
@@ -319,6 +320,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUL-yA-vLG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2456" y="2359"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="uhe-dn-gfD">
+            <objects>
+                <tableViewController id="ZFb-pA-ac0" customClass="FAQTableViewController" customModule="TBD" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="ibL-ME-tcf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="200" id="mWp-AF-Wl8" customClass="FAQTableViewControllerCell" customModule="TBD" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="200"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mWp-AF-Wl8" id="b4S-y6-wsa">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8td-uh-Ub4">
+                                            <rect key="frame" x="16" y="8" width="382" height="184"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3li-fw-0PX">
+                                                    <rect key="frame" x="8" y="8" width="366" height="168"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="3li-fw-0PX" firstAttribute="leading" secondItem="8td-uh-Ub4" secondAttribute="leading" constant="8" id="W4Y-jr-oOf"/>
+                                                <constraint firstAttribute="trailing" secondItem="3li-fw-0PX" secondAttribute="trailing" constant="8" id="aaP-bs-lEf"/>
+                                                <constraint firstAttribute="bottom" secondItem="3li-fw-0PX" secondAttribute="bottom" constant="8" id="fvS-on-JvL"/>
+                                                <constraint firstItem="3li-fw-0PX" firstAttribute="top" secondItem="8td-uh-Ub4" secondAttribute="top" constant="8" id="nys-lZ-RjO"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="8td-uh-Ub4" secondAttribute="trailing" constant="16" id="Qdl-fA-YRU"/>
+                                        <constraint firstItem="8td-uh-Ub4" firstAttribute="leading" secondItem="b4S-y6-wsa" secondAttribute="leading" constant="16" id="WtK-AH-Ugi"/>
+                                        <constraint firstItem="8td-uh-Ub4" firstAttribute="top" secondItem="b4S-y6-wsa" secondAttribute="top" constant="8" id="mhX-F3-9E6"/>
+                                        <constraint firstAttribute="bottom" secondItem="8td-uh-Ub4" secondAttribute="bottom" constant="8" id="zjb-RK-190"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="fullWidthImageView" destination="3li-fw-0PX" id="54Y-AH-x1v"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="ZFb-pA-ac0" id="mIe-rQ-eeE"/>
+                            <outlet property="delegate" destination="ZFb-pA-ac0" id="aLd-7Y-Gz3"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J4p-6h-ykv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3270" y="2358"/>
         </scene>
         <!--Information-->
         <scene sceneID="TMO-Zq-Xq4">
