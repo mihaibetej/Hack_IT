@@ -22,6 +22,7 @@ class MessagesOverviewViewController: UIViewController {
     private var groups = [Group]()
     
     var chatMode: ChatMode = .private
+    var showKeyboardInChatScreen: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +45,9 @@ class MessagesOverviewViewController: UIViewController {
         tableView.reloadData()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
     // MARK: Navigation
@@ -57,6 +58,9 @@ class MessagesOverviewViewController: UIViewController {
             
             if chatMode == .private {
                 messagesController.contact = contacts[index]
+                messagesController.showKeyboardInChatScreen = showKeyboardInChatScreen
+                messagesController.delegate = self
+                showKeyboardInChatScreen = false
             } else {
                 messagesController.group = groups[index]
             }
@@ -74,6 +78,24 @@ class MessagesOverviewViewController: UIViewController {
     @IBAction func selectionUpdate(_ sender: Any) {
         chatMode = ChatMode(rawValue: segmentedControl.selectedSegmentIndex) ?? .private
         tableView.reloadData()
+    }
+    
+}
+
+extension MessagesOverviewViewController: MessagesDelegate {
+    
+    func update(contact: Contact) {
+        var index = -1
+        for i in 0..<contacts.count {
+            if contacts[i].fullname == contact.fullname {
+                index = i
+                break
+            }
+        }
+        
+        if index > -1 {
+            contacts[index].messages = contact.messages
+        }
     }
     
 }
@@ -118,6 +140,7 @@ extension MessagesOverviewViewController : AddContactsViewControllerDelegate {
         contacts.insert(contact, at: 0)
         tableView.reloadData()
         
+        showKeyboardInChatScreen = true
         performSegue(withIdentifier: "showPrivateChat", sender: tableView.cellForRow(at: IndexPath(row: 0, section: 0)))
     }
 }

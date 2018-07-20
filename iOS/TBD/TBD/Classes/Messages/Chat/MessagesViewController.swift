@@ -9,6 +9,10 @@
 import UIKit
 import NextGrowingTextView
 
+protocol MessagesDelegate {
+    func update(contact: Contact)
+}
+
 class MessagesViewController: UIViewController {
     
     var contact: Contact?
@@ -24,6 +28,8 @@ class MessagesViewController: UIViewController {
     @IBOutlet weak var inputContainerViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var sendButton: UIButton!
     
+    var showKeyboardInChatScreen: Bool = false
+    var delegate: MessagesDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +80,12 @@ class MessagesViewController: UIViewController {
         view.addGestureRecognizer(tapGR)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if showKeyboardInChatScreen {
+            growingTextView.textView.becomeFirstResponder()
+        }
+    }
     
     // MARK: Actions
     
@@ -107,6 +119,14 @@ class MessagesViewController: UIViewController {
         } else {
             me.messages!.append(messages.last!)
         }
+        if contact != nil {
+            if contact?.messages == nil {
+                contact?.messages = [Message]()
+            }
+            contact!.messages!.append(messages.last!)
+            delegate?.update(contact: contact!)
+        }
+        
         growingTextView.textView.text = ""
         tableView.reloadData()
     }
