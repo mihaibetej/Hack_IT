@@ -34,6 +34,7 @@
 		51E33FF52101C4EF00C7CB27 /* WhiteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FF42101C4EF00C7CB27 /* WhiteTableViewCell.swift */; };
 		51E33FF72101CB3300C7CB27 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FF62101CB3300C7CB27 /* ArticleViewController.swift */; };
 		51E33FFA2101DA2C00C7CB27 /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E33FF92101DA2C00C7CB27 /* StoriesViewController.swift */; };
+		6339642A2101FA1400687DE5 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633964292101FA1400687DE5 /* LaunchViewController.swift */; };
 		633A311B2100D56800C6C253 /* MyFeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 633A311A2100D56800C6C253 /* MyFeedViewController.storyboard */; };
 		633A311D2100D5B800C6C253 /* MyFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A311C2100D5B800C6C253 /* MyFeedViewController.swift */; };
 		633A311F2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633A311E2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift */; };
@@ -162,6 +163,7 @@
 		51E33FF42101C4EF00C7CB27 /* WhiteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteTableViewCell.swift; sourceTree = "<group>"; };
 		51E33FF62101CB3300C7CB27 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		51E33FF92101DA2C00C7CB27 /* StoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewController.swift; sourceTree = "<group>"; };
+		633964292101FA1400687DE5 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		633A311A2100D56800C6C253 /* MyFeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyFeedViewController.storyboard; sourceTree = "<group>"; };
 		633A311C2100D5B800C6C253 /* MyFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedViewController.swift; sourceTree = "<group>"; };
 		633A311E2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -422,6 +424,7 @@
 			children = (
 				27992C192100841500F05763 /* Assets.xcassets */,
 				27992C1B2100841500F05763 /* LaunchScreen.storyboard */,
+				633964292101FA1400687DE5 /* LaunchViewController.swift */,
 				751A59D02100B8B000E913A8 /* Fonts */,
 			);
 			path = Resources;
@@ -743,6 +746,7 @@
 				633A311F2100DF1700C6C253 /* MyFeedHeaderTableViewCell.swift in Sources */,
 				633A312D21017ECA00C6C253 /* CommentsTableViewCell.swift in Sources */,
 				756DD8DF2100EE750037FF3C /* FeedItemModel.swift in Sources */,
+				6339642A2101FA1400687DE5 /* LaunchViewController.swift in Sources */,
 				51E33FF52101C4EF00C7CB27 /* WhiteTableViewCell.swift in Sources */,
 				633A31232101109400C6C253 /* VideoHelper.swift in Sources */,
 				756DD8DD2100EC230037FF3C /* PostContentViewController.swift in Sources */,
