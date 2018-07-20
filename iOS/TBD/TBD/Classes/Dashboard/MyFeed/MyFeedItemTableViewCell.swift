@@ -42,7 +42,7 @@ class MyFeedItemTableViewCell: UITableViewCell {
     
     func setupCellWith(feedItem: FeedItemModel) {
         
-        
+        isExpandable = feedItem.username == "cureleukaemia" && feedItem.reactions == 43
         
         userAvatarImageView.image = feedItem.avatarImage
         
@@ -56,12 +56,16 @@ class MyFeedItemTableViewCell: UITableViewCell {
                                        additionalAttributes: [UILabel.AdditionalAttribute(type: .font, value: UIFont(name: "ProximaNova-Semibold", size: 11))])
         
         textContentLabel.text = feedItem.text
+        
         if feedItem.username == "cureleukaemia" {
             textContentLabel.font = UIFont(name: "ProximaNova-Semibold", size: 15)
         } else {
             textContentLabel.font = UIFont(name: "ProximaNova-Regular", size: 11)
         }
+        
         guard let attachment = feedItem.attachment else {
+            mediaThumbImageView.image = nil
+            mediaThumbHeight.constant = 0
             return
         }
         var mediaThumb: UIImage?
@@ -79,7 +83,7 @@ class MyFeedItemTableViewCell: UITableViewCell {
             mediaThumbHeight.constant = 0
         }
         
-        isExpandable = feedItem.username == "cureleukaemia" && feedItem.reactions == 43
+        
     }
     
     @IBAction func expandItem(_ sender: Any) {

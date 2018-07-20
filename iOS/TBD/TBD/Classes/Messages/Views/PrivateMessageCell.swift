@@ -23,7 +23,9 @@ class PrivateMessageCell: UITableViewCell {
 
     func configure(_ contact: Contact) {
         nameLabel.text = contact.fullname
-        if contact.fullname == "Ada Lovelace" {
+        if contact.fullname == "Erin" {
+            userImageView.image = #imageLiteral(resourceName: "avatar_2")
+        } else if contact.fullname == "Ada Lovelace" {
             userImageView.image = UIImage(named: "user_female")
         } else {
             userImageView.image = UIImage(named: "user_male")

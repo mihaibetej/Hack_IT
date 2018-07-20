@@ -8,7 +8,7 @@
 
 import Foundation
 
-let defaultUsername = "Rafael Smith"
+let defaultUsername = "Mark Green"
 
 class FeedDatasource {
     private(set) var items: [FeedItemModel] = []

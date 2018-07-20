@@ -162,7 +162,7 @@ class PostContentViewController: UIViewController {
                 attachment = mediaType
             }
             
-            let item = FeedItemModel(username: defaultUsername, avatarImage: #imageLiteral(resourceName: "av_3"), text: textArea.text, attachment: attachment, reactions: 0, hoursAgo: 0, comments: [])
+            let item = FeedItemModel(username: defaultUsername, avatarImage: #imageLiteral(resourceName: "user_icon"), text: textArea.text, attachment: attachment, reactions: 0, hoursAgo: 0, comments: [])
             
             delegate.didCreatePost(item: item)
         }
