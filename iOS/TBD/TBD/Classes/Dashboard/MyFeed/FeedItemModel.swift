@@ -12,9 +12,10 @@ struct FeedItemModel {
     let username: String
     let avatarImage: UIImage
     let text: String
-    let attachment: MediaType?
+    var attachment: MediaType?
     let reactions: Int
     let hoursAgo: Int
+    let comments: [CommentModel]
     
     enum MediaType {
         case image(imageData: UIImage)

@@ -48,7 +48,7 @@ class MyFeedViewController: UITableViewController {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeedItemCell", for: indexPath) as? MyFeedItemTableViewCell else {
                 preconditionFailure()
             }
-            let feedItem = feedItemsDatasource.items[indexPath.row - 1]
+            let feedItem = feedItemsDatasource.items[indexPath.row-1]
             cell.setupCellWith(feedItem: feedItem)
             cell.index = indexPath.row
             cell.delegate = self
@@ -72,7 +72,7 @@ class MyFeedViewController: UITableViewController {
                 postController.delegate = self
             }
         }
-        else if let detailsViewController = segue.destination as? MyFeedDetailsViewController {
+        else if let detailsViewController = segue.destination as? MyFeedDetailsTableViewController {
             detailsViewController.feedItem = feedItemsDatasource.items[selectedCellIndex! - 1]
             selectedCellIndex = nil
         }
