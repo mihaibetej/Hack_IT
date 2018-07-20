@@ -43,7 +43,7 @@ class MessagesViewController: UIViewController {
         growingTextView.backgroundColor = UIColor(white: 0.9, alpha: 1)
         growingTextView.textView.textContainerInset = UIEdgeInsets(top: 6, left: 8, bottom: 6, right: 8)
         growingTextView.textView.font = UIFont(name: "ProximaNova-Regular", size: 16)
-        growingTextView.placeholderAttributedText = NSAttributedString(string: "Placeholder text",
+        growingTextView.placeholderAttributedText = NSAttributedString(string: "Type your message...",
                                                                             attributes: [NSAttributedStringKey.font: self.growingTextView.textView.font!,
                                                                                          NSAttributedStringKey.foregroundColor: UIColor.gray
             ])
@@ -67,6 +67,18 @@ class MessagesViewController: UIViewController {
                 }
             }
         }
+        
+        // Dsimiss keyboard gesture
+        let tapGR = UITapGestureRecognizer(target: self, action: #selector(MessagesViewController.dismissKeyboard(_:)))
+        tapGR.numberOfTapsRequired = 1
+        view.addGestureRecognizer(tapGR)
+    }
+    
+    
+    // MARK: Actions
+    
+    @objc func dismissKeyboard(_ sender: Any) {
+        growingTextView.textView.resignFirstResponder()
     }
     
     @IBAction func addMediaAction(_ sender: Any) {
@@ -89,7 +101,7 @@ class MessagesViewController: UIViewController {
     
     @IBAction func sendAction(_ sender: Any) {
         let myMessageContent = growingTextView.textView.text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        messages.append(Message(content: myMessageContent, type: .outgoing))
+        messages.append(Message(content: myMessageContent, type: .outgoing, sender: "Me"))
         if me.messages == nil {
             me.messages = [messages.last!]
         } else {
@@ -117,7 +129,12 @@ extension MessagesViewController: UITableViewDataSource, UITableViewDelegate {
         let message = messages[indexPath.row]
         if message.type == .incoming {
             cell = tableView.dequeueReusableCell(withIdentifier: "IncomingMessageCell", for: indexPath) as! IncomingMessageCell
-            (cell as! IncomingMessageCell).configure(message)
+            if group != nil {
+                let previousMessage: Message? = indexPath.row == 0 ? nil : messages[indexPath.row - 1]
+                (cell as! IncomingMessageCell).configure(message, previousMessage: previousMessage, isGroupMessage: true)
+            } else {
+                (cell as! IncomingMessageCell).configure(message)
+            }
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: "OutgoingMessageCell", for: indexPath) as! OutgoingMessageCell
             (cell as! OutgoingMessageCell).configure(message)
@@ -167,7 +184,7 @@ extension MessagesViewController {
     @objc func keyboardWillShow(_ sender: Notification) {
         if let userInfo = (sender as NSNotification).userInfo {
             if let keyboardHeight = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.size.height {
-                inputContainerViewBottomConstraint.constant = keyboardHeight
+                inputContainerViewBottomConstraint.constant = -keyboardHeight
                 UIView.animate(withDuration: 0.25, animations: { () -> Void in
                     self.view.layoutIfNeeded()
                 })
