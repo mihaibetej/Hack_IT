@@ -9,6 +9,10 @@
 import UIKit
 import NextGrowingTextView
 
+protocol MessagesDelegate {
+    func update(contact: Contact)
+}
+
 class MessagesViewController: UIViewController {
     
     var contact: Contact?
@@ -24,11 +28,32 @@ class MessagesViewController: UIViewController {
     @IBOutlet weak var inputContainerViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var sendButton: UIButton!
     
+    var showKeyboardInChatScreen: Bool = true
+    var delegate: MessagesDelegate?
+    var alfyMessageIndex = 0
+    
+    var alfieMessagesContents = [
+        "Hi there, Mark! My name is Alfy and I am your personal assistant. I can help you with advice, information or I can find a new friend for you. Please select one of the options at the bottom of the screen",
+        "Can do! I can give you information about different aspects of leukaemia such as treatment, medication, side effects or ways to recover after treatment.",
+        "I can access a huge database for you, all you have to do is tell me the name of the medicine you're interested about.",
+        "I found 2 articles and one glossary entry for Cytarabine",
+        "I hope that was helpful, Mark. Can I help you with anything else?",
+        "Right on! I will now use my super powers to find a chat buddy for you. This might take a while but don't worry. Once I find someone I will send you a private message. see you in the Messages section!"
+    ]
+    var alfieMessages = [Message]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        if contact == nil && group == nil {
+            installAlfieMock()
+            group = Group(name: "Alfy", contacts: [Contact(fullname: "Alfy", messages: [alfieMessages.first!])])
+            alfyMessageIndex += 1
+
+            let button = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(dismissController))
+            navigationItem.rightBarButtonItem = button
+        }
         title = contact?.fullname ?? group!.name
         
         // Input separator
@@ -43,7 +68,7 @@ class MessagesViewController: UIViewController {
         growingTextView.backgroundColor = UIColor(white: 0.9, alpha: 1)
         growingTextView.textView.textContainerInset = UIEdgeInsets(top: 6, left: 8, bottom: 6, right: 8)
         growingTextView.textView.font = UIFont(name: "ProximaNova-Regular", size: 16)
-        growingTextView.placeholderAttributedText = NSAttributedString(string: "Placeholder text",
+        growingTextView.placeholderAttributedText = NSAttributedString(string: "Type your message...",
                                                                             attributes: [NSAttributedStringKey.font: self.growingTextView.textView.font!,
                                                                                          NSAttributedStringKey.foregroundColor: UIColor.gray
             ])
@@ -67,6 +92,29 @@ class MessagesViewController: UIViewController {
                 }
             }
         }
+        
+        // Dsimiss keyboard gesture
+        let tapGR = UITapGestureRecognizer(target: self, action: #selector(MessagesViewController.dismissKeyboard(_:)))
+        tapGR.numberOfTapsRequired = 1
+        view.addGestureRecognizer(tapGR)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if showKeyboardInChatScreen {
+            growingTextView.textView.becomeFirstResponder()
+        }
+    }
+    
+    @objc func dismissController(sender: Any) {
+        view.endEditing(true)
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: Actions
+    
+    @objc func dismissKeyboard(_ sender: Any) {
+        growingTextView.textView.resignFirstResponder()
     }
     
     @IBAction func addMediaAction(_ sender: Any) {
@@ -89,14 +137,37 @@ class MessagesViewController: UIViewController {
     
     @IBAction func sendAction(_ sender: Any) {
         let myMessageContent = growingTextView.textView.text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-        messages.append(Message(content: myMessageContent, type: .outgoing))
+        messages.append(Message(content: myMessageContent, type: .outgoing, sender: "Me"))
         if me.messages == nil {
             me.messages = [messages.last!]
         } else {
             me.messages!.append(messages.last!)
         }
+        
+        if contact != nil {
+            if contact?.messages == nil {
+                contact?.messages = [Message]()
+            }
+            contact!.messages!.append(messages.last!)
+            delegate?.update(contact: contact!)
+        } else if alfieMessages.count > 0 && alfyMessageIndex < alfieMessagesContents.count {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+                self.messages.append(self.alfieMessages[self.alfyMessageIndex])
+                self.alfyMessageIndex += 1
+                self.tableView.reloadData()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0) - 1, section: 0)
+                    self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+                }
+            }
+        }
+        
         growingTextView.textView.text = ""
         tableView.reloadData()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0) - 1, section: 0)
+            self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        }
     }
     
 }
@@ -117,7 +188,12 @@ extension MessagesViewController: UITableViewDataSource, UITableViewDelegate {
         let message = messages[indexPath.row]
         if message.type == .incoming {
             cell = tableView.dequeueReusableCell(withIdentifier: "IncomingMessageCell", for: indexPath) as! IncomingMessageCell
-            (cell as! IncomingMessageCell).configure(message)
+            if group != nil {
+                let previousMessage: Message? = indexPath.row == 0 ? nil : messages[indexPath.row - 1]
+                (cell as! IncomingMessageCell).configure(message, previousMessage: previousMessage, isGroupMessage: true, showActions: indexPath.row == 6)
+            } else {
+                (cell as! IncomingMessageCell).configure(message)
+            }
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: "OutgoingMessageCell", for: indexPath) as! OutgoingMessageCell
             (cell as! OutgoingMessageCell).configure(message)
@@ -159,7 +235,10 @@ extension MessagesViewController {
                 inputContainerViewBottomConstraint.constant = 0
                 UIView.animate(withDuration: 0.25, animations: { () -> Void in
                     self.view.layoutIfNeeded()
-                })
+                }) { (finished) in
+                    let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0) - 1, section: 0)
+                    self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+                }
             }
         }
     }
@@ -167,10 +246,16 @@ extension MessagesViewController {
     @objc func keyboardWillShow(_ sender: Notification) {
         if let userInfo = (sender as NSNotification).userInfo {
             if let keyboardHeight = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.size.height {
-                inputContainerViewBottomConstraint.constant = keyboardHeight
+                inputContainerViewBottomConstraint.constant = -keyboardHeight
                 UIView.animate(withDuration: 0.25, animations: { () -> Void in
                     self.view.layoutIfNeeded()
                 })
+                UIView.animate(withDuration: 0.25, animations: {
+                    self.view.layoutIfNeeded()
+                }) { (finished) in
+                    let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0) - 1, section: 0)
+                    self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+                }
             }
         }
     }
@@ -185,6 +270,14 @@ private extension MessagesViewController {
         UIView.animate(withDuration: 0.1, animations: { () -> Void in
             self.view.layoutIfNeeded()
         })
+    }
+    
+    func installAlfieMock() {
+        alfieMessages.removeAll()
+        for i in 0..<alfieMessagesContents.count {
+            let message = Message(content: alfieMessagesContents[i], type: .incoming, sender: "Alfy")
+            alfieMessages.append(message)
+        }
     }
     
 }
