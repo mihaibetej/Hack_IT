@@ -23,7 +23,7 @@
         <scene sceneID="Ru9-Pa-rWU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tk6-gc-HAx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dashboard" id="Z6S-Le-Fyr"/>
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="dashboard_blue" id="Z6S-Le-Fyr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CPP-BS-H70">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -457,6 +457,8 @@
     </scenes>
     <resources>
         <image name="active_routine" width="183" height="127"/>
+        <image name="av_3" width="48" height="48"/>
+        <image name="dashboard_blue" width="27" height="27"/>
         <image name="feeling_today" width="380" height="76"/>
         <image name="feeling_today_expanded" width="383" height="126"/>
         <image name="poza_1" width="380" height="98"/>

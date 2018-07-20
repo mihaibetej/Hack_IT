@@ -33,7 +33,7 @@ class OutgoingMessageCell: UITableViewCell {
         contentView.layer.shadowOpacity = 0.3
         contentView.layer.shadowColor = UIColor.black.cgColor
         contentView.layer.shadowOffset = CGSize(width: 0, height: 1)
-        contentView.layer.shadowRadius = 1
+        contentView.layer.shadowRadius = 2
     }
     
     func configure(_ message: Message) {
@@ -42,7 +42,7 @@ class OutgoingMessageCell: UITableViewCell {
         let requiredMessageLabelSize = (message.content as NSString).boundingRect(with: CGSize(width: maxW - 16, height: maxH), options: [.usesFontLeading, .usesLineFragmentOrigin], attributes: [NSAttributedStringKey.font : messageLabel.font], context: nil)
         
         outgoingMessageContainerHeightConstant.constant = ceil(requiredMessageLabelSize.height) + 12
-        outgoingMessageContainerLeadingConstraint.constant = bounds.width - ceil(requiredMessageLabelSize.width + 2) - 16 - 10
+        outgoingMessageContainerLeadingConstraint.constant = bounds.width - ceil(requiredMessageLabelSize.width + 1) - 16 - 10
         layoutIfNeeded()
         
         messageLabel.text = message.content

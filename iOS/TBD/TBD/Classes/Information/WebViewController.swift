@@ -36,6 +36,10 @@ class WebViewController: UIViewController {
         webView.configuration.allowsInlineMediaPlayback = false
         webView.contentMode = .scaleAspectFit
         webView.navigationDelegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         loadContent()
     }
     
