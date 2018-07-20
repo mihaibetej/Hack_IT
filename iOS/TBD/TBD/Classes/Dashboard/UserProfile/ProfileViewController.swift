@@ -15,12 +15,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        closeButton.layer.masksToBounds = false
-        closeButton.layer.shadowOpacity = 0.7
-        closeButton.layer.shadowColor = UIColor.white.cgColor
-        closeButton.layer.shadowOffset = CGSize(width: 0, height: 0)
-        closeButton.layer.shadowRadius = 5
     }
 
     override func didReceiveMemoryWarning() {
