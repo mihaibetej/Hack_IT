@@ -42,6 +42,8 @@ class InformationViewController: UIViewController {
         articlesButton.layer.shadowColor = UIColor.black.cgColor
         articlesButton.layer.shadowOffset = CGSize(width: 0, height: 5)
         articlesButton.layer.shadowRadius = 10
+        
+        title = "Medical Info"
     }
     
     override func didReceiveMemoryWarning() {
