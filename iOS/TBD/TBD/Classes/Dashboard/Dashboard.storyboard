@@ -388,7 +388,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9IX-rD-ndy"/>
                     </view>
-                    <navigationItem key="navigationItem" title="App Name" id="fkH-le-5mr">
+                    <navigationItem key="navigationItem" title="Dashboard" id="fkH-le-5mr">
                         <barButtonItem key="rightBarButtonItem" title="Help" id="fiJ-jC-BnD"/>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
