@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum ModalTransitionPosition {
+    case upperRight
+    case center
+}
+
 class DashboardViewController: UIViewController {
     
     static var shouldLaunchHelp = false
@@ -26,6 +31,7 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var accountButton: UIButton!
     
     let transition = CircularTransition()
+    var transitionPosition = ModalTransitionPosition.upperRight
     
     @IBAction func openHowIFeel(_ sender: Any) {
         openButton.isHidden = true
@@ -91,6 +97,15 @@ class DashboardViewController: UIViewController {
     
     @IBAction func didTapOnTheyveWonTheFight(_ sender: UIButton) {
         print("They've won the fight!")
+        
+        let modalVC = UIStoryboard(name: "Information", bundle: nil).instantiateViewController(withIdentifier: String.init(describing: WebViewController.self)) as! WebViewController
+        
+        modalVC.transitioningDelegate = self
+        modalVC.modalPresentationStyle = .custom
+        transitionPosition = .center
+        modalVC.youtubeURL = "f6rSuJ2YheQ"
+        
+        self.present(modalVC, animated: true, completion: nil)
     }
     
     @IBAction func didTapOnFeed(_ sender: UIButton) {
@@ -112,6 +127,7 @@ class DashboardViewController: UIViewController {
         if segue.identifier == "ShowUserProfile" {
             segue.destination.transitioningDelegate = self
             segue.destination.modalPresentationStyle = .custom
+            transitionPosition = .upperRight
         }
     }
 }
@@ -121,7 +137,13 @@ extension DashboardViewController: UIViewControllerTransitioningDelegate {
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .present
-        transition.startingPoint = accountButton.convert(accountButton.center, to: self.view)
+        if transitionPosition == .upperRight {
+            transition.startingPoint = accountButton.convert(accountButton.center, to: self.view)
+        }
+        else {
+            transition.startingPoint = view.center
+        }
+        
         transition.circleColor = UIColor.white
         
         return transition
@@ -129,7 +151,12 @@ extension DashboardViewController: UIViewControllerTransitioningDelegate {
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .dismiss
-        transition.startingPoint =  accountButton.convert(accountButton.center, to: self.view)
+        if transitionPosition == .upperRight {
+            transition.startingPoint = accountButton.convert(accountButton.center, to: self.view)
+        }
+        else {
+            transition.startingPoint = view.center
+        }
         transition.circleColor = UIColor.white
         
         return transition
