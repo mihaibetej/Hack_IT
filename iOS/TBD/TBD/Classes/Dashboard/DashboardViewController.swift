@@ -16,6 +16,8 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var theyveWonView: UIView!
     @IBOutlet weak var feedView: UIView!
     
+    @IBOutlet weak var accountButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +30,12 @@ class DashboardViewController: UIViewController {
             view.layer.shadowOffset = CGSize(width: 0, height: 5)
             view.layer.shadowRadius = 10
         }
+        
+        accountButton.layer.masksToBounds = false
+        accountButton.layer.shadowOpacity = 0.7
+        accountButton.layer.shadowColor = UIColor.white.cgColor
+        accountButton.layer.shadowOffset = CGSize(width: 0, height: 0)
+        accountButton.layer.shadowRadius = 5
 
         // Do any additional setup after loading the view.
     }
@@ -66,5 +74,6 @@ class DashboardViewController: UIViewController {
         
         myScheduleViewController.loadViewIfNeeded()
         myScheduleViewController.segmentedController.selectedSegmentIndex = tabIndex
+        myScheduleViewController.tabBar.selectedIndex = tabIndex
     }
 }
