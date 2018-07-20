@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,6 +16,9 @@
         </array>
         <array key="ProximaNova-Regular.otf">
             <string>ProximaNova-Regular</string>
+        </array>
+        <array key="ProximaNova-Semibold.otf">
+            <string>ProximaNova-Semibold</string>
         </array>
     </customFonts>
     <scenes>
@@ -26,7 +30,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLD-ya-tfc" customClass="RoundedShadowView" customModule="TBD" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLD-ya-tfc" customClass="RoundedShadowView" customModule="Companion_Widget" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Z7b-X7-N5M">
@@ -109,20 +113,35 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8e-ka-O6D">
-                                        <rect key="frame" x="234" y="25" width="61" height="61"/>
-                                        <state key="normal" image="av_3x"/>
+                                        <rect key="frame" x="234" y="24.5" width="61" height="61"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="j8e-ka-O6D" secondAttribute="height" id="a5U-mC-0gO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="11"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="-10" maxX="0.0" maxY="10"/>
+                                        <state key="normal" title="Instant Help" image="help_widget">
+                                            <color key="titleColor" red="0.96078431372549022" green="0.20392156862745098" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="didTapOnInstantHelp:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="io5-jP-nMk"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instant Help" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPa-ie-7sJ">
+                                        <rect key="frame" x="233" y="81" width="65" height="12"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="12"/>
+                                        <color key="textColor" red="0.96078431369999995" green="0.20392156859999999" blue="0.058823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="QPa-ie-7sJ" firstAttribute="centerX" secondItem="j8e-ka-O6D" secondAttribute="centerX" id="9R9-19-YyZ"/>
                                     <constraint firstItem="Z7b-X7-N5M" firstAttribute="top" secondItem="wLD-ya-tfc" secondAttribute="top" id="Dt8-6o-J7B"/>
                                     <constraint firstAttribute="trailing" secondItem="j8e-ka-O6D" secondAttribute="trailing" constant="25" id="Ieg-6q-fGD"/>
                                     <constraint firstItem="Z7b-X7-N5M" firstAttribute="leading" secondItem="wLD-ya-tfc" secondAttribute="leading" constant="12" id="MrC-6j-VNQ"/>
                                     <constraint firstAttribute="trailing" secondItem="Z7b-X7-N5M" secondAttribute="trailing" constant="110" id="XJA-lm-SBz"/>
                                     <constraint firstItem="j8e-ka-O6D" firstAttribute="leading" secondItem="Z7b-X7-N5M" secondAttribute="trailing" constant="24" id="cuT-Xx-ByJ"/>
+                                    <constraint firstItem="QPa-ie-7sJ" firstAttribute="top" secondItem="j8e-ka-O6D" secondAttribute="bottom" constant="-4.5" id="wwG-ei-nIO"/>
                                     <constraint firstAttribute="bottom" secondItem="Z7b-X7-N5M" secondAttribute="bottom" id="zzL-ss-NC9"/>
                                 </constraints>
                             </view>
@@ -145,6 +164,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="av_3x" width="61" height="61"/>
+        <image name="help_widget" width="144" height="144"/>
     </resources>
 </document>
