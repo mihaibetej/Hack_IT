@@ -47,6 +47,7 @@ struct GlossaryModel {
     
 class GlossaryViewController: UIViewController {
 
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     var wordsDictionary = [String: [String]]()
     var wordsSectionTitles = [String]()
@@ -71,7 +72,7 @@ class GlossaryViewController: UIViewController {
         
         wordsSectionTitles = [String](wordsDictionary.keys)
         wordsSectionTitles = wordsSectionTitles.sorted(by: { $0 < $1 })
-       
+        title = "Glossary"
     }
 
     override func didReceiveMemoryWarning() {

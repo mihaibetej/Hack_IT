@@ -158,6 +158,14 @@
                                 <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="info_mail" translatesAutoresizingMaskIntoConstraints="NO" id="cp5-6g-mr1">
+                                <rect key="frame" x="10" y="664" width="15" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="info_phone" translatesAutoresizingMaskIntoConstraints="NO" id="p2M-la-Y1T">
+                                <rect key="frame" x="10" y="643" width="15" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -207,7 +215,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V3f-jP-XHT">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="120" width="414" height="616"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GlossaryCell" rowHeight="60" id="m4U-Wf-fqN">
@@ -224,17 +232,28 @@
                                     <outlet property="delegate" destination="on0-tQ-J2N" id="eDD-oo-DHB"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="hxq-1X-ENn">
+                                <rect key="frame" x="0.0" y="64" width="414" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="jhO-Nr-pA4"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="hxq-1X-ENn" firstAttribute="trailing" secondItem="qv8-Gx-fqJ" secondAttribute="trailing" id="6as-Pp-5jc"/>
+                            <constraint firstItem="hxq-1X-ENn" firstAttribute="leading" secondItem="qv8-Gx-fqJ" secondAttribute="leading" id="8Ir-fm-TsP"/>
                             <constraint firstItem="qv8-Gx-fqJ" firstAttribute="trailing" secondItem="V3f-jP-XHT" secondAttribute="trailing" id="Dn0-m8-89N"/>
+                            <constraint firstItem="V3f-jP-XHT" firstAttribute="top" secondItem="hxq-1X-ENn" secondAttribute="bottom" id="Kcf-zq-9eg"/>
                             <constraint firstItem="qv8-Gx-fqJ" firstAttribute="bottom" secondItem="V3f-jP-XHT" secondAttribute="bottom" id="d0Q-JH-0ki"/>
-                            <constraint firstItem="V3f-jP-XHT" firstAttribute="top" secondItem="qv8-Gx-fqJ" secondAttribute="top" id="fCJ-Pc-dKd"/>
+                            <constraint firstItem="hxq-1X-ENn" firstAttribute="top" secondItem="qv8-Gx-fqJ" secondAttribute="top" id="hxg-rL-h9Q"/>
                             <constraint firstItem="V3f-jP-XHT" firstAttribute="leading" secondItem="qv8-Gx-fqJ" secondAttribute="leading" id="mwj-Hs-2Iy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qv8-Gx-fqJ"/>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="hxq-1X-ENn" id="E2V-mu-AYV"/>
                         <outlet property="tableView" destination="V3f-jP-XHT" id="dRM-Sb-zfv"/>
                     </connections>
                 </viewController>
@@ -329,6 +348,8 @@
         <image name="if_LinkedIn" width="42" height="42"/>
         <image name="if_Twitter" width="42" height="42"/>
         <image name="if_Youtube" width="42" height="42"/>
+        <image name="info_mail" width="40" height="40"/>
+        <image name="info_phone" width="40" height="40"/>
         <image name="leukaemia_articles" width="383" height="178"/>
         <image name="they_won_the_fight" width="383" height="173"/>
     </resources>

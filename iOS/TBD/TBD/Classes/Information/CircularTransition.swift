@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CircularTransition: NSObject {
+public class CircularTransition: NSObject {
 
     var circle = UIView()
     
@@ -30,14 +30,14 @@ class CircularTransition: NSObject {
     
 }
 
-extension CircularTransition:UIViewControllerAnimatedTransitioning {
+ extension CircularTransition:UIViewControllerAnimatedTransitioning {
     
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return duration
     }
     
     
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
         
         if transitionMode == .present {
