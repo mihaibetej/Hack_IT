@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: 8cd95f959ca3df3acf397bfb66ad3d5bd346685b
+PODS:
+  - NextGrowingTextView (1.2.2)
+
+DEPENDENCIES:
+  - NextGrowingTextView
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - NextGrowingTextView
+
+SPEC CHECKSUMS:
+  NextGrowingTextView: 78c8b96f7ac6dc845f5babb27dcf7c18dd3210ec
+
+PODFILE CHECKSUM: 01bd43e12e49e3063d693763a9aea3fbb7b83137
 
 COCOAPODS: 1.5.3
