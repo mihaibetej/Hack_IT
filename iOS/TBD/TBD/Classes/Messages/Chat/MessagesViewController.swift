@@ -41,7 +41,7 @@ class MessagesViewController: UIViewController {
         "Erin meet Mark. Mark, meet Erin.",
         "You both said you need someone to talk to. It's always a good ideea to meet new people from new places that are going through the same thing as you and learn new things from them",
         "Looks like you both like traveling, why not start with that?",
-        "As for me, battery recharging time!"
+        "As for me, I feel a bit tired, I think I will take a nap and recharge my batteries!"
     ]
     var alfieMessages = [Message]()
     
@@ -108,7 +108,23 @@ class MessagesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
      
-        growingTextView.textView.becomeFirstResponder() 
+        growingTextView.textView.becomeFirstResponder()
+        
+        // Insert Alfred message if case
+        if alfyMessageIndex == 4 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.messages.append(self.alfieMessages[self.alfyMessageIndex])
+                self.alfyMessageIndex += 1
+                self.tableView.insertRows(at: [IndexPath(row: self.messages.count - 1, section: 0)], with: .left)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    let numberOfRows = self.tableView.numberOfRows(inSection: 0)
+                    if numberOfRows > 0 {
+                        let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0) - 1, section: 0)
+                        self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+                    }
+                }
+            }
+        }
     }
     
     @objc func dismissController(sender: Any) {
@@ -141,11 +157,21 @@ class MessagesViewController: UIViewController {
     }
     
     @IBAction func sendAction(_ sender: Any) {
-        
-        
-        
+        // Update UI with our messages
         let myMessageContent = growingTextView.textView.text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         messages.append(Message(content: myMessageContent, type: .outgoing, sender: "Me"))
+        growingTextView.textView.text = ""
+        sendButton.isEnabled = false
+        self.tableView.insertRows(at: [IndexPath(row: self.messages.count - 1, section: 0)], with: .fade)
+        // make sure new message is in scope
+        let numberOfRows = self.tableView.numberOfRows(inSection: 0)
+        if numberOfRows > 0 {
+            let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0) - 1, section: 0)
+            self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        }
+        
+
+        // Subsequent actions
         if me.messages == nil {
             me.messages = [messages.last!]
         } else {
@@ -162,39 +188,27 @@ class MessagesViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
                 self.messages.append(self.alfieMessages[self.alfyMessageIndex])
                 self.alfyMessageIndex += 1
-                self.tableView.reloadData()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                    let numberOfRows = self.tableView.numberOfRows(inSection: 0)
-                    if numberOfRows > 0 {
-                        let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0) - 1, section: 0)
-                        self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
-                    }
+                self.tableView.insertRows(at: [IndexPath(row: self.messages.count - 1, section: 0)], with: .left)
+                // Scroll
+                let numberOfRows = self.tableView.numberOfRows(inSection: 0)
+                if numberOfRows > 0 {
+                    let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0) - 1, section: 0)
+                    self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+                }
 
-                    if self.alfyMessageIndex == 6 { // Meet Erin
-                        self.messages.append(Message(content: "Erin has joined the chat", type: .incoming, sender: "Erin"))
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                            self.tableView.reloadData()
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                                let numberOfRows = self.tableView.numberOfRows(inSection: 0)
-                                if numberOfRows > 0 {
-                                    let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0) - 1, section: 0)
-                                    self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
-                                }
-                                self.alfieMonologue1()
-                            }
+                if self.alfyMessageIndex == 6 { // Meet Erin
+                    self.messages.append(Message(content: "Erin has joined the chat", type: .incoming, sender: "Erin"))
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        self.tableView.insertRows(at: [IndexPath(row: self.messages.count - 1, section: 0)], with: .fade)
+                        // Scroll
+                        let numberOfRows = self.tableView.numberOfRows(inSection: 0)
+                        if numberOfRows > 0 {
+                            let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0) - 1, section: 0)
+                            self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
                         }
+                        self.alfieMonologue1()
                     }
                 }
-            }
-        }
-        
-        growingTextView.textView.text = ""
-        tableView.reloadData()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            let numberOfRows = self.tableView.numberOfRows(inSection: 0)
-            if numberOfRows > 0 {
-                let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0) - 1, section: 0)
-                self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
             }
         }
     }
@@ -216,7 +230,8 @@ extension MessagesViewController: CellActionsDelegate {
         print(controller.view.frame)
         // Then carry on ... my wayward child...
         controller.dismissButton.isHidden = true
-        controller.textHTML = "Cytarabine is used to treat different forms of leukemia, including acute and chronic myelogenous leukemia (AML and CML), acute lymphocytic leukemia (ALL), and acute promyelocytic leukemia (APL). It is also used to treat Hodgkin's lymphoma, as well as meningeal leukemia and other types of lymphoma (cancers found in the lining of the brain and spinal cord)."
+//        controller.textHTML = "Cytarabine is used to treat different forms of leukemia, including acute and chronic myelogenous leukemia (AML and CML), acute lymphocytic leukemia (ALL), and acute promyelocytic leukemia (APL). It is also used to treat Hodgkin's lymphoma, as well as meningeal leukemia and other types of lymphoma (cancers found in the lining of the brain and spinal cord)."
+        controller.webSiteURL = URL(string: "http://chemocare.com/chemotherapy/drug-info/cytarabine.aspx")
         controller.title = "Cytarabine"
         navigationController?.pushViewController(controller, animated: true)
     }
@@ -255,7 +270,7 @@ extension MessagesViewController: UITableViewDataSource, UITableViewDelegate {
                                                          previousMessage: previousMessage,
                                                          isGroupMessage: true,
                                                          showActions: indexPath.row == 6,
-                                                         showAction: indexPath.row == 15,
+                                                         showAction: indexPath.row == 14,
                                                          delegate: self)
             } else {
                 (cell as! IncomingMessageCell).configure(message, delegate: self)
@@ -355,16 +370,15 @@ private extension MessagesViewController {
     func alfieMonologue1() {
         messages.append(self.alfieMessages[self.alfyMessageIndex])
         alfyMessageIndex += 1
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.tableView.reloadData()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                let numberOfRows = self.tableView.numberOfRows(inSection: 0)
-                if numberOfRows > 0 {
-                    let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0) - 1, section: 0)
-                    self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
-                }
-                self.alfieMonologue2()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.tableView.insertRows(at: [IndexPath(row: self.messages.count - 1, section: 0)], with: .left)
+            // Scroll
+            let numberOfRows = self.tableView.numberOfRows(inSection: 0)
+            if numberOfRows > 0 {
+                let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0) - 1, section: 0)
+                self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
             }
+            self.alfieMonologue2()
         }
 
     }
@@ -372,16 +386,15 @@ private extension MessagesViewController {
     func alfieMonologue2() {
         messages.append(self.alfieMessages[self.alfyMessageIndex])
         alfyMessageIndex += 1
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.tableView.reloadData()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                let numberOfRows = self.tableView.numberOfRows(inSection: 0)
-                if numberOfRows > 0 {
-                    let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0) - 1, section: 0)
-                    self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
-                }
-                self.alfieMonologue3()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            self.tableView.insertRows(at: [IndexPath(row: self.messages.count - 1, section: 0)], with: .left)
+            // Scroll
+            let numberOfRows = self.tableView.numberOfRows(inSection: 0)
+            if numberOfRows > 0 {
+                let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0) - 1, section: 0)
+                self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
             }
+            self.alfieMonologue3()
         }
         
     }
@@ -389,16 +402,15 @@ private extension MessagesViewController {
     func alfieMonologue3() {
         messages.append(self.alfieMessages[self.alfyMessageIndex])
         alfyMessageIndex += 1
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.tableView.reloadData()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                let numberOfRows = self.tableView.numberOfRows(inSection: 0)
-                if numberOfRows > 0 {
-                    let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0) - 1, section: 0)
-                    self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
-                }
-                self.alfieMonologue4()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.tableView.insertRows(at: [IndexPath(row: self.messages.count - 1, section: 0)], with: .left)
+            // Scroll
+            let numberOfRows = self.tableView.numberOfRows(inSection: 0)
+            if numberOfRows > 0 {
+                let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0) - 1, section: 0)
+                self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
             }
+            self.alfieMonologue4()
         }
         
     }
@@ -406,17 +418,15 @@ private extension MessagesViewController {
     func alfieMonologue4() {
         messages.append(self.alfieMessages[self.alfyMessageIndex])
         alfyMessageIndex += 1
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.tableView.reloadData()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                let numberOfRows = self.tableView.numberOfRows(inSection: 0)
-                if numberOfRows > 0 {
-                    let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0) - 1, section: 0)
-                    self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
-                }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.tableView.insertRows(at: [IndexPath(row: self.messages.count - 1, section: 0)], with: .left)
+            // Scroll
+            let numberOfRows = self.tableView.numberOfRows(inSection: 0)
+            if numberOfRows > 0 {
+                let indexPath = IndexPath(row: self.tableView.numberOfRows(inSection: 0) - 1, section: 0)
+                self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
             }
         }
-        
     }
     
 }

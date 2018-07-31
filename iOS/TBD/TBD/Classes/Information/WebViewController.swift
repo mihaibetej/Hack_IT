@@ -103,4 +103,5 @@ extension WebViewController: WKNavigationDelegate {
         activityIndicator.stopAnimating()
         activityIndicator.alpha = 0
     }
+    
 }
